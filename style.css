@@ -1,7 +1,9 @@
+/* ---------- VARIABLES ---------- */
 :root {
   --burgundy: #7a0f1d;
 }
 
+/* ---------- BASE STYLES ---------- */
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
@@ -20,10 +22,10 @@ body {
   padding: 30px 20px;
   transform: translateX(-260px);
   transition: transform 0.4s ease;
-  z-index: 2000; /* below toggle */
-
+  z-index: 900; /* below toggle */
 }
-.sidebar.visible {
+
+.sidebar.active {
   transform: translateX(0);
 }
 
@@ -34,7 +36,7 @@ body {
   margin-bottom: 40px;
 }
 
-.nav a {
+.sidebar .nav a {
   display: block;
   padding: 12px 16px;
   color: #fff;
@@ -43,27 +45,24 @@ body {
   border-radius: 8px;
   margin-bottom: 8px;
   transition: background 0.3s ease;
+  font-family: 'Playfair Display', serif;
 }
-.nav a:hover, .nav a.active {
+
+.sidebar .nav a:hover,
+.sidebar .nav a.active {
   background: rgba(255, 255, 255, 0.15);
 }
-.nav a.highlight {
+
+.sidebar .nav a.highlight {
   background: rgba(255,255,255,0.25);
   border: 1px solid rgba(255,255,255,0.4);
 }
 
-/* ---------- TOGGLE + LOGIN ---------- */
-.top-controls {
+/* ---------- TOGGLE BUTTON ---------- */
+.toggle-btn {
   position: fixed;
   top: 20px;
   left: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 1000;
-}
-
-.toggle-btn {
   background: var(--burgundy);
   color: #fff;
   border: none;
@@ -71,12 +70,15 @@ body {
   padding: 10px 14px;
   border-radius: 6px;
   cursor: pointer;
+  z-index: 4000; /* always above sidebar */
+  isolation: isolate; /* ensures stacking context */
 }
+
 .toggle-btn:hover {
   opacity: 0.9;
 }
 
-/* Move the login button to the right side */
+/* ---------- LOGIN ICON (RIGHT SIDE) ---------- */
 .login-icon {
   position: fixed;
   top: 20px;
@@ -88,11 +90,13 @@ body {
   border-radius: 6px;
   font-weight: 600;
   transition: 0.3s;
+  z-index: 3500;
+  font-family: 'Playfair Display', serif;
 }
+
 .login-icon:hover {
   background: var(--burgundy);
 }
-
 
 /* ---------- CONTENT ---------- */
 .content {
@@ -111,6 +115,7 @@ body {
   font-size: 18px;
   border-radius: 8px;
 }
+
 .subscribe {
   background: var(--burgundy);
   color: #fff;
@@ -121,6 +126,7 @@ body {
   cursor: pointer;
   font-family: 'Playfair Display', serif;
 }
+
 .subscribe:hover {
   opacity: 0.9;
 }
@@ -131,8 +137,8 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  gap: 0;
 }
+
 .search-container input {
   width: 320px;
   padding: 10px 14px;
@@ -140,6 +146,7 @@ body {
   border-radius: 4px 0 0 4px;
   font-family: 'Playfair Display', serif;
 }
+
 .search-btn {
   background: var(--burgundy);
   color: #fff;
@@ -149,86 +156,18 @@ body {
   cursor: pointer;
 }
 
+.search-btn:hover {
+  background: #5e0c18;
+}
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
   .banner {
     width: 90%;
     font-size: 16px;
   }
+
   .search-container input {
     width: 70%;
   }
-}
-/* --- Fixed positions --- */
-.toggle-btn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background: var(--burgundy);
-  color: #fff;
-  border: none;
-  font-size: 20px;
-  padding: 10px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  z-index: 3000; /* always above the sidebar */
-}
-.toggle-btn:hover {
-  opacity: 0.9;
-}
-
-.login-icon {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: 0.3s;
-  z-index: 1000;
-}
-.login-icon:hover {
-  background: var(--burgundy);
-}
-/* --- Fix sidebar layering so toggle always stays on top --- */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 240px;
-  height: 100%;
-  background: var(--burgundy);
-  color: white;
-  padding: 30px 20px;
-  transform: translateX(-260px);
-  transition: transform 0.4s ease;
-  z-index: 900; /* lower than toggle button */
-  pointer-events: auto;
-}
-
-.sidebar.active {
-  transform: translateX(0);
-}
-
-/* Ensure the toggle button always stays clickable */
-.toggle-btn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background: var(--burgundy);
-  color: #fff;
-  border: none;
-  font-size: 20px;
-  padding: 10px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  z-index: 4000; /* ensures it's above sidebar */
-  isolation: isolate; /* keeps stacking context clean */
-}
-
-.toggle-btn:hover {
-  opacity: 0.9;
 }
