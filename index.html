@@ -10,14 +10,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header buttons -->
+  <!-- Header controls (sidebar, search, login) -->
   <div class="top-controls">
     <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <button class="search-icon" onclick="toggleSearch()">🔍</button>
     <a href="login.html" class="login-icon" title="Login">👤</a>
   </div>
 
-  <!-- Sidebar -->
-  <aside class="sidebar hidden" id="sidebar">
+  <!-- Sidebar (hidden by default) -->
+  <aside class="sidebar" id="sidebar">
     <div class="brand">Dulzura</div>
     <nav class="nav">
       <a href="index.html" class="active">Home</a>
@@ -27,9 +28,14 @@
     </nav>
   </aside>
 
+  <!-- Search bar (hidden until toggled) -->
+  <div class="search-bar" id="searchBar">
+    <input type="text" placeholder="Search Dulzura..." id="searchInput">
+    <button class="search-btn" onclick="searchSite()">Search</button>
+  </div>
+
   <!-- Main content -->
   <main class="content">
-    <!-- Banner -->
     <div class="banner">
       <p>Our first issue is on the way.</p>
       <button class="subscribe">Subscribe Now</button>
