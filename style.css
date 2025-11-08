@@ -1,0 +1,60 @@
+:root{
+  --burgundy:#80091B;
+  --text:#000;
+  --bg:#fff;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Playfair Display',serif;
+  display:flex;
+}
+
+/* Sidebar */
+.sidebar{
+  position:fixed;
+  left:0;top:0;bottom:0;
+  width:240px;
+  background:var(--burgundy);
+  color:#fff;
+  padding:28px 20px;
+}
+
+.brand{
+  font-family:'Great Vibes',cursive;
+  font-size:40px;
+  text-align:center;
+  margin-bottom:28px;
+}
+
+.nav a{
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  padding:10px 8px;
+  border-radius:10px;
+  margin:6px 0;
+  font-weight:600;
+}
+
+.nav a.active,
+.nav a:hover{
+  background:rgba(255,255,255,0.15);
+}
+
+/* Main content */
+.content{
+  margin-left:240px;
+  padding:36px;
+  max-width:1100px;
+  width:100%;
+}
+
+.cursive{
+  font-family:'Great Vibes',cursive;
+  color:var(--burgundy);
+  font-size:44px;
+  margin:10px 0 18px;
+}
