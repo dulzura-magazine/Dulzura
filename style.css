@@ -58,3 +58,95 @@ body{
   font-size:44px;
   margin:10px 0 18px;
 }
+/* Sidebar toggle button */
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--burgundy);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Hide sidebar when toggled */
+.sidebar.hidden {
+  transform: translateX(-260px);
+  transition: transform 0.4s ease;
+}
+.sidebar {
+  transition: transform 0.4s ease;
+}
+
+/* Logo inside sidebar */
+.logo {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Top banner */
+.banner {
+  background: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.banner p {
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.banner .subscribe {
+  background: var(--burgundy);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Search bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.search-container input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+}
+.search-btn {
+  background: var(--burgundy);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+/* Centered quote */
+.center-quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  text-align: center;
+}
+.quote {
+  font-family: 'Great Vibes', cursive;
+  color: var(--burgundy);
+  font-size: 42px;
+  max-width: 700px;
+  line-height: 1.4;
+}
