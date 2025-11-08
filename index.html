@@ -10,14 +10,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header controls (sidebar, search, login) -->
+  <!-- Sidebar toggle + login -->
   <div class="top-controls">
     <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-    <button class="search-icon" onclick="toggleSearch()">🔍</button>
-    <a href="login.html" class="login-icon" title="Login">👤</a>
+    <a href="login.html" class="login-icon">Login</a>
   </div>
 
-  <!-- Sidebar (hidden by default) -->
+  <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
     <div class="brand">Dulzura</div>
     <nav class="nav">
@@ -28,17 +27,17 @@
     </nav>
   </aside>
 
-  <!-- Search bar (hidden until toggled) -->
-  <div class="search-bar" id="searchBar">
-    <input type="text" placeholder="Search Dulzura..." id="searchInput">
-    <button class="search-btn" onclick="searchSite()">Search</button>
-  </div>
-
-  <!-- Main content -->
+  <!-- Main Content -->
   <main class="content">
     <div class="banner">
       <p>Our first issue is on the way.</p>
       <button class="subscribe">Subscribe Now</button>
+    </div>
+
+    <!-- Search bar (same as before) -->
+    <div class="search-container">
+      <input type="text" placeholder="Search Dulzura..." />
+      <button class="search-btn">🔍</button>
     </div>
   </main>
 
