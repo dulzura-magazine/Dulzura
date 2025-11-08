@@ -157,3 +157,37 @@ body {
     width: 70%;
   }
 }
+/* --- Fixed positions --- */
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: var(--burgundy);
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+}
+.toggle-btn:hover {
+  opacity: 0.9;
+}
+
+.login-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s;
+  z-index: 1000;
+}
+.login-icon:hover {
+  background: var(--burgundy);
+}
