@@ -10,16 +10,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!-- Sidebar toggle (left) -->
-<button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+  <!-- Sidebar toggle (left) -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-<!-- Login button (right) -->
-<a href="login.html" class="login-icon">Login</a>
-
+  <!-- Top Header -->
+  <header class="top-header">
+    <h1 class="site-logo">Dulzura</h1>
+    <a href="login.html" class="login-icon">Login</a>
+  </header>
 
   <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
-    <div class="brand">Dulzura</div>
     <nav class="nav">
       <a href="index.html" class="active">Home</a>
       <a href="articles.html">Articles</a>
@@ -35,7 +36,7 @@
       <button class="subscribe">Subscribe Now</button>
     </div>
 
-    <!-- Search bar (same as before) -->
+    <!-- Search bar -->
     <div class="search-container">
       <input type="text" placeholder="Search Dulzura..." />
       <button class="search-btn">🔍</button>
