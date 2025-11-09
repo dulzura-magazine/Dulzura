@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const user = localStorage.getItem("dulzuraUser");
   const loginIcon = document.querySelector(".login-icon");
 
-  // If user already logged in, update login icon text
+  // Handle persistent session
   if (user) {
     loginIcon.textContent = "Logout";
     loginIcon.addEventListener("click", (e) => {
@@ -20,25 +20,25 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("You have been logged out.");
       window.location.href = "index.html";
     });
-  } else {
-    // Regular login flow
-    const loginBtn = document.getElementById("login-btn");
-    if (loginBtn) {
-      loginBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value.trim();
+  }
 
-        if (!email || !password) {
-          alert("Please fill in both fields.");
-          return;
-        }
+  // Handle login form submission
+  const loginForm = document.getElementById("login-form");
+  if (loginForm) {
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
 
-        // Store user in localStorage to persist login
-        localStorage.setItem("dulzuraUser", email);
-        alert(`Welcome back, ${email.split("@")[0]}!`);
-        window.location.href = "index.html"; // redirect to homepage
-      });
-    }
+      if (!email || !password) {
+        alert("Please fill in both fields.");
+        return;
+      }
+
+      // Save user locally
+      localStorage.setItem("dulzuraUser", email);
+      alert(`Welcome back, ${email.split("@")[0]}!`);
+      window.location.href = "index.html";
+    });
   }
 });
