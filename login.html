@@ -34,16 +34,25 @@
 
   <!-- Main Content -->
   <main class="content login-page">
-    <h2>Welcome Back</h2>
-    <p class="login-subtext">Sign in to access exclusive Dulzura content.</p>
+  <h2>Welcome Back</h2>
+  <p class="login-subtext">Sign in to access exclusive Dulzura content.</p>
 
-    <form class="login-form">
-      <input type="email" placeholder="Email address" required />
-      <input type="password" placeholder="Password" required />
-      <button type="submit" class="login-submit">Login</button>
-      <p class="register-text">Don’t have an account? <a href="#">Sign up</a></p>
-    </form>
-  </main>
+  <form class="login-form" action="home.html" method="POST">
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+    <button type="submit" class="login-submit">Login</button>
+
+    <p class="register-text">
+      Don’t have an account?
+      <a href="signup.html">Sign up</a>
+    </p>
+  </form>
+</main>
+
 
   <script src="script.js"></script>
 </body>
