@@ -19,33 +19,18 @@ body {
   height: 100%;
   background: var(--burgundy);
   color: white;
-  padding: 20px;
-  transform: translateX(-260px);
+  padding: 30px 20px;
+  transform: translateX(-200px); /* partially visible edge */
   transition: transform 0.4s ease;
   z-index: 1500;
+  border-top-right-radius: 10px;
 }
 
 .sidebar.active {
   transform: translateX(0);
 }
 
-/* Move toggle button inside sidebar, at top */
-.sidebar .toggle-btn {
-  display: block;
-  background: #fff;
-  color: var(--burgundy);
-  border: none;
-  font-size: 20px;
-  padding: 10px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-bottom: 25px;
-  font-weight: bold;
-}
-.sidebar .toggle-btn:hover {
-  opacity: 0.85;
-}
-
+/* Sidebar links */
 .sidebar .nav a {
   display: block;
   padding: 12px 16px;
@@ -64,8 +49,33 @@ body {
 }
 
 .sidebar .nav a.highlight {
-  background: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* ---------- TOGGLE BUTTON ---------- */
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  background: var(--burgundy);
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 4000; /* always above sidebar */
+  transition: left 0.4s ease;
+}
+
+/* When sidebar is open, shift toggle slightly right */
+.sidebar.active ~ .toggle-btn {
+  left: 250px;
+}
+
+.toggle-btn:hover {
+  opacity: 0.9;
 }
 
 /* ---------- TOP HEADER ---------- */
