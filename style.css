@@ -265,8 +265,9 @@ body {
 /* ---------- LOGIN PAGE ---------- */
 .login-page {
   max-width: 400px;
-  margin-top: 140px;
-  text-align: center;
+  margin: 140px auto;
+  text-align: left;
+  padding: 0 20px;
 }
 
 .login-page h2 {
@@ -275,18 +276,27 @@ body {
   color: var(--burgundy);
   margin-bottom: 10px;
   font-size: 28px;
+  text-align: center;
 }
 
 .login-subtext {
   color: #555;
   font-size: 16px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
+}
+
+.login-form label {
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 4px;
+  color: #333;
 }
 
 .login-form input {
@@ -307,6 +317,7 @@ body {
   font-size: 17px;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin-top: 10px;
 }
 
 .login-submit:hover {
@@ -317,6 +328,7 @@ body {
   margin-top: 15px;
   font-size: 15px;
   color: #333;
+  text-align: center;
 }
 
 .register-text a {
