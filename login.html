@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Login • Dulzura</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login • Dulzura Magazine</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="content" style="text-align:center;padding-top:100px;">
-    <h1 class="cursive">Login to Dulzura</h1>
-    <form style="display:inline-block;text-align:left;margin-top:20px;">
-      <label>Email</label><br>
-      <input type="email" placeholder="your@email.com" style="width:300px;padding:10px;margin:8px 0;border:1px solid #aaa;border-radius:6px;"><br>
-      <label>Password</label><br>
-      <input type="password" placeholder="••••••••" style="width:300px;padding:10px;margin:8px 0;border:1px solid #aaa;border-radius:6px;"><br>
-      <button type="submit" style="width:320px;padding:10px;background:#80091B;color:#fff;border:none;border-radius:6px;cursor:pointer;">Login</button>
+  <!-- Top Header -->
+  <header class="top-header">
+    <h1 class="site-logo">Dulzura</h1>
+    <a href="login.html" class="login-icon">Login</a>
+  </header>
+
+  <!-- Sidebar Toggle Button (always visible) -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="moodboards.html">Moodboards</a>
+      <a href="login.html" class="active highlight">Login</a>
+    </nav>
+  </aside>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+  <!-- Main Content -->
+  <main class="content">
+    <h1 class="cursive">Login</h1>
+    <p>Welcome back! Please sign in to continue.</p>
+
+    <!-- Login form -->
+    <form class="login-form">
+      <input type="text" placeholder="Username or Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit" class="subscribe">Sign In</button>
     </form>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
