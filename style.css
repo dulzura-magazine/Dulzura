@@ -262,3 +262,69 @@ body {
 .site-logo .logo-link:hover {
   opacity: 0.85;
 }
+/* ---------- LOGIN PAGE ---------- */
+.login-page {
+  max-width: 400px;
+  margin-top: 140px;
+  text-align: center;
+}
+
+.login-page h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.login-subtext {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+}
+
+.login-submit {
+  background: var(--burgundy);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-submit:hover {
+  background: #5e0c18;
+}
+
+.register-text {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #333;
+}
+
+.register-text a {
+  color: var(--burgundy);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
