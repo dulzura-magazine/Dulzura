@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Moodboards • Dulzura</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Moodboards • Dulzura Magazine</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Top Header -->
+  <header class="top-header">
+    <h1 class="site-logo">Dulzura</h1>
+    <a href="login.html" class="login-icon">Login</a>
+  </header>
+
+  <!-- Sidebar Toggle Button (always visible) -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
-    <div class="brand">Dulzura</div>
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="articles.html">Articles</a>
       <a href="moodboards.html" class="active">Moodboards</a>
-      <a href="login.html">Login</a>
+      <a href="login.html" class="highlight">Login</a>
     </nav>
   </aside>
 
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+  <!-- Main Content -->
   <main class="content">
     <h1 class="cursive">Moodboards</h1>
-    <p>Coming soon — curated visuals and inspirations from Dulzura contributors worldwide.</p>
+    <p>Explore visual stories, fashion palettes, and creative inspiration from Dulzura’s editors and readers.</p>
+
+    <!-- Example placeholder section -->
+    <section class="moodboard-preview">
+      <p>Stay tuned for our first moodboard collection release!</p>
+    </section>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
