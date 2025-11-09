@@ -29,13 +29,6 @@ body {
   transform: translateX(0);
 }
 
-.brand {
-  font-family: 'Great Vibes', cursive;
-  font-size: 42px;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
 .sidebar .nav a {
   display: block;
   padding: 12px 16px;
@@ -71,11 +64,34 @@ body {
   border-radius: 6px;
   cursor: pointer;
   z-index: 4000; /* always above sidebar */
-  isolation: isolate; /* ensures stacking context */
+  isolation: isolate;
 }
 
 .toggle-btn:hover {
   opacity: 0.9;
+}
+
+/* ---------- TOP HEADER ---------- */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 15px 0;
+  z-index: 2000;
+  border-bottom: 1px solid #eee;
+}
+
+/* Dulzura logo text in the top bar */
+.site-logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  color: var(--burgundy);
+  margin: 0;
 }
 
 /* ---------- LOGIN ICON (RIGHT SIDE) ---------- */
@@ -101,7 +117,7 @@ body {
 /* ---------- CONTENT ---------- */
 .content {
   text-align: center;
-  padding-top: 100px;
+  padding-top: 120px; /* adjust for header height */
   margin: 0 auto;
   max-width: 800px;
 }
@@ -169,5 +185,9 @@ body {
 
   .search-container input {
     width: 70%;
+  }
+
+  .site-logo {
+    font-size: 36px;
   }
 }
