@@ -367,3 +367,41 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 15px;
 }
+/* Prevent underline on header logo */
+.no-underline {
+  text-decoration: none;
+}
+
+/* Keep Dulzura logo in cursive burgundy */
+.site-logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 56px;
+  color: var(--burgundy);
+  margin: 0;
+}
+
+/* Input styling (restored elegant look) */
+.login-container input {
+  width: 300px;
+  padding: 10px 14px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  background-color: #f8f8ff;
+}
+
+/* Thematic red button */
+.red-btn {
+  background: var(--burgundy);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+}
+.red-btn:hover {
+  background: #5e0c18;
+}
+
