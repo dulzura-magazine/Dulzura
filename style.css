@@ -238,4 +238,27 @@ body {
 .site-logo a:hover {
   opacity: 0.8; /* subtle hover effect */
 }
+/* Keep the logo above everything & clickable */
+.site-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Great Vibes', cursive;
+  font-size: 56px;
+  color: var(--burgundy);
+  margin: 0;
+  z-index: 2600;           /* above header + login button */
+}
 
+/* Make the text a clean, clickable link */
+.site-logo .logo-link {
+  color: var(--burgundy);
+  text-decoration: none;
+  display: inline-block;
+  padding: 6px 12px;       /* gives it a comfy click area */
+  cursor: pointer;
+}
+
+.site-logo .logo-link:hover {
+  opacity: 0.85;
+}
