@@ -1,4 +1,4 @@
 function toggleSidebar() {
-  const sidebar = document.querySelector('.sidebar');
+  const sidebar = document.getElementById('sidebar');
   sidebar.classList.toggle('active');
 }
