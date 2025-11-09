@@ -13,6 +13,7 @@ body {
 }
 
 /* ---------- SIDEBAR ---------- */
+/* ---------- SIDEBAR ---------- */
 .sidebar {
   position: fixed;
   top: 0;
@@ -22,21 +23,21 @@ body {
   background: var(--burgundy);
   color: white;
   padding: 30px 20px;
-  transform: translateX(-200px);
-  transition: transform 0.4s ease, opacity 0.3s ease;
+  transform: translateX(-260px);           /* move fully off screen */
+  transition: transform 0.4s ease, opacity 0.5s ease;
   z-index: 1500;
   border-top-right-radius: 10px;
-  pointer-events: none; /* disable clicks when hidden */
-  opacity: 0.8; /* slight transparency when tucked in */
+
+  /* prevent interaction while hidden */
+  pointer-events: none;
+  opacity: 0;                              /* fully hidden */
 }
 
 .sidebar.active {
   transform: translateX(0);
-  pointer-events: auto; /* enable clicks only when visible */
-  opacity: 1; /* full visible when open */
+  pointer-events: auto;                    /* clickable only when open */
+  opacity: 1;
 }
-
-
 
 /* Sidebar links */
 .sidebar .nav a {
