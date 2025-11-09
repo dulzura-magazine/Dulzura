@@ -228,4 +228,14 @@ body {
   .site-logo {
     font-size: 40px;
   }
+}.site-logo a {
+  color: var(--burgundy);
+  text-decoration: none;
+  font-family: 'Great Vibes', cursive;
+  font-size: inherit;
 }
+
+.site-logo a:hover {
+  opacity: 0.8; /* subtle hover effect */
+}
+
