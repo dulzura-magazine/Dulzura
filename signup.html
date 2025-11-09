@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up • Dulzura</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Header -->
+  <header class="top-header">
+    <h1 class="site-logo"><a class="logo-link" href="index.html">Dulzura</a></h1>
+    <a href="login.html" class="login-icon">Login</a>
+  </header>
+
+  <!-- Sidebar Toggle Button -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="moodboards.html">Moodboards</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </aside>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+  <!-- Main Content -->
+  <main class="content login-page">
+    <h2>Create Account</h2>
+    <p class="login-subtext">Join Dulzura to unlock member-only articles and features.</p>
+
+    <form class="login-form" id="signup-form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Create a password" required />
+
+      <button type="submit" class="login-submit">Sign Up</button>
+
+      <p class="register-text">
+        Already have an account? <a href="login.html">Login</a>
+      </p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
