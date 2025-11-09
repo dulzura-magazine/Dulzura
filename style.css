@@ -35,9 +35,7 @@ body {
   pointer-events: auto; /* enable clicks only when visible */
   opacity: 1; /* full visible when open */
 }
-.sidebar:not(.active) {
-  overflow: hidden;
-}
+
 
 
 /* Sidebar links */
