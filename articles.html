@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Articles • Dulzura</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Articles • Dulzura Magazine</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Top Header -->
+  <header class="top-header">
+    <h1 class="site-logo">Dulzura</h1>
+    <a href="login.html" class="login-icon">Login</a>
+  </header>
+
+  <!-- Sidebar Toggle Button (always visible) -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
-    <div class="brand">Dulzura</div>
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="articles.html" class="active">Articles</a>
       <a href="moodboards.html">Moodboards</a>
-      <a href="login.html">Login</a>
+      <a href="login.html" class="highlight">Login</a>
     </nav>
   </aside>
 
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+  <!-- Main Content -->
   <main class="content">
     <h1 class="cursive">Articles</h1>
     <p>Our latest features and fashion insights will appear here soon.</p>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
