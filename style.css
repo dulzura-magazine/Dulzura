@@ -1,6 +1,7 @@
 /* ---------- VARIABLES ---------- */
 :root {
   --burgundy: #7a0f1d;
+  --overlay: rgba(0, 0, 0, 0.4); /* dim overlay when sidebar is open */
 }
 
 /* ---------- BASE STYLES ---------- */
@@ -8,6 +9,7 @@ body {
   margin: 0;
   font-family: 'Playfair Display', serif;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 /* ---------- SIDEBAR ---------- */
@@ -76,6 +78,25 @@ body {
 
 .toggle-btn:hover {
   opacity: 0.9;
+}
+
+/* ---------- OVERLAY ---------- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 1400; /* below sidebar */
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* ---------- TOP HEADER ---------- */
