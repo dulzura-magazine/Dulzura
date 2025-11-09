@@ -340,3 +340,30 @@ body {
 .register-text a:hover {
   text-decoration: underline;
 }
+
+.red-btn {
+  background: var(--burgundy);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.red-btn:hover {
+  background: #5e0c18;
+}
+
+.login-container input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #f8f8ff;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+}
