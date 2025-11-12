@@ -42,3 +42,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// -------------------- Subscribe Page --------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const subscribeForm = document.getElementById("subscribe-form");
+  const subscribeMessage = document.getElementById("subscribe-message");
+
+  if (subscribeForm) {
+    subscribeForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      if (!email) return;
+
+      // For now, just show a confirmation
+      subscribeMessage.textContent = `🎉 Thanks for subscribing, ${email}!`;
+      subscribeMessage.style.color = "green";
+      subscribeForm.reset();
+    });
+  }
+});
