@@ -404,4 +404,22 @@ body {
 .red-btn:hover {
   background: #5e0c18;
 }
+.subscribe-box {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+.subscribe-box input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+}
 
