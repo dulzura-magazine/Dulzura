@@ -12,29 +12,33 @@
 <body>
   <!-- Top Header -->
   <header class="top-header">
-    <h1 class="site-logo"><a class="logo-link" href="index.html" aria-label="Go to homepage">Dulzura</a></h1>
+    <h1 class="site-logo">
+      <a class="logo-link" href="index.html" aria-label="Go to homepage">Dulzura</a>
+    </h1>
     <a href="login.html" class="login-icon">Login</a>
   </header>
   
-<!-- Sidebar Toggle Button (always visible) -->
-<button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+  <!-- Sidebar Toggle Button (always visible) -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-<!-- Sidebar -->
-<aside class="sidebar" id="sidebar">
-  <nav class="nav">
-    <a href="index.html" class="active">Home</a>
-    <a href="articles.html">Articles</a>
-    <a href="moodboards.html">Moodboards</a>
-    <a href="login.html" class="highlight">Login</a>
-  </nav>
-</aside>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="moodboards.html">Moodboards</a>
+      <a href="login.html" class="highlight">Login</a>
+    </nav>
+  </aside>
+
+  <!-- Overlay -->
   <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
   <!-- Main Content -->
   <main class="content">
     <div class="banner">
       <p>Our first issue is on the way.</p>
-      <button class="subscribe">Subscribe Now</button>
+      <button class="subscribe" onclick="location.href='subscribe.html'">Subscribe Now</button>
     </div>
 
     <!-- Search bar -->
@@ -43,11 +47,7 @@
       <button class="search-btn">🔍</button>
     </div>
   </main>
-    <!-- Subscribe now -->
-    <button class="subscribe" onclick="location.href='subscribe.html'">Subscribe Now</button>
 
-  
   <script src="script.js"></script>
 </body>
 </html>
-
