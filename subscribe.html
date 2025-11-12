@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Subscribe • Dulzura Magazine</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Header -->
+  <header class="top-header">
+    <a href="index.html" class="site-logo no-underline">Dulzura</a>
+    <a href="login.html" class="login-icon">Login</a>
+  </header>
+
+  <!-- Sidebar Toggle Button -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="moodboards.html">Moodboards</a>
+      <a href="login.html">Login</a>
+      <a href="subscribe.html" class="active highlight">Subscribe</a>
+    </nav>
+  </aside>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+  <!-- Main Content -->
+  <main class="content">
+    <h2>Subscribe to Dulzura</h2>
+    <p>Join our mailing list to get updates when new issues and moodboards drop.</p>
+
+    <form id="subscribe-form" class="subscribe-box">
+      <label for="email"><b>Email Address:</b></label><br>
+      <input type="email" id="email" name="email" placeholder="Enter your email..." required><br><br>
+      <button type="submit" class="red-btn">Subscribe</button>
+      <p id="subscribe-message" style="margin-top: 15px;"></p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
