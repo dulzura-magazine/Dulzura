@@ -3,72 +3,53 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Subscribe • Dulzura Magazine</title>
+  <title>Subscribe • Dulzura</title>
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- Top Header -->
-  <header class="top-header">
-    <h1 class="site-logo">
-      <a href="index.html" class="logo-link">Dulzura</a>
-    </h1>
+<header class="top-header">
+  <h1 class="site-logo"><a href="index.html">Dulzura</a></h1>
 
-    <div class="header-buttons">
+  <div class="header-buttons">
+    <a href="login.html" class="login-icon-small">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+        viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15.75 3.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 21a7.5 7.5 0 0115 0v.75H4.5V21z" />
+      </svg>
+    </a>
 
-      <!-- Account Icon -->
-      <a href="login.html" class="login-icon-small" title="Login">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-          viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor"
-          width="22" height="22">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M15.75 3.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 21a7.5 7.5 0 0115 0v.75H4.5V21z" />
-        </svg>
-      </a>
+    <a href="subscribe.html" class="subscribe-btn">Subscribe Now</a>
+  </div>
+</header>
 
-      <!-- Subscribe Button (still visible for consistency) -->
-      <a href="subscribe.html" class="subscribe-btn">Subscribe Now</a>
-    </div>
-  </header>
+<button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-  <!-- Sidebar Toggle Button -->
-  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+<aside class="sidebar" id="sidebar">
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="articles.html">Articles</a>
+    <a href="moodboards.html">Moodboards</a>
+    <a href="login.html">Login</a>
+  </nav>
+</aside>
 
-  <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="articles.html">Articles</a>
-      <a href="moodboards.html">Moodboards</a>
-      <a href="login.html">Login</a>
-    </nav>
-  </aside>
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
-  <!-- Overlay -->
-  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+<main class="content">
+  <h1>Subscribe</h1>
+  <p>Enter your email below to receive Dulzura’s first issue.</p>
 
-  <!-- Main Content -->
-  <main class="content">
-    <h1 class="cursive">Subscribe</h1>
-    <p>Join our newsletter to receive Dulzura updates, new issues, features, and exclusive content.</p>
+  <div class="subscribe-box">
+    <input type="email" placeholder="Enter your email">
+    <button class="subscribe-btn" style="margin-top:15px;">Subscribe</button>
+  </div>
+</main>
 
-    <div class="subscribe-box">
-      <form id="subscribe-form">
-        <input type="email" id="subscriber-email" placeholder="Enter your email" required />
-        <br><br>
-        <button type="submit" class="red-btn">Subscribe</button>
-      </form>
-
-      <p style="margin-top: 20px; font-size: 15px;">
-        We never spam. Unsubscribe at any time.
-      </p>
-    </div>
-  </main>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
