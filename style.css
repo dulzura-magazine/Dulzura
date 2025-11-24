@@ -103,24 +103,39 @@ body {
   z-index: 2000;
 }
 
-/* Dulzura Logo */
-.site-logo {
+/* Dulzura Logo — ALWAYS cursive */
+.site-logo,
+.site-logo a {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-family: 'Great Vibes', cursive;
-  font-size: 56px;
-  color: var(--burgundy);
+  font-family: 'Great Vibes', cursive !important;
+  font-size: 56px !important;
+  color: var(--burgundy) !important;
   margin: 0;
   z-index: 2500;
-}
-
-.site-logo a {
   text-decoration: none;
-  color: var(--burgundy);
 }
 
-/* ---------- HEADER BUTTONS (NON-HOME PAGES) ---------- */
+/* ---------- HOME PAGE LOGIN BUTTON (BLACK) ---------- */
+.login-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: black;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.login-icon:hover {
+  background: var(--burgundy);
+}
+
+/* ---------- HEADER BUTTONS (OTHER PAGES) ---------- */
 .header-buttons {
   position: absolute;
   right: 20px;
@@ -131,10 +146,18 @@ body {
 }
 
 /* SVG login icon */
+.login-icon-small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
 .login-icon-small svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   stroke: #000;
+  display: block;
   transition: 0.3s;
 }
 
@@ -212,4 +235,3 @@ body {
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
-
