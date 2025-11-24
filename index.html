@@ -5,20 +5,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dulzura Magazine</title>
 
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+  <!-- TOP HEADER -->
   <header class="top-header">
     <h1 class="site-logo"><a href="index.html">Dulzura</a></h1>
 
-    <!-- Black LOGIN button for home page -->
-    <a href="login.html" class="login-icon">Login</a>
+    <!-- Right side buttons (HOME → only Login button) -->
+    <a href="login.html" class="login-icon home-login-btn">Login</a>
   </header>
 
+  <!-- SIDEBAR BUTTON -->
   <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
+  <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
     <nav class="nav">
       <a href="index.html" class="active">Home</a>
@@ -28,9 +33,12 @@
     </nav>
   </aside>
 
+  <!-- OVERLAY -->
   <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
+  <!-- MAIN CONTENT -->
   <main class="content">
+
     <div class="banner">
       <p>Our first issue is on the way.</p>
       <button class="subscribe" onclick="location.href='subscribe.html'">Subscribe Now</button>
@@ -40,6 +48,7 @@
       <input type="text" placeholder="Search Dulzura..." />
       <button class="search-btn">🔍</button>
     </div>
+
   </main>
 
   <script src="script.js"></script>
