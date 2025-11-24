@@ -2,28 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dulzura Magazine</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (Correct, Stable, Working) -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- TOP HEADER -->
+  <!-- ===================== HEADER ===================== -->
   <header class="top-header">
-    <h1 class="site-logo"><a href="index.html">Dulzura</a></h1>
+    <!-- Dulzura logo centered -->
+    <h1 class="site-logo">
+      <a href="index.html">Dulzura</a>
+    </h1>
 
-    <!-- Right side buttons (HOME → only Login button) -->
-    <a href="login.html" class="login-icon home-login-btn">Login</a>
+    <!-- Right side Login button (HOME PAGE ONLY) -->
+    <div class="header-buttons">
+      <a href="login.html" class="login-icon home-login-btn">Login</a>
+    </div>
   </header>
 
-  <!-- SIDEBAR BUTTON -->
+  <!-- ===================== SIDEBAR BUTTON ===================== -->
   <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-  <!-- SIDEBAR -->
+  <!-- ===================== SIDEBAR ===================== -->
   <aside class="sidebar" id="sidebar">
     <nav class="nav">
       <a href="index.html" class="active">Home</a>
@@ -33,17 +40,19 @@
     </nav>
   </aside>
 
-  <!-- OVERLAY -->
+  <!-- Overlay (dark background when sidebar opens) -->
   <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
-  <!-- MAIN CONTENT -->
+  <!-- ===================== MAIN CONTENT ===================== -->
   <main class="content">
 
+    <!-- Banner box -->
     <div class="banner">
       <p>Our first issue is on the way.</p>
       <button class="subscribe" onclick="location.href='subscribe.html'">Subscribe Now</button>
     </div>
 
+    <!-- Search box -->
     <div class="search-container">
       <input type="text" placeholder="Search Dulzura..." />
       <button class="search-btn">🔍</button>
@@ -52,5 +61,6 @@
   </main>
 
   <script src="script.js"></script>
+
 </body>
 </html>
