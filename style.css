@@ -88,7 +88,7 @@ body {
   visibility: visible;
 }
 
-/* ---------- TOP HEADER ---------- */
+/* ---------- TOP HEADER (FIXED + CLEAN) ---------- */
 .top-header {
   position: fixed;
   top: 0;
@@ -97,17 +97,15 @@ body {
   height: 80px;
   background: #fff;
   border-bottom: 1px solid #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 2000;
 }
 
-/* DULZURA LOGO — CORRECT, CURSIVE, CENTERED */
+/* DULZURA LOGO — PERFECTLY CENTERED + CURSIVE */
 .site-logo {
   position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   font-family: 'Great Vibes', cursive !important;
   font-size: 56px;
   color: var(--burgundy);
@@ -120,18 +118,19 @@ body {
   color: var(--burgundy);
 }
 
-
 /* ---------- HOME PAGE LOGIN BUTTON (BLACK) ---------- */
 .login-icon {
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   background: black;
   color: white;
   padding: 10px 18px;
   border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
+  font-family: 'Playfair Display', serif;
   transition: 0.3s;
 }
 
@@ -139,17 +138,17 @@ body {
   background: var(--burgundy);
 }
 
-/* ---------- HEADER BUTTONS (OTHER PAGES) ---------- */
+/* ---------- OTHER PAGES HEADER BUTTONS ---------- */
 .header-buttons {
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-/* SVG login icon */
 .login-icon-small {
   display: flex;
   align-items: center;
@@ -161,7 +160,6 @@ body {
   width: 22px;
   height: 22px;
   stroke: #000;
-  display: block;
   transition: 0.3s;
 }
 
@@ -169,14 +167,13 @@ body {
   stroke: var(--burgundy);
 }
 
-/* Subscribe button */
 .subscribe-btn {
   background: var(--burgundy);
   color: #fff;
-  text-decoration: none;
   padding: 10px 18px;
   border-radius: 6px;
   font-weight: 600;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -192,7 +189,6 @@ body {
   margin: 0 auto;
 }
 
-/* Banner */
 .banner {
   background: #f9f9f9;
   border: 1px solid #eee;
@@ -217,7 +213,6 @@ body {
   background: #5e0c18;
 }
 
-/* Search */
 .search-container {
   display: flex;
   justify-content: center;
