@@ -1,10 +1,10 @@
 /* ---------- VARIABLES ---------- */
 :root {
   --burgundy: #7a0f1d;
-  --overlay: rgba(0, 0, 0, 0.4); /* dim overlay when sidebar is open */
+  --overlay: rgba(0, 0, 0, 0.4);
 }
 
-/* ---------- BASE STYLES ---------- */
+/* ---------- BASE ---------- */
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
@@ -22,12 +22,10 @@ body {
   background: var(--burgundy);
   color: white;
   padding: 30px 20px;
-  transform: translateX(-260px); /* completely offscreen */
+  transform: translateX(-260px);
   transition: transform 0.4s ease, opacity 0.3s ease;
   z-index: 1500;
   border-top-right-radius: 10px;
-
-  /* Hide everything visually & interactively when closed */
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -40,7 +38,6 @@ body {
   pointer-events: auto;
 }
 
-/* Sidebar links */
 .sidebar .nav a {
   display: block;
   padding: 12px 16px;
@@ -50,17 +47,11 @@ body {
   border-radius: 8px;
   margin-bottom: 8px;
   transition: background 0.3s ease;
-  font-family: 'Playfair Display', serif;
 }
 
 .sidebar .nav a:hover,
 .sidebar .nav a.active {
   background: rgba(255, 255, 255, 0.15);
-}
-
-.sidebar .nav a.highlight {
-  background: rgba(255,255,255,0.25);
-  border: 1px solid rgba(255,255,255,0.4);
 }
 
 /* ---------- TOGGLE BUTTON ---------- */
@@ -75,17 +66,7 @@ body {
   padding: 10px 14px;
   border-radius: 6px;
   cursor: pointer;
-  z-index: 4000; /* always above sidebar */
-  transition: left 0.4s ease;
-}
-
-/* When sidebar is open, shift toggle slightly right */
-.sidebar.active ~ .toggle-btn {
-  left: 250px;
-}
-
-.toggle-btn:hover {
-  opacity: 0.9;
+  z-index: 4000;
 }
 
 /* ---------- OVERLAY ---------- */
@@ -98,8 +79,8 @@ body {
   background: var(--overlay);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-  z-index: 1400; /* below sidebar */
+  transition: opacity 0.4s ease;
+  z-index: 1400;
 }
 
 .overlay.active {
@@ -122,7 +103,7 @@ body {
   z-index: 2000;
 }
 
-/* Center Dulzura logo perfectly */
+/* Dulzura Logo */
 .site-logo {
   position: absolute;
   left: 50%;
@@ -131,336 +112,104 @@ body {
   font-size: 56px;
   color: var(--burgundy);
   margin: 0;
-}
-
-/* ---------- LOGIN ICON ---------- */
-.login-icon {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: 0.3s;
-  font-family: 'Playfair Display', serif;
   z-index: 2500;
 }
-.login-icon:hover {
-  background: var(--burgundy);
-}
 
-/* ---------- CONTENT ---------- */
-.content {
-  text-align: center;
-  padding-top: 120px; /* adjust for header height */
-  margin: 0 auto;
-  max-width: 800px;
-}
-
-.banner {
-  background: #f9f9f9;
-  border: 1px solid #eee;
-  padding: 20px 30px;
-  margin: 20px auto 30px;
-  display: inline-block;
-  font-size: 18px;
-  border-radius: 8px;
-}
-
-.subscribe {
-  background: var(--burgundy);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-left: 12px;
-  cursor: pointer;
-  font-family: 'Playfair Display', serif;
-}
-
-.subscribe:hover {
-  opacity: 0.9;
-}
-
-/* ---------- SEARCH ---------- */
-.search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.search-container input {
-  width: 320px;
-  padding: 10px 14px;
-  border: 1px solid #bbb;
-  border-radius: 4px 0 0 4px;
-  font-family: 'Playfair Display', serif;
-}
-
-.search-btn {
-  background: var(--burgundy);
-  color: #fff;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-}
-
-.search-btn:hover {
-  background: #5e0c18;
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 768px) {
-  .banner {
-    width: 90%;
-    font-size: 16px;
-  }
-
-  .search-container input {
-    width: 70%;
-  }
-
-  .site-logo {
-    font-size: 40px;
-  }
-}.site-logo a {
-  color: var(--burgundy);
+.site-logo a {
   text-decoration: none;
-  font-family: 'Great Vibes', cursive;
-  font-size: inherit;
-}
-
-.site-logo a:hover {
-  opacity: 0.8; /* subtle hover effect */
-}
-/* Keep the logo above everything & clickable */
-.site-logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Great Vibes', cursive;
-  font-size: 56px;
   color: var(--burgundy);
-  margin: 0;
-  z-index: 2600;           /* above header + login button */
 }
 
-/* Make the text a clean, clickable link */
-.site-logo .logo-link {
-  color: var(--burgundy);
-  text-decoration: none;
-  display: inline-block;
-  padding: 6px 12px;       /* gives it a comfy click area */
-  cursor: pointer;
-}
-
-.site-logo .logo-link:hover {
-  opacity: 0.85;
-}
-/* ---------- LOGIN PAGE ---------- */
-.login-page {
-  max-width: 400px;
-  margin: 140px auto;
-  text-align: left;
-  padding: 0 20px;
-}
-
-.login-page h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  color: var(--burgundy);
-  margin-bottom: 10px;
-  font-size: 28px;
-  text-align: center;
-}
-
-.login-subtext {
-  color: #555;
-  font-size: 16px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.login-form label {
-  font-weight: 600;
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 4px;
-  color: #333;
-}
-
-.login-form input {
-  padding: 12px 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-}
-
-.login-submit {
-  background: var(--burgundy);
-  color: #fff;
-  border: none;
-  padding: 12px;
-  border-radius: 6px;
-  font-family: 'Playfair Display', serif;
-  font-size: 17px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 10px;
-}
-
-.login-submit:hover {
-  background: #5e0c18;
-}
-
-.register-text {
-  margin-top: 15px;
-  font-size: 15px;
-  color: #333;
-  text-align: center;
-}
-
-.register-text a {
-  color: var(--burgundy);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.register-text a:hover {
-  text-decoration: underline;
-}
-
-.red-btn {
-  background: var(--burgundy);
-  color: #fff;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.red-btn:hover {
-  background: #5e0c18;
-}
-
-.login-container input {
-  width: 80%;
-  max-width: 400px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  background: #f8f8ff;
-  font-family: 'Playfair Display', serif;
-  font-size: 15px;
-}
-/* Prevent underline on header logo */
-.no-underline {
-  text-decoration: none;
-}
-
-/* Keep Dulzura logo in cursive burgundy */
-.site-logo {
-  font-family: 'Great Vibes', cursive;
-  font-size: 56px;
-  color: var(--burgundy);
-  margin: 0;
-}
-
-/* Input styling (restored elegant look) */
-.login-container input {
-  width: 300px;
-  padding: 10px 14px;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-  font-family: 'Playfair Display', serif;
-  font-size: 15px;
-  background-color: #f8f8ff;
-}
-
-/* Thematic red button */
-.red-btn {
-  background: var(--burgundy);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Playfair Display', serif;
-}
-.red-btn:hover {
-  background: #5e0c18;
-}
-.subscribe-box {
-  background: #f9f9f9;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 30px;
-  margin: 30px auto;
-  max-width: 400px;
-  text-align: center;
-}
-
-.subscribe-box input {
-  width: 90%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #bbb;
-  font-family: 'Playfair Display', serif;
-  font-size: 15px;
-}
-/* ---------- HEADER BUTTONS ---------- */
+/* ---------- HEADER BUTTONS (NON-HOME PAGES) ---------- */
 .header-buttons {
   position: absolute;
   right: 20px;
   top: 20px;
   display: flex;
-  gap: 10px;
   align-items: center;
+  gap: 12px;
 }
 
-/* Red Subscribe button */
+/* SVG login icon */
+.login-icon-small svg {
+  width: 24px;
+  height: 24px;
+  stroke: #000;
+  transition: 0.3s;
+}
+
+.login-icon-small:hover svg {
+  stroke: var(--burgundy);
+}
+
+/* Subscribe button */
 .subscribe-btn {
   background: var(--burgundy);
   color: #fff;
   text-decoration: none;
-  padding: 10px 16px;
+  padding: 10px 18px;
   border-radius: 6px;
   font-weight: 600;
   transition: 0.3s;
-  font-family: 'Playfair Display', serif;
 }
+
 .subscribe-btn:hover {
   background: #5e0c18;
 }
 
-/* Clean minimalist login icon */
-.login-icon-small {
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 12px;
-  border-radius: 6px;
-  font-size: 18px;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ---------- CONTENT ---------- */
+.content {
+  text-align: center;
+  padding-top: 120px;
+  max-width: 800px;
+  margin: 0 auto;
 }
-.login-icon-small:hover {
+
+/* Banner */
+.banner {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 20px 30px;
+  border-radius: 8px;
+  margin-top: 40px;
+  display: inline-block;
+}
+
+.subscribe {
   background: var(--burgundy);
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: 'Playfair Display', serif;
+}
+
+.subscribe:hover {
+  background: #5e0c18;
+}
+
+/* Search */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.search-container input {
+  width: 350px;
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-btn {
+  background: var(--burgundy);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
 }
 
