@@ -103,19 +103,23 @@ body {
   z-index: 2000;
 }
 
-/* Dulzura Logo — ALWAYS cursive */
-.site-logo,
-.site-logo a {
+/* DULZURA LOGO — CORRECT, CURSIVE, CENTERED */
+.site-logo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Great Vibes', cursive !important;
-  font-size: 56px !important;
-  color: var(--burgundy) !important;
+  font-size: 56px;
+  color: var(--burgundy);
   margin: 0;
   z-index: 2500;
-  text-decoration: none;
 }
+
+.site-logo a {
+  text-decoration: none;
+  color: var(--burgundy);
+}
+
 
 /* ---------- HOME PAGE LOGIN BUTTON (BLACK) ---------- */
 .login-icon {
