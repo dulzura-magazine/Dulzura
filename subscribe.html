@@ -9,32 +9,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header class="top-header">
-  <h1 class="site-logo">
-    <a href="index.html">Dulzura</a>
-  </h1>
-
-  <div class="header-buttons">
-    
-    <!-- Head Icon (SVG Outline) -->
-    <a href="login.html" class="login-icon-small">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M15.75 3.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 21a7.5 7.5 0 0115 0v.75H4.5V21z" />
-      </svg>
-    </a>
-
-    <!-- Subscribe Button -->
-    <a href="subscribe.html" class="subscribe-btn">Subscribe Now</a>
-  </div>
-</header>
 
   <!-- Top Header -->
   <header class="top-header">
-    <a href="index.html" class="site-logo no-underline">Dulzura</a>
-    <a href="login.html" class="login-icon">Login</a>
+    <h1 class="site-logo">
+      <a href="index.html" class="logo-link">Dulzura</a>
+    </h1>
+
+    <div class="header-buttons">
+
+      <!-- Account Icon -->
+      <a href="login.html" class="login-icon-small" title="Login">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor"
+          width="22" height="22">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15.75 3.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 21a7.5 7.5 0 0115 0v.75H4.5V21z" />
+        </svg>
+      </a>
+
+      <!-- Subscribe Button (still visible for consistency) -->
+      <a href="subscribe.html" class="subscribe-btn">Subscribe Now</a>
+    </div>
   </header>
 
   <!-- Sidebar Toggle Button -->
@@ -47,7 +45,6 @@
       <a href="articles.html">Articles</a>
       <a href="moodboards.html">Moodboards</a>
       <a href="login.html">Login</a>
-      <a href="subscribe.html" class="active highlight">Subscribe</a>
     </nav>
   </aside>
 
@@ -56,15 +53,20 @@
 
   <!-- Main Content -->
   <main class="content">
-    <h2>Subscribe to Dulzura</h2>
-    <p>Join our mailing list to get updates when new issues and moodboards drop.</p>
+    <h1 class="cursive">Subscribe</h1>
+    <p>Join our newsletter to receive Dulzura updates, new issues, features, and exclusive content.</p>
 
-    <form id="subscribe-form" class="subscribe-box">
-      <label for="email"><b>Email Address:</b></label><br>
-      <input type="email" id="email" name="email" placeholder="Enter your email..." required><br><br>
-      <button type="submit" class="red-btn">Subscribe</button>
-      <p id="subscribe-message" style="margin-top: 15px;"></p>
-    </form>
+    <div class="subscribe-box">
+      <form id="subscribe-form">
+        <input type="email" id="subscriber-email" placeholder="Enter your email" required />
+        <br><br>
+        <button type="submit" class="red-btn">Subscribe</button>
+      </form>
+
+      <p style="margin-top: 20px; font-size: 15px;">
+        We never spam. Unsubscribe at any time.
+      </p>
+    </div>
   </main>
 
   <script src="script.js"></script>
