@@ -100,16 +100,17 @@ body {
   z-index: 2000;
 }
 
-/* DULZURA LOGO — PERFECTLY CENTERED + CURSIVE */
+/* Perfectly centered Dulzura logo in header */
 .site-logo {
   position: absolute;
-  top: 50%;
+  top: 50%;                 /* vertically center */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
   font-family: 'Great Vibes', cursive !important;
   font-size: 56px;
   color: var(--burgundy);
   margin: 0;
+  line-height: 1;           /* prevents extra vertical space */
   z-index: 2500;
 }
 
