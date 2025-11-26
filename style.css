@@ -88,7 +88,7 @@ body {
   visibility: visible;
 }
 
-/* ---------- TOP HEADER (FIXED + CLEAN) ---------- */
+/* ---------- TOP HEADER (FIXED) ---------- */
 .top-header {
   position: fixed;
   top: 0;
@@ -98,20 +98,23 @@ body {
   background: #fff;
   border-bottom: 1px solid #eee;
   z-index: 2000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Perfectly centered Dulzura logo in header */
+/* DULZURA LOGO — centered perfectly */
 .site-logo {
   position: absolute;
-  top: 50%;                 /* vertically center */
   left: 50%;
-  transform: translate(-50%, -50%); 
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
   font-family: 'Great Vibes', cursive !important;
   font-size: 56px;
   color: var(--burgundy);
-  margin: 0;
-  line-height: 1;           /* prevents extra vertical space */
-  z-index: 2500;
+  line-height: 1;
 }
 
 .site-logo a {
@@ -119,7 +122,7 @@ body {
   color: var(--burgundy);
 }
 
-/* ---------- HOME PAGE LOGIN BUTTON (BLACK) ---------- */
+/* ---------- HOME PAGE LOGIN BUTTON ---------- */
 .login-icon {
   position: absolute;
   right: 20px;
@@ -139,22 +142,25 @@ body {
   background: var(--burgundy);
 }
 
-/* ---------- OTHER PAGES HEADER BUTTONS ---------- */
+/* ---------- OTHER PAGES BUTTONS ---------- */
 .header-buttons {
-  position: absolute;
+  position: absolute !important;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
+/* Login icon (non-home pages) */
 .login-icon-small {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 
 .login-icon-small svg {
@@ -168,6 +174,7 @@ body {
   stroke: var(--burgundy);
 }
 
+/* Subscribe button */
 .subscribe-btn {
   background: var(--burgundy);
   color: #fff;
@@ -182,25 +189,6 @@ body {
   background: #5e0c18;
 }
 
-/* Fix login icon being cut off on Articles & Moodboards */
-.header-buttons {
-  top: 22px !important; /* shifts down slightly */
-}
-
-.login-icon-small {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px 8px; /* reduces height -> prevents clipping */
-  border-radius: 6px;
-}
-
-.login-icon-small svg {
-  width: 22px;
-  height: 22px;
-  stroke: #000;
-}
-
 /* ---------- CONTENT ---------- */
 .content {
   text-align: center;
@@ -209,6 +197,7 @@ body {
   margin: 0 auto;
 }
 
+/* Banner box */
 .banner {
   background: #f9f9f9;
   border: 1px solid #eee;
@@ -233,6 +222,7 @@ body {
   background: #5e0c18;
 }
 
+/* Search bar */
 .search-container {
   display: flex;
   justify-content: center;
