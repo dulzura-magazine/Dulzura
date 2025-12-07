@@ -23,6 +23,14 @@ a {
   color: inherit;
 }
 
+/* FINAL ENFORCED FIX — LOGO FONT ALWAYS GREAT VIBES */
+.site-logo,
+.site-logo a {
+  font-family: var(--font-logo) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
+
 /* ----------------------------------------------------
    SIDEBAR
 ---------------------------------------------------- */
@@ -55,7 +63,6 @@ a {
   display: block;
   padding: 12px 16px;
   margin-bottom: 10px;
-  background: transparent;
   border-radius: 8px;
   font-weight: 600;
   transition: 0.3s;
@@ -102,7 +109,7 @@ a {
 }
 
 /* ----------------------------------------------------
-   TOP HEADER (shared across all pages)
+   TOP HEADER
 ---------------------------------------------------- */
 .top-header {
   position: fixed;
@@ -121,7 +128,6 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: var(--font-logo);
   font-size: 56px;
   color: var(--burgundy);
   margin: 0;
@@ -129,7 +135,7 @@ a {
 }
 
 /* ----------------------------------------------------
-   RIGHT HEADER BUTTONS (Articles, Moodboards, Login pages)
+   RIGHT HEADER BUTTONS (non-homepages)
 ---------------------------------------------------- */
 .header-buttons {
   position: absolute;
@@ -171,7 +177,7 @@ a {
 }
 
 /* ----------------------------------------------------
-   HOME PAGE — special black login button
+   HOME PAGE LOGIN BUTTON
 ---------------------------------------------------- */
 .home-login-btn {
   position: absolute;
@@ -191,7 +197,7 @@ a {
 }
 
 /* ----------------------------------------------------
-   MAIN CONTENT
+   MAIN CONTENT AREA
 ---------------------------------------------------- */
 .content {
   padding-top: 130px;
@@ -241,7 +247,7 @@ a {
 }
 
 /* ----------------------------------------------------
-   LOGIN & SIGNUP PAGES
+   LOGIN & SIGNUP FORMS
 ---------------------------------------------------- */
 .login-page {
   max-width: 400px;
@@ -259,7 +265,8 @@ a {
   margin-bottom: 10px;
 }
 
-.red-btn, .login-submit {
+.red-btn,
+.login-submit {
   background: var(--burgundy);
   color: white;
   padding: 12px;
@@ -271,6 +278,7 @@ a {
   font-family: var(--font-body);
 }
 
-.red-btn:hover, .login-submit:hover {
+.red-btn:hover,
+.login-submit:hover {
   background: #5e0c18;
 }
