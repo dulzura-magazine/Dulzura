@@ -5,37 +5,40 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dulzura Magazine</title>
 
-  <!-- Load Google Fonts FIRST -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Great Vibes for Dulzura logo -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <!-- Logo font: Pinyon Script -->
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
 
-  <!-- Playfair Display for all body text -->
+  <!-- Body font for other pages: Playfair Display -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Display font for homepage hero & editorial text: Noto Serif Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="home-page">
 
   <!-- HEADER -->
   <header class="top-header">
-    
-    <!-- Dulzura logo (centered) -->
+    <!-- Sidebar toggle -->
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Centered Dulzura logo -->
     <h1 class="site-logo">
       <a href="index.html">Dulzura</a>
     </h1>
 
-    <!-- Login button (top-right, black) -->
-    <a href="login.html" class="home-login-btn">Login</a>
-
+    <!-- Subscribe button (top-right) -->
+    <a href="subscribe.html" class="header-subscribe-btn">
+      Subscribe Now
+    </a>
   </header>
-
-  <!-- SIDEBAR TOGGLE -->
-  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
   <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
@@ -51,19 +54,46 @@
   <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
   <!-- MAIN CONTENT -->
-  <main class="content">
+  <main class="home-main">
+    
+    <!-- HERO IMAGE BAND -->
+    <section class="hero-section">
+      <div class="hero-image-wrapper">
+        <!-- Replace src with your real hero image path -->
+        <img src="images/hero-models.jpg" alt="Dulzura models in a bathtub" class="hero-image">
+        <div class="hero-gradient-overlay"></div>
+        <!-- Optional tiny caption on image -->
+        <p class="hero-caption">(any photo taken of our models)</p>
+      </div>
+    </section>
 
-    <div class="banner">
-      <p>Our first issue is on the way.</p>
-      <button class="subscribe" onclick="location.href='subscribe.html'">
-        Subscribe Now
-      </button>
-    </div>
+    <!-- EDITORIAL TEXT BLOCK -->
+    <section class="editorial-section">
+      <p class="editorial-tagline">
+        the future of luxury, curated by young creatives.
+      </p>
 
-    <div class="search-container">
-      <input type="text" placeholder="Search Dulzura..." />
-      <button class="search-btn">🔍</button>
-    </div>
+      <h2 class="editorial-heading">
+        Because <span class="editorial-italic">true</span> style lives in the details
+        that only the <span class="editorial-italic">chic</span> ever notice.
+      </h2>
+
+      <p class="editorial-body">
+        A magazine and blog inspired by the timeless elegance of luxury fashion and editorials.
+        Our aesthetic blends high fashion, chic affordable wear, with polished visuals that
+        reimagine the future of style.
+      </p>
+    </section>
+
+    <!-- CURATED FOR YOU (we'll build this next) -->
+    <section class="curated-section">
+      <!-- placeholder; JS carousel comes in the next step -->
+      <h3 class="curated-title">Curated for <span class="editorial-italic">you</span></h3>
+      <div class="curated-strip">
+        <!-- cards will go here in the next step -->
+        <p class="curated-placeholder">[Curated article cards will scroll horizontally here]</p>
+      </div>
+    </section>
 
   </main>
 
