@@ -188,7 +188,7 @@ a {
 /* Subscribe button */
 .header-subscribe-btn {
   position: absolute;
-  right: 50px; /* moved inward LEFT */
+  right: 60px; /* moved inward LEFT */
   top: 50%;
   transform: translateY(-50%);
   padding: 10px 26px;
