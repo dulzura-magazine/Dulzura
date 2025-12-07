@@ -1,76 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dulzura</title>
 
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
 
-    <link rel="stylesheet" href="style.css">
+    <!-- JS -->
+    <script defer src="script.js"></script>
 </head>
-
 <body>
 
-    <!-- SIDEBAR -->
+    <!-- ░░░ SIDEBAR ░░░ -->
     <div class="sidebar" id="sidebar">
         <nav class="nav">
             <a href="articles.html">Articles</a>
             <a href="moodboards.html">Moodboards</a>
-            <a href="login.html" class="login-icon">Login</a>
+            <a href="login.html">Login</a>
         </nav>
     </div>
 
     <div class="overlay" id="overlay"></div>
 
-    <!-- HEADER -->
+    <!-- ░░░ HEADER ░░░ -->
     <header class="top-header">
 
+        <!-- Sidebar Toggle Button -->
         <button class="toggle-btn" id="toggle-btn">☰</button>
 
+        <!-- Centered Logo -->
         <h1 class="site-logo">
             <a href="index.html">Dulzura</a>
         </h1>
 
-        <button class="header-subscribe-btn">Subscribe Now</button>
-
+        <!-- Subscribe Button -->
+        <button class="header-subscribe-btn" onclick="window.location.href='subscribe.html'">
+            Subscribe Now
+        </button>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="home-main">
+    <!-- ░░░ MAIN HOME CONTENT ░░░ -->
+    <main>
 
-        <!-- HERO IMAGE -->
+        <!-- HERO SECTION -->
         <section class="hero-section">
             <div class="hero-image-wrapper">
-                <img src="https://i.imgur.com/a9vHq4a.jpeg" class="hero-image" alt="Dulzura models">
+                <img 
+                    src="https://i.imgur.com/a9vHq4a.jpeg"
+                    class="hero-image"
+                    alt="Dulzura Models"
+                >
+
+                <!-- Gradient fade (no caption anymore) -->
                 <div class="hero-gradient-overlay"></div>
             </div>
         </section>
 
-        <!-- EDITORIAL TEXT -->
+        <!-- EDITORIAL TEXT SECTION -->
         <section class="editorial-section">
 
+            <!-- Tagline -->
             <p class="editorial-tagline">
                 the future of luxury, curated by young creatives.
             </p>
 
+            <!-- Main Heading -->
             <h2 class="editorial-heading">
                 because <span class="editorial-italic">true</span> style lives in the details.
             </h2>
 
+            <!-- Body Text -->
             <p class="editorial-body">
-                A magazine and blog inspired by the timeless elegance of luxury fashion and editorials.
-                Our aesthetic blends high fashion, chic affordable wear, with polished visuals that
-                reimagine the future of style.
+                A magazine and blog inspired by the timeless elegance of luxury fashion 
+                and editorials. Our aesthetic blends high fashion, chic affordable wear, 
+                with polished visuals that reimagine the future of style.
             </p>
 
         </section>
 
         <!-- CURATED SECTION -->
         <section class="curated-section">
-            <h3 class="curated-title">curated for <span class="editorial-italic">you</span></h3>
+            <h3 class="curated-title">curated for <span>you</span></h3>
 
             <p class="curated-placeholder">
                 (Curated article cards will scroll horizontally here)
@@ -78,9 +90,6 @@
         </section>
 
     </main>
-
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
 
 </body>
 </html>
