@@ -4,8 +4,11 @@
 :root {
   --burgundy: #7a0f1d;
   --overlay: rgba(0, 0, 0, 0.4);
-  --font-body: 'Playfair Display', serif;
-  --font-logo: 'Great Vibes', cursive;
+
+  /* Fonts */
+  --font-body: 'Playfair Display', serif;           
+  --font-logo: 'Pinyon Script', cursive;            
+  --font-display: 'Noto Serif Display', serif;      
 }
 
 /* ----------------------------------------------------
@@ -23,7 +26,9 @@ a {
   color: inherit;
 }
 
-/* FINAL ENFORCED FIX — LOGO FONT ALWAYS GREAT VIBES */
+/* ----------------------------------------------------
+   LOGO FONT (PINYON SCRIPT)
+---------------------------------------------------- */
 .site-logo,
 .site-logo a {
   font-family: var(--font-logo) !important;
@@ -74,23 +79,6 @@ a {
 }
 
 /* ----------------------------------------------------
-   SIDEBAR TOGGLE BUTTON
----------------------------------------------------- */
-.toggle-btn {
-  position: fixed;
-  top: 20px;
-  left: 15px;
-  background: var(--burgundy);
-  color: white;
-  border: none;
-  font-size: 20px;
-  padding: 10px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  z-index: 4000;
-}
-
-/* ----------------------------------------------------
    OVERLAY WHEN SIDEBAR OPENS
 ---------------------------------------------------- */
 .overlay {
@@ -109,176 +97,204 @@ a {
 }
 
 /* ----------------------------------------------------
-   TOP HEADER
+   TOP HEADER — FLOATING OVER HERO
 ---------------------------------------------------- */
 .top-header {
   position: fixed;
   top: 0;
   left: 0;
-  height: 80px;
   width: 100%;
-  background: white;
-  border-bottom: 1px solid #eee;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  background: linear-gradient(
+    to bottom,
+    #f4f5f7 0%,
+    rgba(244,245,247,0.8) 60%,
+    transparent 100%
+  );
   z-index: 2000;
 }
 
-/* Centered Dulzura logo */
+/* Logo centered */
 .site-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 56px;
-  color: var(--burgundy);
   margin: 0;
   line-height: 1;
+  font-family: var(--font-logo);
+  font-size: 40px;
+  letter-spacing: 0.08em;
+  color: var(--burgundy);
 }
 
-/* ----------------------------------------------------
-   RIGHT HEADER BUTTONS (non-homepages)
----------------------------------------------------- */
-.header-buttons {
+.site-logo a {
+  font-family: var(--font-logo);
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Sidebar toggle (top-left) */
+.toggle-btn {
   position: absolute;
-  right: 20px;
+  left: 24px;
   top: 50%;
   transform: translateY(-50%);
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.subscribe-btn {
   background: var(--burgundy);
-  padding: 10px 16px;
-  border-radius: 6px;
   color: white;
-  font-weight: 600;
-  transition: 0.3s;
+  border: none;
+  font-size: 20px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  z-index: 4000;
 }
 
-.subscribe-btn:hover {
+/* Subscribe button (top-right) */
+.header-subscribe-btn {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: var(--burgundy);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header-subscribe-btn:hover {
   background: #5e0c18;
-}
-
-.login-icon-small {
-  padding: 6px 8px;
-  border-radius: 6px;
-}
-
-.login-icon-small svg {
-  width: 22px;
-  height: 22px;
-  stroke: black;
-  transition: 0.3s;
-}
-
-.login-icon-small:hover svg {
-  stroke: var(--burgundy);
+  transform: translateY(-50%) translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
 }
 
 /* ----------------------------------------------------
-   HOME PAGE LOGIN BUTTON
+   HOMEPAGE MAIN WRAPPER
 ---------------------------------------------------- */
-.home-login-btn {
+.home-main {
+  padding-top: 80px;  /* offset header */
+  background: #f5f5f7;
+}
+
+/* ----------------------------------------------------
+   HERO SECTION
+---------------------------------------------------- */
+.hero-section {
+  width: 100%;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-height: 420px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* White fade at bottom */
+.hero-gradient-overlay {
   position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: black;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: 0.3s;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 140px;
+  background: linear-gradient(
+    to bottom,
+    rgba(245,245,247,0) 0%,
+    #f5f5f7 100%
+  );
 }
 
-.home-login-btn:hover {
-  background: var(--burgundy);
+/* Tiny caption */
+.hero-caption {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 11px;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 /* ----------------------------------------------------
-   MAIN CONTENT AREA
+   EDITORIAL SECTION
 ---------------------------------------------------- */
-.content {
-  padding-top: 130px;
-  max-width: 800px;
-  margin: auto;
+.editorial-section {
+  max-width: 900px;
+  margin: 40px auto 60px auto;
   text-align: center;
+  color: #111;
+  padding: 0 24px;
+  font-family: var(--font-display);
 }
 
-.banner {
-  background: #f9f9f9;
-  padding: 20px 30px;
-  border-radius: 8px;
-  border: 1px solid #eee;
-  display: inline-block;
-  margin-top: 30px;
+/* Red cursive tagline */
+.editorial-tagline {
+  margin: 0 0 10px 0;
+  font-family: var(--font-logo);
+  font-size: 18px;
+  color: var(--burgundy);
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
 }
 
-.subscribe {
-  background: var(--burgundy);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-family: var(--font-body);
-  cursor: pointer;
+/* Main headline */
+.editorial-heading {
+  margin: 0 0 24px 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.35;
 }
 
-.search-container {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
+.editorial-italic {
+  font-style: italic;
 }
 
-.search-container input {
-  width: 350px;
-  padding: 12px;
-  border: 1px solid #bbb;
-  border-radius: 6px 0 0 6px;
-}
-
-.search-btn {
-  background: var(--burgundy);
-  color: white;
-  padding: 12px;
-  border-radius: 0 6px 6px 0;
-  border: none;
-  cursor: pointer;
+/* Paragraph */
+.editorial-body {
+  margin: 0 auto;
+  max-width: 820px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 /* ----------------------------------------------------
-   LOGIN & SIGNUP FORMS
+   CURATED SECTION — placeholder (JS cards later)
 ---------------------------------------------------- */
-.login-page {
-  max-width: 400px;
-  margin: auto;
-  padding-top: 130px;
-  text-align: left;
+.curated-section {
+  max-width: 1100px;
+  margin: 30px auto 80px auto;
+  padding: 0 24px 40px 24px;
+  background: #fdfdfd;
 }
 
-.login-form input {
-  width: 100%;
-  padding: 12px;
+.curated-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+.curated-placeholder {
   font-family: var(--font-body);
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-}
-
-.red-btn,
-.login-submit {
-  background: var(--burgundy);
-  color: white;
-  padding: 12px;
-  border-radius: 6px;
-  border: none;
-  width: 100%;
-  font-size: 16px;
-  cursor: pointer;
-  font-family: var(--font-body);
-}
-
-.red-btn:hover,
-.login-submit:hover {
-  background: #5e0c18;
+  font-size: 14px;
+  opacity: 0.5;
 }
