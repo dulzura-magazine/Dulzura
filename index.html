@@ -2,35 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dulzura Magazine</title>
 
-  <!-- Google Fonts (Correct, Stable, Working) -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Main stylesheet -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- ===================== HEADER ===================== -->
+  <!-- HEADER -->
   <header class="top-header">
-    <!-- Dulzura logo centered -->
+    <!-- Centered Dulzura logo -->
     <h1 class="site-logo">
       <a href="index.html">Dulzura</a>
     </h1>
 
-    <!-- Right side Login button (HOME PAGE ONLY) -->
-    <div class="header-buttons">
-      <a href="login.html" class="login-icon home-login-btn">Login</a>
-    </div>
+    <!-- Black Login button (home page only) -->
+    <a href="login.html" class="login-icon">Login</a>
   </header>
 
-  <!-- ===================== SIDEBAR BUTTON ===================== -->
+  <!-- SIDEBAR TOGGLE -->
   <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-  <!-- ===================== SIDEBAR ===================== -->
+  <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
     <nav class="nav">
       <a href="index.html" class="active">Home</a>
@@ -40,19 +38,19 @@
     </nav>
   </aside>
 
-  <!-- Overlay (dark background when sidebar opens) -->
+  <!-- OVERLAY -->
   <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
-  <!-- ===================== MAIN CONTENT ===================== -->
+  <!-- MAIN CONTENT -->
   <main class="content">
 
-    <!-- Banner box -->
     <div class="banner">
       <p>Our first issue is on the way.</p>
-      <button class="subscribe" onclick="location.href='subscribe.html'">Subscribe Now</button>
+      <button class="subscribe" onclick="location.href='subscribe.html'">
+        Subscribe Now
+      </button>
     </div>
 
-    <!-- Search box -->
     <div class="search-container">
       <input type="text" placeholder="Search Dulzura..." />
       <button class="search-btn">🔍</button>
@@ -61,6 +59,5 @@
   </main>
 
   <script src="script.js"></script>
-
 </body>
 </html>
