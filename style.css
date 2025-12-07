@@ -64,7 +64,7 @@
   --overlay: rgba(0, 0, 0, 0.4);
 
   --font-body: 'Cormorant Garamond', serif;
-  --font-logo: 'Pinyon Script', serif;
+  --font-logo: 'Pinyon Script', cursive;
   --font-display: 'Noto Serif Display', serif;
 }
 
@@ -84,63 +84,55 @@ a {
 }
 
 /* ----------------------------------------------------
-   HEADER — CENTERED LOGO + PURE WHITE
+   HEADER
 ---------------------------------------------------- */
 .top-header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 90px;
-
+  height: 95px;
   display: flex;
-  justify-content: center;
   align-items: center;
-
-  background: #ffffff;
-  border-bottom: 1px solid #ececec;
-
+  justify-content: center; /* centers the logo */
   padding: 0 24px;
+  background: #ffffff; /* pure white */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   z-index: 2000;
 }
 
-/* Centered LOGO */
+/* LOGO */
 .site-logo {
   font-family: var(--font-logo);
-  font-size: 60px;
+  font-size: 56px;
   color: var(--burgundy);
   margin: 0 auto;
-  text-align: center;
   pointer-events: none;
-}
-
-.site-logo a {
-  pointer-events: auto;
-  color: inherit;
+  white-space: nowrap;
 }
 
 /* Sidebar button */
 .toggle-btn {
   position: absolute;
-  left: 22px;
+  left: 24px;
   top: 50%;
   transform: translateY(-50%);
   background: var(--burgundy);
   color: white;
   border: none;
-  font-size: 24px;
-  padding: 10px 14px;
-  border-radius: 50%;
+  font-size: 22px;
+  padding: 12px 16px;
+  border-radius: 999px;
   cursor: pointer;
-  z-index: 3000;
+  z-index: 4000;
 }
 
 /* Subscribe button */
 .header-subscribe-btn {
   position: absolute;
-  right: 30px;
+  right: 36px;
   top: 50%;
   transform: translateY(-50%);
-  padding: 10px 32px;
+  padding: 10px 26px;
   background: var(--burgundy);
   color: white;
   border-radius: 999px;
@@ -149,7 +141,7 @@ a {
   font-weight: 600;
   font-size: 18px;
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: background 0.25s ease;
 }
 
 .header-subscribe-btn:hover {
@@ -161,16 +153,15 @@ a {
 ---------------------------------------------------- */
 .sidebar {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   width: 260px;
   height: 100vh;
   background: var(--burgundy);
-  padding: 120px 24px 40px;
+  padding: 120px 24px 30px;
   color: white;
-
-  transform: translateX(-300px);
-  transition: 0.4s ease;
+  transform: translateX(-280px);
+  transition: transform 0.4s ease;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -187,9 +178,9 @@ a {
 .sidebar .nav a {
   display: block;
   padding: 14px 4px;
+  margin-bottom: 18px;
   font-size: 22px;
-  font-family: var(--font-body);
-  color: #fff;
+  color: white;
 }
 
 /* Overlay */
@@ -202,19 +193,21 @@ a {
   transition: 0.3s;
   z-index: 2500;
 }
-
 .overlay.active {
   opacity: 1;
   visibility: visible;
 }
 
 /* ----------------------------------------------------
-   HERO SECTION — WHITE FADE BELOW HEADER
+   HERO SECTION
 ---------------------------------------------------- */
+.hero-section {
+  margin-top: 95px;
+}
+
 .hero-image-wrapper {
   position: relative;
-  margin-top: 90px; /* space for fixed header */
-  max-height: 500px;
+  max-height: 420px;
   overflow: hidden;
 }
 
@@ -223,34 +216,27 @@ a {
   object-fit: cover;
 }
 
-.hero-gradient-overlay {
-  position: absolute;
-  left: 0; right: 0; bottom: -1px;
-  height: 180px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #ffffff 100%);
-}
-
 /* ----------------------------------------------------
    EDITORIAL SECTION
 ---------------------------------------------------- */
 .editorial-section {
   max-width: 900px;
-  margin: 50px auto 70px;
+  margin: 40px auto 60px;
   text-align: center;
   padding: 0 24px;
 }
 
 .editorial-tagline {
   font-family: var(--font-logo);
-  font-size: 28px;
+  font-size: 26px;
   color: var(--burgundy);
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .editorial-heading {
   font-family: var(--font-display);
+  font-size: 52px;
   font-weight: 400;
-  font-size: 56px;
   line-height: 1.3;
 }
 
@@ -259,69 +245,40 @@ a {
 }
 
 .editorial-body {
-  font-family: var(--font-body);
-  font-size: 22px;
-  line-height: 1.75;
-  max-width: 820px;
-  margin: 25px auto 0;
+  font-size: 20px;
+  line-height: 1.7;
+  margin-top: 20px;
 }
 
 /* ----------------------------------------------------
-   CURATED SECTION
+   RESPONSIVE
 ---------------------------------------------------- */
-.curated-section {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 0 24px;
-}
-
-.curated-title {
-  font-family: var(--font-display);
-  font-size: 36px;
-  font-weight: 400;
-  text-transform: lowercase;
-}
-
-.curated-title span {
-  font-style: italic;
-}
-
-.curated-placeholder {
-  font-family: var(--font-body);
-  font-size: 16px;
-  opacity: 0.6;
-  margin-top: 12px;
-}
-
-/* ----------------------------------------------------
-   RESPONSIVE FIXES
----------------------------------------------------- */
-
-/* Tablets */
 @media (max-width: 900px) {
   .site-logo {
-    font-size: 52px;
+    font-size: 48px;
   }
   .header-subscribe-btn {
+    right: 24px;
     font-size: 16px;
-    right: 20px;
+    padding: 8px 20px;
   }
 }
 
-/* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .site-logo {
-    font-size: 46px;
-  }
-  .toggle-btn {
-    left: 16px;
+    font-size: 42px;
   }
   .header-subscribe-btn {
-    right: 16px;
-    padding: 8px 22px;
-    font-size: 15px;
+    right: 18px;
   }
-  .editorial-heading {
-    font-size: 42px;
+}
+
+@media (max-width: 500px) {
+  .site-logo {
+    font-size: 36px;
+  }
+  .header-subscribe-btn {
+    padding: 6px 16px;
+    font-size: 14px;
   }
 }
