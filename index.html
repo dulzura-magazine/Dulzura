@@ -1,107 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dulzura Magazine</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulzura</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- GOOGLE FONTS (FIXED — REQUIRED FOR LOCAL FONT LOADING) -->
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Logo script -->
-  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
-  <!-- Body serif (Cormorant Garamond) -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Display serif (Noto Serif Display) -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css?v=3" />
+    <!-- JS -->
+    <script defer src="script.js"></script>
 </head>
+<body>
 
-<body class="home-page">
+    <!-- ░░░ FIXED SIDEBAR ░░░ -->
+    <div class="sidebar" id="sidebar">
+        <nav class="nav">
+            <a href="articles.html">Articles</a>
+            <a href="moodboards.html">Moodboards</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </div>
 
-  <!-- HEADER -->
-  <header class="top-header">
-    <!-- Sidebar toggle -->
-    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <div class="overlay" id="overlay"></div>
 
-    <!-- Centered Dulzura logo -->
-    <h1 class="site-logo">
-      <a href="index.html">Dulzura</a>
-    </h1>
+    <!-- ░░░ TOP HEADER ░░░ -->
+    <header class="top-header">
 
-    <!-- Subscribe button -->
-    <a href="subscribe.html" class="header-subscribe-btn">Subscribe Now</a>
-  </header>
+        <!-- Sidebar Toggle Button -->
+        <button class="toggle-btn" id="toggle-btn">☰</button>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar" id="sidebar">
-    <nav class="nav">
-      <a href="articles.html">Articles</a>
-      <a href="moodboards.html">Moodboards</a>
-      <a href="login.html">Login</a>
-    </nav>
-  </aside>
+        <!-- CENTER LOGO -->
+        <h1 class="site-logo">
+            <a href="index.html">Dulzura</a>
+        </h1>
 
-  <!-- OVERLAY -->
-  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+        <!-- Subscribe Button -->
+        <button class="header-subscribe-btn">Subscribe Now</button>
+    </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="home-main">
 
-    <!-- HERO IMAGE BAND -->
-    <section class="hero-section">
-      <div class="hero-image-wrapper">
-        <!-- TODO: replace with your real image -->
-        <img src="images/hero.jpg" alt="Dulzura models" class="hero-image">
+    <!-- ░░░ MAIN HOME CONTENT ░░░ -->
+    <main class="home-main">
 
-        <div class="hero-gradient-overlay"></div>
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-image-wrapper">
+                <img src="https://i.imgur.com/a9vHq4a.jpeg" class="hero-image" alt="Dulzura models in bathtub">
 
-        <p class="hero-caption">(any photo taken of our models)</p>
-      </div>
-    </section>
+                <!-- Tiny caption -->
+                <p class="hero-caption">(any photo taken of our models)</p>
 
-    <!-- EDITORIAL SECTION -->
-    <section class="editorial-section">
+                <!-- Gradient -->
+                <div class="hero-gradient-overlay"></div>
+            </div>
+        </section>
 
-      <!-- full tagline text -->
-      <p class="editorial-tagline">
-        the future of luxury, curated by young creatives.
-      </p>
+        <!-- EDITORIAL TEXT SECTION -->
+        <section class="editorial-section">
 
-      <!-- headline with period -->
-      <h2 class="editorial-heading">
-        because <span class="editorial-italic">true</span> style lives in the details
-        that only the <span class="editorial-italic">chic</span> ever notice.
-      </h2>
+            <!-- tagline -->
+            <p class="editorial-tagline">the future of luxury, curated by young creatives.</p>
 
-      <p class="editorial-body">
-        A magazine and blog inspired by the timeless elegance of luxury fashion and editorials.
-        Our aesthetic blends high fashion, chic affordable wear, with polished visuals that
-        reimagine the future of style.
-      </p>
-    </section>
+            <!-- MAIN HEADLINE – FIXED, PERIOD ADDED -->
+            <h2 class="editorial-heading">
+                because <span class="editorial-italic">true</span> style lives in the details.
+            </h2>
 
-    <!-- CURATED SECTION (carousel next) -->
-    <section class="curated-section">
-      <h3 class="curated-title">
-        CURATED FOR <span class="editorial-italic">you</span>
-      </h3>
+            <!-- body text -->
+            <p class="editorial-body">
+                A magazine and blog inspired by the timeless elegance of luxury fashion and editorials.
+                Our aesthetic blends high fashion, chic affordable wear, with polished visuals that reimagine
+                the future of style.
+            </p>
 
-      <!-- placeholder until we add the scroll cards -->
-      <p class="curated-placeholder">
-        (Curated article cards will scroll horizontally here)
-      </p>
-    </section>
+        </section>
 
-  </main>
 
-  <!-- SCRIPT -->
-  <script src="script.js"></script>
+        <!-- CURATED SECTION (SCROLL CARDS LATER) -->
+        <section class="curated-section">
+            <h3 class="curated-title">curated for <span class="editorial-italic">you</span></h3>
+
+            <p class="curated-placeholder">
+                (Curated article cards will scroll horizontally here)
+            </p>
+        </section>
+
+    </main>
 
 </body>
 </html>
