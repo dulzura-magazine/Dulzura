@@ -1,9 +1,60 @@
 /* ----------------------------------------------------
-   FONT IMPORTS — REQUIRED FOR WINDOWS + LIVE SERVER
+   SELF-HOSTED FONTS (GitHub Pages compatible)
 ---------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
+
+/* Pinyon Script – LOGO */
+@font-face {
+  font-family: 'Pinyon Script';
+  src: url('fonts/PinyonScript-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Noto Serif Display – Condensed Regular */
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('fonts/NotoSerifDisplay_Condensed-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Noto Serif Display – Condensed SemiBold */
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('fonts/NotoSerifDisplay_Condensed-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Noto Serif Display – Condensed Italic */
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('fonts/NotoSerifDisplay_Condensed-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Cormorant Garamond – Regular */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('fonts/CormorantGaramond-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Cormorant Garamond – Italic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('fonts/CormorantGaramond-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 
 /* ----------------------------------------------------
    VARIABLES
@@ -34,13 +85,13 @@ a {
 }
 
 /* ----------------------------------------------------
-   LOGO
+   LOGO FONT
 ---------------------------------------------------- */
 .site-logo,
 .site-logo a {
   font-family: var(--font-logo) !important;
-  font-size: 40px;
   font-weight: 400;
+  font-style: normal;
   color: var(--burgundy);
 }
 
@@ -57,12 +108,11 @@ a {
   padding: 110px 24px 30px;
   color: white;
   transform: translateX(-280px);
-  transition: transform 0.4s ease, opacity 0.3s ease;
+  transition: transform 0.4s ease;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   z-index: 3000;
-  border-top-right-radius: 12px;
 }
 
 .sidebar.active {
@@ -74,21 +124,14 @@ a {
 
 .sidebar .nav a {
   display: block;
-  padding: 10px 4px;
-  margin-bottom: 14px;
+  padding: 12px 4px;
+  margin-bottom: 16px;
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: 22px;
   color: #fff;
-  transition: 0.2s;
 }
 
-.sidebar .nav a:hover {
-  background: rgba(255, 255, 255, 0.18);
-}
-
-/* ----------------------------------------------------
-   OVERLAY
----------------------------------------------------- */
+/* Overlay */
 .overlay {
   position: fixed;
   inset: 0;
@@ -98,7 +141,6 @@ a {
   transition: 0.3s;
   z-index: 2500;
 }
-
 .overlay.active {
   opacity: 1;
   visibility: visible;
@@ -110,17 +152,22 @@ a {
 .top-header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 24px;
   background: linear-gradient(to bottom, #f4f5f7 0%, rgba(244,245,247,0.8) 60%, transparent 100%);
   z-index: 2000;
 }
 
-/* toggle */
+.site-logo {
+  margin: 0;
+  font-size: 44px;
+}
+
+/* Sidebar button */
 .toggle-btn {
   position: absolute;
   left: 24px;
@@ -136,50 +183,37 @@ a {
   z-index: 4000;
 }
 
-/* subscribe button */
+/* Subscribe button */
 .header-subscribe-btn {
   position: absolute;
-  right: 40px;
+  right: 48px;
   top: 50%;
   transform: translateY(-50%);
-  padding: 9px 22px;
-  border-radius: 999px;
+  padding: 10px 24px;
   background: var(--burgundy);
-  color: #fff;
+  color: white;
+  border-radius: 999px;
+  border: none;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 14px;
-  border: none;
   cursor: pointer;
-  transition: 0.2s;
-}
-
-.header-subscribe-btn:hover {
-  background: #5e0c18;
-}
-
-/* ----------------------------------------------------
-   MAIN
----------------------------------------------------- */
-.home-main {
-  padding-top: 80px;
 }
 
 /* ----------------------------------------------------
    HERO SECTION
 ---------------------------------------------------- */
+.hero-section {
+  width: 100%;
+}
 .hero-image-wrapper {
   position: relative;
-  width: 100%;
   max-height: 420px;
   overflow: hidden;
 }
-
 .hero-image {
   width: 100%;
   object-fit: cover;
 }
-
 .hero-caption {
   position: absolute;
   top: 55%;
@@ -187,15 +221,13 @@ a {
   transform: translate(-50%, -50%);
   font-family: var(--font-display);
   font-size: 11px;
-  opacity: 0.9;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-
 .hero-gradient-overlay {
   position: absolute;
-  bottom: -1px;
-  left: 0;
-  right: 0;
+  left: 0; right: 0; bottom: -1px;
   height: 140px;
   background: linear-gradient(to bottom, rgba(245,245,247,0) 0%, #f5f5f7 100%);
 }
@@ -205,33 +237,33 @@ a {
 ---------------------------------------------------- */
 .editorial-section {
   max-width: 900px;
-  margin: 40px auto;
+  margin: 40px auto 60px;
   text-align: center;
   padding: 0 24px;
 }
 
-/* tagline */
 .editorial-tagline {
   font-family: var(--font-logo);
-  font-size: 20px;
+  font-size: 21px;
   color: var(--burgundy);
 }
 
-/* main headline */
 .editorial-heading {
   font-family: var(--font-display);
-  font-weight: 500;
-  font-size: 42px;
-  line-height: 1.35;
-  margin-top: 12px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+.editorial-italic {
+  font-style: italic;
 }
 
-/* paragraph */
 .editorial-body {
-  font-family: var(--font-body);
-  font-size: 18px;
   max-width: 820px;
-  margin: 18px auto 0;
+  margin: 20px auto 0;
+  font-family: var(--font-body);
+  font-size: 20px;
   line-height: 1.7;
 }
 
@@ -240,24 +272,24 @@ a {
 ---------------------------------------------------- */
 .curated-section {
   max-width: 1100px;
-  margin: 50px auto;
+  margin: 60px auto;
   padding: 0 24px;
 }
 
 .curated-title {
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: 32px;
   font-weight: 400;
   text-transform: lowercase;
 }
 
-.curated-title .editorial-italic {
+.curated-title span {
   font-style: italic;
 }
 
 .curated-placeholder {
-  font-family: var(--font-body);
+  margin-top: 14px;
   font-size: 16px;
   opacity: 0.5;
-  margin-top: 10px;
+  font-family: var(--font-body);
 }
