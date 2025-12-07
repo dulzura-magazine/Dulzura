@@ -1,28 +1,41 @@
 // -------------------- Sidebar Toggle --------------------
-function toggleSidebar() {
-  const sidebar = document.getElementById('sidebar');
-  const overlay = document.getElementById('overlay');
-  sidebar.classList.toggle('active');
-  overlay.classList.toggle('active');
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("toggle-btn");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+      overlay.classList.toggle("active");
+    });
+  }
+
+  if (overlay) {
+    overlay.addEventListener("click", () => {
+      sidebar.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+  }
+});
 
 // -------------------- Persistent Login --------------------
 document.addEventListener("DOMContentLoaded", () => {
   const user = localStorage.getItem("dulzuraUser");
   const loginIcon = document.querySelector(".login-icon");
 
-  // Handle persistent session
-  if (user) {
-    loginIcon.textContent = "Logout";
-    loginIcon.addEventListener("click", (e) => {
-      e.preventDefault();
-      localStorage.removeItem("dulzuraUser");
-      alert("You have been logged out.");
-      window.location.href = "index.html";
-    });
+  if (loginIcon) {
+    if (user) {
+      loginIcon.textContent = "Logout";
+      loginIcon.addEventListener("click", (e) => {
+        e.preventDefault();
+        localStorage.removeItem("dulzuraUser");
+        alert("You have been logged out.");
+        window.location.href = "index.html";
+      });
+    }
   }
 
-  // Handle login form submission
   const loginForm = document.getElementById("login-form");
   if (loginForm) {
     loginForm.addEventListener("submit", (e) => {
@@ -35,13 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Save user locally
       localStorage.setItem("dulzuraUser", email);
       alert(`Welcome back, ${email.split("@")[0]}!`);
       window.location.href = "index.html";
     });
   }
 });
+
 // -------------------- Subscribe Page --------------------
 document.addEventListener("DOMContentLoaded", () => {
   const subscribeForm = document.getElementById("subscribe-form");
@@ -53,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const email = document.getElementById("email").value.trim();
       if (!email) return;
 
-      // For now, just show a confirmation
       subscribeMessage.textContent = `🎉 Thanks for subscribing, ${email}!`;
       subscribeMessage.style.color = "green";
       subscribeForm.reset();
