@@ -1,45 +1,32 @@
 // -------------------- Sidebar Toggle --------------------
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.getElementById("toggle-btn");
-  const sidebar = document.getElementById("sidebar");
-  const overlay = document.getElementById("overlay");
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('overlay');
 
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-      sidebar.classList.toggle("active");
-      overlay.classList.toggle("active");
-    });
-  }
-
-  if (overlay) {
-    overlay.addEventListener("click", () => {
-      sidebar.classList.remove("active");
-      overlay.classList.remove("active");
-    });
-  }
-});
+  sidebar.classList.toggle('active');
+  overlay.classList.toggle('active');
+}
 
 // -------------------- Persistent Login --------------------
 document.addEventListener("DOMContentLoaded", () => {
   const user = localStorage.getItem("dulzuraUser");
   const loginIcon = document.querySelector(".login-icon");
 
-  if (loginIcon) {
-    if (user) {
-      loginIcon.textContent = "Logout";
-      loginIcon.addEventListener("click", (e) => {
-        e.preventDefault();
-        localStorage.removeItem("dulzuraUser");
-        alert("You have been logged out.");
-        window.location.href = "index.html";
-      });
-    }
+  if (user && loginIcon) {
+    loginIcon.textContent = "Logout";
+    loginIcon.addEventListener("click", (e) => {
+      e.preventDefault();
+      localStorage.removeItem("dulzuraUser");
+      alert("You have been logged out.");
+      window.location.href = "index.html";
+    });
   }
 
   const loginForm = document.getElementById("login-form");
   if (loginForm) {
     loginForm.addEventListener("submit", (e) => {
       e.preventDefault();
+
       const email = document.getElementById("email").value.trim();
       const password = document.getElementById("password").value.trim();
 
@@ -63,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (subscribeForm) {
     subscribeForm.addEventListener("submit", (e) => {
       e.preventDefault();
+      
       const email = document.getElementById("email").value.trim();
       if (!email) return;
 
