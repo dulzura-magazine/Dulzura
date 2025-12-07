@@ -90,30 +90,27 @@ a {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 95px;
+  height: 90px;
   display: flex;
   align-items: center;
-  justify-content: center; /* centers the logo */
-  padding: 0 24px;
-  background: #ffffff; /* pure white */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  justify-content: center;
+  padding: 0 40px; /* increased padding left/right */
+  background: #ffffff; /* fully white */
   z-index: 2000;
+  border-bottom: 1px solid #eee;
 }
 
-/* LOGO */
+/* Center Logo */
 .site-logo {
-  font-family: var(--font-logo);
-  font-size: 56px;
-  color: var(--burgundy);
-  margin: 0 auto;
-  pointer-events: none;
-  white-space: nowrap;
+  margin: 0;
+  font-size: 50px;
+  text-align: center;
 }
 
-/* Sidebar button */
+/* Sidebar (hamburger) button */
 .toggle-btn {
   position: absolute;
-  left: 24px;
+  left: 35px;       /* moved slightly further inward */
   top: 50%;
   transform: translateY(-50%);
   background: var(--burgundy);
@@ -126,22 +123,21 @@ a {
   z-index: 4000;
 }
 
-/* Subscribe button */
+/* Subscribe Now button */
 .header-subscribe-btn {
   position: absolute;
-  right: 36px;
+  right: 35px;      /* moved slightly inward from the right */
   top: 50%;
   transform: translateY(-50%);
-  padding: 10px 26px;
+  padding: 12px 28px;
   background: var(--burgundy);
   color: white;
   border-radius: 999px;
   border: none;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 18px;
   cursor: pointer;
-  transition: background 0.25s ease;
+  font-size: 18px;
 }
 
 .header-subscribe-btn:hover {
