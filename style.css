@@ -247,4 +247,54 @@ a {
   text-transform: lowercase;
 }
 
-/* Main*
+/* Main headline */
+.editorial-heading {
+  margin: 0 0 24px 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.35;
+}
+
+.editorial-italic {
+  font-style: italic;
+}
+
+/* Paragraph */
+.editorial-body {
+  margin: 0 auto;
+  max-width: 820px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ----------------------------------------------------
+   CURATED SECTION — will add JS cards next
+---------------------------------------------------- */
+.curated-section {
+  max-width: 1100px;
+  margin: 30px auto 80px auto;
+  padding: 0 24px 40px 24px;
+  background: #fdfdfd;
+}
+
+.curated-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px 0;
+}
+
+.curated-title .editorial-italic {
+  font-style: italic;
+  text-transform: none;
+}
+
+.curated-placeholder {
+  font-family: var(--font-body);
+  font-size: 14px;
+  opacity: 0.5;
+}
