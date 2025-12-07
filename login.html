@@ -2,62 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Login • Dulzura Magazine</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=GreatVibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-<header class="top-header">
-  <h1 class="site-logo"><a href="index.html">Dulzura</a></h1>
 
-  <div class="header-buttons">
-    <a href="login.html" class="login-icon-small">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-        viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M15.75 3.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 21a7.5 7.5 0 0115 0v.75H4.5V21z" />
-      </svg>
-    </a>
+  <!-- TOP HEADER (Matching Articles + Moodboards style) -->
+  <header class="top-header">
+    <h1 class="site-logo">
+      <a href="index.html">Dulzura</a>
+    </h1>
 
-    <a href="subscribe.html" class="subscribe-btn">Subscribe Now</a>
-  </div>
-</header>
+    <div class="header-buttons">
+      <!-- Subscribe -->
+      <a href="subscribe.html" class="subscribe-btn">Subscribe</a>
 
-<button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+      <!-- Head icon login button -->
+      <a href="login.html" class="login-icon-small" title="Login">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15.75 3.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 21a7.5 7.5 0 0115 0v.75H4.5V21z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
 
-<aside class="sidebar" id="sidebar">
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="articles.html">Articles</a>
-    <a href="moodboards.html">Moodboards</a>
-    <a href="login.html" class="highlight active">Login</a>
-  </nav>
-</aside>
+  <!-- SIDEBAR TOGGLE -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="moodboards.html">Moodboards</a>
+      <a href="login.html" class="highlight active">Login</a>
+    </nav>
+  </aside>
 
-<main class="content login-page">
-  <h2>Welcome Back</h2>
-  <p>Sign in to access exclusive Dulzura content.</p>
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
-  <form id="login-form">
-    <label>Email Address:</label>
-    <input type="email" id="email" required>
+  <!-- LOGIN PAGE CONTENT -->
+  <main class="content login-page">
 
-    <label>Password:</label>
-    <input type="password" id="password" required>
+    <h2>Welcome Back</h2>
+    <p class="login-subtext">Sign in to access exclusive Dulzura content.</p>
 
-    <button type="submit" class="red-btn">Login</button>
+    <form id="login-form" class="login-form">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" placeholder="Email address" required>
 
-    <p class="register-text">
-      Don’t have an account? <a href="signup.html">Sign up</a>
-    </p>
-  </form>
-</main>
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Password" required>
 
-<script src="script.js"></script>
+      <button type="submit" class="login-submit">Login</button>
+
+      <p class="register-text">
+        Don’t have an account? <a href="signup.html">Sign up</a>
+      </p>
+    </form>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
