@@ -5,52 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dulzura Magazine</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 
 <body>
 
-  <!-- Overlay -->
-  <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+<!-- ================= SIDEBAR ================= -->
+<div id="sidebar" class="sidebar">
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="articles.html">Articles</a>
+    <a href="moodboards.html">Moodboards</a>
+    <a href="login.html">Login</a>
+    <a href="subscribe.html">Subscribe</a>
+  </nav>
+</div>
 
-  <!-- Sidebar -->
-  <div id="sidebar" class="sidebar">
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="articles.html">Articles</a>
-      <a href="moodboards.html">Moodboards</a>
-      <a href="login.html">Login</a>
-      <a href="signup.html">Sign Up</a>
-      <a href="subscribe.html">Subscribe</a>
-    </nav>
-  </div>
+<div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
-  <!-- Header -->
+<!-- ================= HEADER ================= -->
 <header class="top-header">
+
+  <!-- Left: Sidebar Toggle -->
   <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
+  <!-- Center: Logo -->
   <h1 class="site-logo">
     <a href="index.html">Dulzura</a>
   </h1>
 
-  <a href="subscribe.html" class="header-subscribe-btn">Subscribe Now</a>
+  <!-- Right: Subscribe -->
+  <a href="subscribe.html" class="header-subscribe-btn">
+    Subscribe Now
+  </a>
 </header>
 
-  <!-- HERO -->
-  <section class="hero-section">
-    <div class="hero-image-wrapper">
-      <img src="https://i.imgur.com/zY8QqY3.jpeg" class="hero-image" alt="Hero" />
-    </div>
-  </section>
+<!-- ================= HERO ================= -->
+<section class="hero-section">
+  <div class="hero-image-wrapper">
+    <img class="hero-image"
+         src="https://i.imgur.com/hY5vmoG.jpeg"
+         alt="Dulzura models in bathtub">
+    <div class="hero-gradient-overlay"></div>
+  </div>
+</section>
 
-  <!-- EDITORIAL -->
-  <section class="editorial-section">
-    <p class="editorial-tagline">the future of luxury, curated by young creatives.</p>
+<!-- ================= EDITORIAL ================= -->
+<section class="editorial-section">
+  <p class="editorial-tagline">
+    the future of luxury, curated by young creatives.
+  </p>
 
-    <h2 class="editorial-heading">
-      because <span class="editorial-italic">true</span> style lives in the details.
-    </h2>
-  </section>
+  <h2 class="editorial-heading">
+    because <span class="editorial-italic">true</span> style lives in the details.
+  </h2>
 
-  <script src="script.js"></script>
+  <p class="editorial-body">
+    A magazine and blog inspired by the timeless elegance of luxury fashion and editorials...
+  </p>
+</section>
+
+<!-- ================= CURATED ================= -->
+<section class="curated-section">
+  <h3 class="curated-title">curated for <span>you</span></h3>
+  <p class="curated-placeholder">(Curated article cards will scroll horizontally here)</p>
+</section>
+
 </body>
 </html>
