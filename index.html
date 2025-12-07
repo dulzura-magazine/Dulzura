@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dulzura</title>
 
-    <!-- CSS -->
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,7 +19,7 @@
         <nav class="nav">
             <a href="articles.html">Articles</a>
             <a href="moodboards.html">Moodboards</a>
-            <a href="login.html">Login</a>
+            <a href="login.html" class="login-icon">Login</a>
         </nav>
     </div>
 
@@ -24,6 +27,7 @@
 
     <!-- HEADER -->
     <header class="top-header">
+
         <button class="toggle-btn" id="toggle-btn">☰</button>
 
         <h1 class="site-logo">
@@ -31,23 +35,26 @@
         </h1>
 
         <button class="header-subscribe-btn">Subscribe Now</button>
+
     </header>
 
-    <!-- MAIN -->
+    <!-- MAIN CONTENT -->
     <main class="home-main">
 
-        <!-- HERO -->
+        <!-- HERO IMAGE -->
         <section class="hero-section">
             <div class="hero-image-wrapper">
-                <img src="https://i.imgur.com/a9vHq4a.jpeg" class="hero-image" alt="Dulzura models in bathtub">
-                <p class="hero-caption">(any photo taken of our models)</p>
+                <img src="https://i.imgur.com/a9vHq4a.jpeg" class="hero-image" alt="Dulzura models">
                 <div class="hero-gradient-overlay"></div>
             </div>
         </section>
 
-        <!-- EDITORIAL -->
+        <!-- EDITORIAL TEXT -->
         <section class="editorial-section">
-            <p class="editorial-tagline">the future of luxury, curated by young creatives.</p>
+
+            <p class="editorial-tagline">
+                the future of luxury, curated by young creatives.
+            </p>
 
             <h2 class="editorial-heading">
                 because <span class="editorial-italic">true</span> style lives in the details.
@@ -58,13 +65,12 @@
                 Our aesthetic blends high fashion, chic affordable wear, with polished visuals that
                 reimagine the future of style.
             </p>
+
         </section>
 
-        <!-- CURATED -->
+        <!-- CURATED SECTION -->
         <section class="curated-section">
-            <h3 class="curated-title">
-                curated for <span>you</span>
-            </h3>
+            <h3 class="curated-title">curated for <span class="editorial-italic">you</span></h3>
 
             <p class="curated-placeholder">
                 (Curated article cards will scroll horizontally here)
@@ -73,7 +79,7 @@
 
     </main>
 
-    <!-- JS -->
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
