@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dulzura Magazine</title>
 
-  <!-- Google Fonts -->
+  <!-- Load Google Fonts FIRST -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- CSS -->
+  <!-- Great Vibes for Dulzura logo -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- Playfair Display for all body text -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -18,13 +23,15 @@
 
   <!-- HEADER -->
   <header class="top-header">
-    <!-- Centered Dulzura logo -->
+    
+    <!-- Dulzura logo (centered) -->
     <h1 class="site-logo">
       <a href="index.html">Dulzura</a>
     </h1>
 
-    <!-- Black Login button (home page only) -->
-    <a href="login.html" class="login-icon">Login</a>
+    <!-- Login button (top-right, black) -->
+    <a href="login.html" class="home-login-btn">Login</a>
+
   </header>
 
   <!-- SIDEBAR TOGGLE -->
@@ -36,11 +43,11 @@
       <a href="index.html" class="active">Home</a>
       <a href="articles.html">Articles</a>
       <a href="moodboards.html">Moodboards</a>
-      <a href="login.html" class="highlight">Login</a>
+      <a href="login.html">Login</a>
     </nav>
   </aside>
 
-  <!-- OVERLAY -->
+  <!-- DARK OVERLAY -->
   <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
   <!-- MAIN CONTENT -->
@@ -60,6 +67,8 @@
 
   </main>
 
+  <!-- SCRIPT -->
   <script src="script.js"></script>
+
 </body>
 </html>
