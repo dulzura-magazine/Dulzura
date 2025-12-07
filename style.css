@@ -29,6 +29,15 @@
   font-display: swap;
 }
 
+/* Noto Serif Display – Condensed Italic */
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('fonts/NotoSerifDisplay_Condensed-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* Cormorant Garamond – Regular */
 @font-face {
   font-family: 'Cormorant Garamond';
@@ -76,7 +85,7 @@ a {
 }
 
 /* ----------------------------------------------------
-   LOGO
+   LOGO FONT
 ---------------------------------------------------- */
 .site-logo,
 .site-logo a {
@@ -149,47 +158,40 @@ a {
   align-items: center;
   justify-content: center;
   padding: 0 24px;
-  background: white;
+  background: #ffffff;  /* solid white */
   z-index: 2000;
   border-bottom: 1px solid #eee;
 }
 
-/* Center logo */
 .site-logo {
   margin: 0;
-  font-size: 54px; /* bigger, elegant */
-  color: var(--burgundy);
-  text-align: center;
-  position: relative;
-  z-index: 2;
+  font-size: 54px; /* Bigger logo */
+  color: var(--burgundy) !important;
 }
 
-/* Sidebar (hamburger) button */
+/* Sidebar button */
 .toggle-btn {
   position: absolute;
-  left: 26px;
+  left: 32px;  /* moved slightly inward */
   top: 50%;
   transform: translateY(-50%);
   background: var(--burgundy);
   color: white;
   border: none;
-  font-size: 20px;
-  padding: 12px 14px;
-  border-radius: 999px;
+  font-size: 22px;
+  padding: 12px 16px;
+  border-radius: 50%;
   cursor: pointer;
   z-index: 4000;
 }
 
-/* ----------------------------------------------------
-   UPDATED: Subscribe Button
----------------------------------------------------- */
+/* Subscribe button */
 .header-subscribe-btn {
   position: absolute;
-  right: 32px;       /* moved LEFT */
+  right: 40px; /* moved inward LEFT */
   top: 50%;
   transform: translateY(-50%);
-  padding: 8px 20px; /* smaller button */
-  font-size: 16px;
+  padding: 10px 26px;
   background: var(--burgundy);
   color: white;
   border-radius: 999px;
@@ -197,8 +199,7 @@ a {
   font-family: var(--font-display);
   font-weight: 600;
   cursor: pointer;
-  white-space: nowrap;
-  z-index: 3;
+  font-size: 18px;
 }
 
 /* ----------------------------------------------------
@@ -223,7 +224,7 @@ a {
   transform: translate(-50%, -50%);
   font-family: var(--font-display);
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255,255,255,0.9);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -246,7 +247,7 @@ a {
 
 .editorial-tagline {
   font-family: var(--font-logo);
-  font-size: 22px;
+  font-size: 23px;
   color: var(--burgundy);
 }
 
