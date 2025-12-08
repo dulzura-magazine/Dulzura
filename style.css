@@ -171,9 +171,10 @@ a {
 
 /* Sidebar button */
 .toggle-btn {
-  position: fixed; /* <-- changed from absolute */
-  left: 32px;
-  top: 22px;
+  position: fixed !important;   /* escape header stacking context */
+  top: 22px !important;
+  left: 32px !important;
+
   background: var(--burgundy);
   color: white;
   border: none;
@@ -181,8 +182,10 @@ a {
   padding: 12px 16px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 5000; /* <-- now ABOVE the sidebar */
+
+  z-index: 9999 !important;     /* higher than sidebar + overlay */
 }
+
 
 /* Subscribe button */
 .header-subscribe-btn {
