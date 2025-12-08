@@ -1,89 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Subscribe • Dulzura Magazine</title>
+<!-- ================= SIDEBAR ================= -->
+<div id="sidebar" class="sidebar">
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="articles.html">Articles</a>
+    <a href="moodboards.html">Moodboards</a>
+    <a href="login.html">Login</a>
+    <a href="subscribe.html">Subscribe</a>
+  </nav>
+</div>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<!-- ================= HEADER (IDENTICAL TO HOME PAGE) ================= -->
+<header class="top-header">
 
-  <!-- TOP HEADER (Matches Articles, Moodboards, Signup) -->
-  <header class="top-header">
-    <h1 class="site-logo">
-      <a href="index.html">Dulzura</a>
-    </h1>
-
-    <div class="header-buttons">
-      <!-- Subscribe Button -->
-      <a href="subscribe.html" class="subscribe-btn">Subscribe</a>
-
-      <!-- Login Icon -->
-      <a href="login.html" class="login-icon-small" title="Login">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M15.75 3.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 21a7.5 7.5 0 0115 0v.75H4.5V21z" />
-        </svg>
-      </a>
-    </div>
-  </header>
-
-  <!-- SIDEBAR BUTTON -->
+  <!-- Left: Sidebar Toggle -->
   <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar" id="sidebar">
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="articles.html">Articles</a>
-      <a href="moodboards.html">Moodboards</a>
-      <a href="login.html" class="highlight">Login</a>
-    </nav>
-  </aside>
+  <!-- Center: Logo -->
+  <h1 class="site-logo">
+    <a href="index.html">Dulzura</a>
+  </h1>
 
-  <!-- OVERLAY -->
-  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+  <!-- Right: Subscribe -->
+  <a href="subscribe.html" class="header-subscribe-btn">
+    Subscribe Now
+  </a>
 
-  <!-- MAIN CONTENT -->
-  <main class="content">
+</header>
 
-    <h2 class="cursive" style="font-size: 34px; margin-bottom: 10px;">
-      Subscribe to Dulzura
-    </h2>
-    <p style="font-size: 17px; color: #444; margin-bottom: 30px;">
-      Get early access to every issue, exclusive fashion insights, and Dulzura-only content.
-    </p>
-
-    <div class="subscribe-box">
-      <form id="subscribe-form">
-
-        <label for="sub-email" style="font-family:'Playfair Display', serif; font-weight:600;">
-          Email Address:
-        </label><br>
-        <input type="email" id="sub-email" placeholder="Enter your email" required><br><br>
-
-        <button type="submit" class="red-btn" style="width: 100%; margin-top: 10px;">
-          Join the Mailing List
-        </button>
-
-      </form>
-
-      <p style="margin-top: 15px; font-size: 15px; color:#444;">
-        Already have an account?
-        <a href="login.html" style="color:var(--burgundy); font-weight:600;">
-          Log in
-        </a>
-      </p>
-    </div>
-
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<!-- WRAPPER THAT PUSHES CONTENT BELOW FIXED HEADER -->
+<div class="page-container">
+</div> <!-- END page-container -->
