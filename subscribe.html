@@ -1,3 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dulzura — Subscribe</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+
+  <style>
+    /* Page-specific luxury enhancements (SAFE, does NOT touch global styles) */
+
+    .subscribe-hero {
+      width: 100%;
+      height: 340px;
+      background: url('images/dulzuraheader.png') center/cover no-repeat;
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .subscribe-hero::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 180px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0), white);
+    }
+
+    .subscribe-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .subscribe-title {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .subscribe-tagline {
+      font-family: var(--font-logo);
+      font-size: 26px;
+      color: var(--burgundy);
+      margin-bottom: 40px;
+    }
+
+    .subscribe-form label {
+      font-family: var(--font-display);
+      font-size: 22px;
+      display: block;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .subscribe-input {
+      width: 100%;
+      padding: 14px;
+      font-size: 18px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 24px;
+      font-family: var(--font-body);
+    }
+
+    .subscribe-btn {
+      padding: 12px 26px;
+      background: var(--burgundy);
+      color: white;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-display);
+      font-size: 20px;
+      transition: 0.2s;
+    }
+
+    .subscribe-btn:hover {
+      opacity: 0.85;
+    }
+
+    .login-redirect {
+      margin-top: 30px;
+      font-size: 18px;
+      font-family: var(--font-body);
+    }
+
+    .login-redirect a {
+      color: var(--burgundy);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+
+</head>
+
+<body>
+
 <!-- ================= SIDEBAR ================= -->
 <div id="sidebar" class="sidebar">
   <nav class="nav">
@@ -11,24 +112,51 @@
 
 <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
-<!-- ================= HEADER (IDENTICAL TO HOME PAGE) ================= -->
+<!-- ================= HEADER ================= -->
 <header class="top-header">
-
-  <!-- Left: Sidebar Toggle -->
   <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-  <!-- Center: Logo -->
   <h1 class="site-logo">
     <a href="index.html">Dulzura</a>
   </h1>
 
-  <!-- Right: Subscribe -->
   <a href="subscribe.html" class="header-subscribe-btn">
     Subscribe Now
   </a>
-
 </header>
 
-<!-- WRAPPER THAT PUSHES CONTENT BELOW FIXED HEADER -->
-<div class="page-container">
-</div> <!-- END page-container -->
+<!-- ================= SPACING BELOW FIXED HEADER ================= -->
+<div style="height: 90px;"></div>
+
+<!-- ================= HERO IMAGE ================= -->
+<section class="subscribe-hero"></section>
+
+<!-- ================= SUBSCRIPTION CONTENT ================= -->
+<section class="subscribe-container">
+
+  <h2 class="subscribe-title">Join the Dulzura Mailing List</h2>
+
+  <p class="subscribe-tagline">
+    early access • exclusive insight • timeless elegance  
+  </p>
+
+  <form class="subscribe-form">
+
+    <label>Email Address:</label>
+    <input type="email" class="subscribe-input"
+           placeholder="Enter your email" required>
+
+    <button type="submit" class="subscribe-btn">
+      Join the Mailing List
+    </button>
+  </form>
+
+  <p class="login-redirect">
+    Already have an account?
+    <a href="login.html">Log in</a>
+  </p>
+
+</section>
+
+</body>
+</html>
