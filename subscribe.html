@@ -9,27 +9,11 @@
   <script defer src="script.js"></script>
 
   <style>
-    /* Page-specific luxury enhancements (SAFE, does NOT touch global styles) */
-
-    .subscribe-hero {
-      width: 100%;
-      height: 340px;
-      background: url('images/dulzuraheader.png') center/cover no-repeat;
-      position: relative;
-      margin-bottom: 40px;
-    }
-
-    .subscribe-hero::after {
-      content: "";
-      position: absolute;
-      left: 0; right: 0; bottom: 0;
-      height: 180px;
-      background: linear-gradient(to bottom, rgba(255,255,255,0), white);
-    }
+    /* Page-specific styling (does NOT affect global layout) */
 
     .subscribe-container {
       max-width: 720px;
-      margin: 0 auto;
+      margin: 40px auto;
       padding: 0 24px;
       text-align: center;
     }
@@ -94,7 +78,6 @@
       font-weight: 600;
     }
   </style>
-
 </head>
 
 <body>
@@ -112,24 +95,20 @@
 
 <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
-<!-- ================= HEADER ================= -->
+<!-- ================= HEADER (NO SUBSCRIBE BUTTON HERE) ================= -->
 <header class="top-header">
+  <!-- Left: Sidebar Toggle -->
   <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
+  <!-- Center Logo -->
   <h1 class="site-logo">
     <a href="index.html">Dulzura</a>
   </h1>
-
-  <a href="subscribe.html" class="header-subscribe-btn">
-    Subscribe Now
-  </a>
 </header>
 
-<!-- ================= SPACING BELOW FIXED HEADER ================= -->
+<!-- spacing for fixed header -->
 <div style="height: 90px;"></div>
 
-<!-- ================= HERO IMAGE ================= -->
-<section class="subscribe-hero"></section>
 
 <!-- ================= SUBSCRIPTION CONTENT ================= -->
 <section class="subscribe-container">
@@ -137,10 +116,14 @@
   <h2 class="subscribe-title">Join the Dulzura Mailing List</h2>
 
   <p class="subscribe-tagline">
-    early access • exclusive insight • timeless elegance  
+    early access • exclusive insight
   </p>
 
   <form class="subscribe-form">
+
+    <label>Name:</label>
+    <input type="text" class="subscribe-input"
+           placeholder="Enter your name" required>
 
     <label>Email Address:</label>
     <input type="email" class="subscribe-input"
