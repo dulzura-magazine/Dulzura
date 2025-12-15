@@ -42,30 +42,45 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// -------------------- Subscribe → Google Sheets --------------------
+// -------------------- Subscribe → Google Sheets (FIXED) --------------------
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("subscribe-form");
 
   if (!form) return;
 
+  // Create editorial success message container
+  const successMessage = document.createElement("p");
+  successMessage.style.marginTop = "24px";
+  successMessage.style.fontFamily = "Cormorant Garamond, serif";
+  successMessage.style.fontSize = "18px";
+  successMessage.style.color = "#7a0f1d";
+  successMessage.style.textAlign = "center";
+  successMessage.style.display = "none";
+  successMessage.textContent = "You’re on the list. Welcome to Dulzura.";
+
+  form.parentNode.appendChild(successMessage);
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const formData = new FormData(form);
+    const payload = {
+      name: form.querySelector('input[name="name"]').value.trim(),
+      email: form.querySelector('input[name="email"]').value.trim()
+    };
 
     fetch("https://script.google.com/macros/s/AKfycby_7enLgIX03FTiqYd0Sl5XG1Mm7e0RUP1y-U5AnCvOCr1x1cE4IbPlmJUZBdLGn9Xk/exec", {
-  method: "POST",
-  body: new FormData(form),
-  mode: "no-cors"
-})
-.then(() => {
-  alert("You're on the list!");
-  form.reset();
-})
-.catch(() => {
-  // REMOVE the scary error — no need for it
-  alert("You're on the list!");
-  form.reset();
-});
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    })
+    .then(() => {
+      form.reset();
+      successMessage.style.display = "block";
+    })
+    .catch(() => {
+      successMessage.style.display = "block";
+    });
   });
 });
