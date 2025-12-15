@@ -16,7 +16,6 @@
   <nav class="nav">
     <a href="index.html">Home</a>
     <a href="articles.html">Articles</a>
-    <a href="moodboards.html">Moodboards</a>
     <a href="login.html">Login</a>
     <a href="subscribe.html">Subscribe</a>
   </nav>
@@ -24,31 +23,22 @@
 
 <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
-<!-- ================= HEADER (SAME AS HOME, NO SUBSCRIBE BUTTON) ================= -->
+<!-- ================= HEADER ================= -->
 <header class="top-header">
-
-  <!-- Left: Sidebar Toggle -->
   <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-  <!-- Center: Logo -->
   <h1 class="site-logo">
     <a href="index.html">Dulzura</a>
   </h1>
-
 </header>
 
-<!-- ================= PAGE CONTENT ================= -->
+<!-- ================= CONTENT ================= -->
 <div class="page-container">
 
   <section class="editorial-section">
 
-    <p class="editorial-tagline">
-      Join the Dulzura mailing list
-    </p>
-
     <h2 class="editorial-heading">
-      curated fashion insights,<br />
-      delivered thoughtfully.
+      join dulzura’s email list.
     </h2>
 
     <p class="editorial-body">
@@ -56,27 +46,32 @@
       and Dulzura-only content.
     </p>
 
-    <form class="subscribe-form" style="margin-top: 36px;">
+    <!-- FORM -->
+    <form class="subscribe-form">
+
       <input
         type="text"
         name="name"
-        placeholder="Your name"
+        class="subscribe-input"
+        placeholder="your name"
         required
       />
 
       <input
         type="email"
         name="email"
-        placeholder="Your email"
+        class="subscribe-input"
+        placeholder="your email"
         required
       />
 
       <button type="submit" class="subscribe-submit">
-        Join the Mailing List
+        Join the mailing list.
       </button>
+
     </form>
 
-    <p class="subscribe-login" style="margin-top: 20px;">
+    <p class="subscribe-login">
       Already have an account?
       <a href="login.html">Log in</a>
     </p>
