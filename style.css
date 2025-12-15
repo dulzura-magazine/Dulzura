@@ -306,3 +306,66 @@ a {
   opacity: 0.5;
   font-family: var(--font-body);
 }
+
+/* ===== SUBSCRIBE PAGE ===== */
+
+.subscribe-hero {
+  margin-top: 140px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.subscribe-title {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 400;
+  color: var(--burgundy);
+  margin-bottom: 20px;
+}
+
+.subscribe-subtext {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.subscribe-form-wrapper {
+  text-align: center;
+}
+
+.subscribe-form {
+  display: inline-flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.subscribe-form input {
+  font-family: var(--font-body);
+  font-size: 16px;
+  padding: 10px 14px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  min-width: 220px;
+}
+
+.subscribe-submit {
+  background: #fff;
+  border: 1px solid #000;
+  padding: 10px 18px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.subscribe-login {
+  margin-top: 26px;
+  font-size: 16px;
+}
+
+.login-btn {
+  margin-left: 6px;
+  color: var(--burgundy);
+  font-weight: 600;
+}
