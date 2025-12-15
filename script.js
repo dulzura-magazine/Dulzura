@@ -69,18 +69,15 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     fetch("https://script.google.com/macros/s/AKfycby_7enLgIX03FTiqYd0Sl5XG1Mm7e0RUP1y-U5AnCvOCr1x1cE4IbPlmJUZBdLGn9Xk/exec", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(payload)
-    })
-    .then(() => {
-      form.reset();
-      successMessage.style.display = "block";
-    })
-    .catch(() => {
-      successMessage.style.display = "block";
-    });
+  method: "POST",
+  body: new FormData(form)
+})
+.then(() => {
+  console.log("Submitted");
+})
+.catch(err => {
+  console.error(err);
+});
+
   });
 });
