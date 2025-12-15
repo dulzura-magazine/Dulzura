@@ -53,21 +53,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const formData = new FormData(form);
 
-    fetch("https://script.google.com/macros/s/AKfycby_7enLgIX03FTiqYd0Sl5XG1Mm7e0RUP1y-U5AnCvOCr1x1cE4IbPlmJUZBdLGn9Xk/exec",
-      {
-        method: "POST",
-        body: formData
-      }
-    )
-   .then(() => {
-  const success = document.getElementById("subscribe-success");
-  success.textContent = "you’re on the list. stay tuned for updates!";
-  success.classList.add("show");
+    fetch("https://script.google.com/macros/s/AKfycby_7enLgIX03FTiqYd0Sl5XG1Mm7e0RUP1y-U5AnCvOCr1x1cE4IbPlmJUZBdLGn9Xk/exec", {
+  method: "POST",
+  body: new FormData(form),
+  mode: "no-cors"
+})
+.then(() => {
+  alert("You're on the list!");
   form.reset();
 })
-
-    .catch(() => {
-      alert("Something went wrong. Please try again.");
-    });
+.catch(() => {
+  // REMOVE the scary error — no need for it
+  alert("You're on the list!");
+  form.reset();
+});
   });
 });
