@@ -351,12 +351,14 @@ a {
 }
 
 .subscribe-submit {
-  background: #fff;
-  border: 1px solid #000;
-  padding: 10px 18px;
+  background: var(--burgundy);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
   font-family: var(--font-display);
   font-size: 15px;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .subscribe-login {
