@@ -25,34 +25,39 @@
 
 <!-- ================= HEADER ================= -->
 <header class="top-header">
+
+  <!-- Sidebar Toggle (ON TOP, ALWAYS CLICKABLE) -->
   <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
+  <!-- Logo -->
   <h1 class="site-logo">
     <a href="index.html">Dulzura</a>
   </h1>
+
 </header>
 
-<!-- ================= CONTENT ================= -->
-<div class="page-container">
+<!-- ================= PAGE CONTENT ================= -->
+<main class="page-container">
 
-  <section class="editorial-section">
-
-    <h2 class="editorial-heading">
+  <!-- Headline -->
+  <section class="subscribe-hero">
+    <h2 class="subscribe-title">
       join dulzura’s email list.
     </h2>
 
-    <p class="editorial-body">
-      Get early access to every issue, exclusive fashion insights,
-      and Dulzura-only content.
+    <p class="subscribe-subtext">
+      Get early access to every issue, exclusive fashion insights, and Dulzura-only content.
     </p>
+  </section>
 
-    <!-- FORM -->
+  <!-- Form -->
+  <section class="subscribe-form-wrapper">
+
     <form class="subscribe-form">
 
       <input
         type="text"
         name="name"
-        class="subscribe-input"
         placeholder="your name"
         required
       />
@@ -60,25 +65,24 @@
       <input
         type="email"
         name="email"
-        class="subscribe-input"
         placeholder="your email"
         required
       />
 
       <button type="submit" class="subscribe-submit">
-        Join the mailing list.
+        Join the mailing list
       </button>
 
     </form>
 
-    <p class="subscribe-login">
-      Already have an account?
-      <a href="login.html">Log in</a>
-    </p>
+    <div class="subscribe-login">
+      <span>Already have an account?</span>
+      <a href="login.html" class="login-btn">Log in</a>
+    </div>
 
   </section>
 
-</div>
+</main>
 
 </body>
 </html>
