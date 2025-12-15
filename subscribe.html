@@ -3,81 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dulzura — Subscribe</title>
+  <title>Subscribe — Dulzura</title>
 
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-
-  <style>
-    /* Page-specific styling (does NOT affect global layout) */
-
-    .subscribe-container {
-      max-width: 720px;
-      margin: 40px auto;
-      padding: 0 24px;
-      text-align: center;
-    }
-
-    .subscribe-title {
-      font-family: var(--font-display);
-      font-size: 48px;
-      font-weight: 400;
-      margin-bottom: 10px;
-    }
-
-    .subscribe-tagline {
-      font-family: var(--font-logo);
-      font-size: 26px;
-      color: var(--burgundy);
-      margin-bottom: 40px;
-    }
-
-    .subscribe-form label {
-      font-family: var(--font-display);
-      font-size: 22px;
-      display: block;
-      margin-bottom: 10px;
-      text-align: left;
-    }
-
-    .subscribe-input {
-      width: 100%;
-      padding: 14px;
-      font-size: 18px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      margin-bottom: 24px;
-      font-family: var(--font-body);
-    }
-
-    .subscribe-btn {
-      padding: 12px 26px;
-      background: var(--burgundy);
-      color: white;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-family: var(--font-display);
-      font-size: 20px;
-      transition: 0.2s;
-    }
-
-    .subscribe-btn:hover {
-      opacity: 0.85;
-    }
-
-    .login-redirect {
-      margin-top: 30px;
-      font-size: 18px;
-      font-family: var(--font-body);
-    }
-
-    .login-redirect a {
-      color: var(--burgundy);
-      text-decoration: none;
-      font-weight: 600;
-    }
-  </style>
 </head>
 
 <body>
@@ -95,51 +24,57 @@
 
 <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
-<!-- ================= HEADER (NO SUBSCRIBE BUTTON HERE) ================= -->
+<!-- ================= HEADER (SAME AS HOME) ================= -->
 <header class="top-header">
+
   <!-- Left: Sidebar Toggle -->
   <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-  <!-- Center Logo -->
+  <!-- Center: Logo -->
   <h1 class="site-logo">
     <a href="index.html">Dulzura</a>
   </h1>
+
+  <!-- RIGHT: intentionally empty on subscribe page -->
 </header>
 
-<!-- spacing for fixed header -->
-<div style="height: 90px;"></div>
+<!-- ================= PAGE CONTENT ================= -->
+<div class="page-container">
 
+  <section class="subscribe-section">
+    <h2 class="subscribe-title">Join Dulzura</h2>
 
-<!-- ================= SUBSCRIPTION CONTENT ================= -->
-<section class="subscribe-container">
+    <p class="subscribe-description">
+      Get early access to every issue, exclusive fashion insights, and Dulzura-only content.
+    </p>
 
-  <h2 class="subscribe-title">Join the Dulzura Mailing List</h2>
+    <form class="subscribe-form">
+      <input
+        type="text"
+        name="name"
+        placeholder="Your name"
+        required
+      />
 
-  <p class="subscribe-tagline">
-    early access • exclusive insight
-  </p>
+      <input
+        type="email"
+        name="email"
+        placeholder="Your email"
+        required
+      />
 
-  <form class="subscribe-form">
+      <button type="submit" class="subscribe-submit">
+        Join the Mailing List
+      </button>
+    </form>
 
-    <label>Name:</label>
-    <input type="text" class="subscribe-input"
-           placeholder="Enter your name" required>
+    <p class="subscribe-login">
+      Already have an account?
+      <a href="login.html">Log in</a>
+    </p>
+  </section>
 
-    <label>Email Address:</label>
-    <input type="email" class="subscribe-input"
-           placeholder="Enter your email" required>
-
-    <button type="submit" class="subscribe-btn">
-      Join the Mailing List
-    </button>
-  </form>
-
-  <p class="login-redirect">
-    Already have an account?
-    <a href="login.html">Log in</a>
-  </p>
-
-</section>
+</div>
 
 </body>
 </html>
