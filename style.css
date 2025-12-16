@@ -760,3 +760,7 @@ a {
 .subscribe-success.show {
   opacity: 1;
 }
+
+.subscribe-submit:disabled {
+  pointer-events: none;
+}
