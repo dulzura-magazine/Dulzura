@@ -73,7 +73,10 @@ document.addEventListener("DOMContentLoaded", () => {
   body: new FormData(form)
 })
 .then(() => {
-  console.log("Submitted");
+  const success = document.getElementById("subscribe-success");
+  success.textContent = "You’re on the list. Welcome to Dulzura.";
+  success.classList.add("show");
+  form.reset();
 })
 .catch(err => {
   console.error(err);
