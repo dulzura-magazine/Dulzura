@@ -72,19 +72,23 @@ document.addEventListener("DOMContentLoaded", () => {
   method: "POST",
   body: new FormData(form)
 })
-.then(() => {
+.then(response => response.text())
+.then(result => {
   const success = document.getElementById("subscribe-success");
   const submitButton = form.querySelector(".subscribe-submit");
 
-  success.textContent = "You’re on the list. Welcome to Dulzura.";
+  if (result === "duplicate") {
+    success.textContent = "You’re already on the list!";
+  } else {
+    success.textContent = "You’re on the list. Welcome to Dulzura.";
+    submitButton.textContent = "Joined";
+    submitButton.disabled = true;
+    submitButton.style.opacity = "0.6";
+    submitButton.style.cursor = "default";
+    form.reset();
+  }
+
   success.classList.add("show");
-
-  submitButton.textContent = "Joined";
-  submitButton.disabled = true;
-  submitButton.style.opacity = "0.6";
-  submitButton.style.cursor = "default";
-
-  form.reset();
 })
 
   });
