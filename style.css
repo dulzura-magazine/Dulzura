@@ -372,6 +372,380 @@ a {
   font-weight: 600;
 }
 
+/* ----------------------------------------------------
+   SELF-HOSTED FONTS (GitHub Pages compatible)
+---------------------------------------------------- */
+
+/* Pinyon Script – LOGO */
+@font-face {
+  font-family: 'Pinyon Script';
+  src: url('fonts/PinyonScript-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Noto Serif Display – Condensed Regular */
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('fonts/NotoSerifDisplay_Condensed-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Noto Serif Display – Condensed SemiBold */
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('fonts/NotoSerifDisplay_Condensed-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Noto Serif Display – Condensed Italic */
+@font-face {
+  font-family: 'Noto Serif Display';
+  src: url('fonts/NotoSerifDisplay_Condensed-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Cormorant Garamond – Regular */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('fonts/CormorantGaramond-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Cormorant Garamond – Italic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('fonts/CormorantGaramond-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ----------------------------------------------------
+   VARIABLES
+---------------------------------------------------- */
+:root {
+  --burgundy: #7a0f1d;
+  --overlay: rgba(0, 0, 0, 0.4);
+
+  --font-body: 'Cormorant Garamond', serif;
+  --font-logo: 'Pinyon Script', cursive;
+  --font-display: 'Noto Serif Display', serif;
+}
+
+/* ----------------------------------------------------
+   GLOBAL BASE
+---------------------------------------------------- */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 300;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ----------------------------------------------------
+   LOGO FONT
+---------------------------------------------------- */
+.site-logo,
+.site-logo a {
+  font-family: var(--font-logo) !important;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--burgundy);
+}
+
+/* ----------------------------------------------------
+   SIDEBAR
+---------------------------------------------------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background: var(--burgundy);
+  padding: 110px 24px 30px;
+  color: white;
+  transform: translateX(-280px);
+  transition: transform 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 3000;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.sidebar .nav a {
+  display: block;
+  padding: 12px 4px;
+  margin-bottom: 16px;
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: #fff;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 2500;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ----------------------------------------------------
+   HEADER
+---------------------------------------------------- */
+.top-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  background: #ffffff;
+  z-index: 2000;
+  border-bottom: 1px solid #eee;
+}
+
+.site-logo {
+  margin: 0;
+  font-size: 54px;
+  color: var(--burgundy) !important;
+}
+
+/* Sidebar button */
+.toggle-btn {
+  position: fixed !important;   /* escape header stacking context */
+  top: 22px !important;
+  left: 32px !important;
+
+  background: var(--burgundy);
+  color: white;
+  border: none;
+  font-size: 22px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  z-index: 9999 !important;     /* higher than sidebar + overlay */
+}
+
+
+/* Subscribe button */
+.header-subscribe-btn {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 6px 18px;
+  background: var(--burgundy);
+  color: white;
+  border-radius: 999px;
+  border: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* ----------------------------------------------------
+   HERO SECTION
+---------------------------------------------------- */
+.hero-section {
+  width: 100%;
+  margin-top: 90px; /* Push hero below fixed header */
+}
+
+.hero-image-wrapper {
+  position: relative;
+  max-height: 420px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-caption {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: 11px;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  bottom: -1px;
+  height: 140px;
+  background: linear-gradient(to bottom, rgba(245,245,247,0) 0%, #f5f5f7 100%);
+}
+
+/* ----------------------------------------------------
+   EDITORIAL SECTION
+---------------------------------------------------- */
+.editorial-section {
+  max-width: 900px;
+  margin: 40px auto 60px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.editorial-tagline {
+  font-family: var(--font-logo);
+  font-size: 23px;
+  color: var(--burgundy);
+}
+
+.editorial-heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+
+.editorial-italic {
+  font-style: italic;
+}
+
+.editorial-body {
+  max-width: 820px;
+  margin: 20px auto 0;
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+/* ----------------------------------------------------
+   CURATED SECTION
+---------------------------------------------------- */
+.curated-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 24px;
+}
+
+.curated-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+.curated-title span {
+  font-style: italic;
+}
+
+.curated-placeholder {
+  margin-top: 14px;
+  font-size: 16px;
+  opacity: 0.5;
+  font-family: var(--font-body);
+}
+
+/* ===== SUBSCRIBE PAGE ===== */
+
+.subscribe-hero {
+  margin-top: 140px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.subscribe-title {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 400;
+  color: var(--burgundy);
+  margin-bottom: 20px;
+}
+
+.subscribe-subtext {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.subscribe-form-wrapper {
+  text-align: center;
+}
+
+.subscribe-form {
+  display: inline-flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.subscribe-form input {
+  font-family: var(--font-body);
+  font-size: 16px;
+  padding: 10px 14px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  min-width: 220px;
+}
+
+.subscribe-submit {
+  background: var(--burgundy);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.subscribe-login {
+  margin-top: 26px;
+  font-size: 16px;
+}
+
+.login-btn {
+  margin-left: 6px;
+  color: var(--burgundy);
+  font-weight: 600;
+}
+
 .subscribe-success {
   margin-top: 22px;
   font-family: var(--font-display);
@@ -386,4 +760,3 @@ a {
 .subscribe-success.show {
   opacity: 1;
 }
-
