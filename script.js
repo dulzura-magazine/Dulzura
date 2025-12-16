@@ -74,13 +74,18 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 .then(() => {
   const success = document.getElementById("subscribe-success");
+  const submitButton = form.querySelector(".subscribe-submit");
+
   success.textContent = "You’re on the list. Welcome to Dulzura.";
   success.classList.add("show");
+
+  submitButton.textContent = "Joined";
+  submitButton.disabled = true;
+  submitButton.style.opacity = "0.6";
+  submitButton.style.cursor = "default";
+
   form.reset();
 })
-.catch(err => {
-  console.error(err);
-});
 
   });
 });
