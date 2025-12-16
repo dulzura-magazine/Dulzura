@@ -68,6 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
       email: form.querySelector('input[name="email"]').value.trim()
     };
 
+    const submitButton = form.querySelector(".subscribe-submit");
+submitButton.textContent = "Joining…";
+submitButton.disabled = true;
+
     fetch("https://script.google.com/macros/s/AKfycby_7enLgIX03FTiqYd0Sl5XG1Mm7e0RUP1y-U5AnCvOCr1x1cE4IbPlmJUZBdLGn9Xk/exec", {
   method: "POST",
   body: new FormData(form)
@@ -77,12 +81,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const success = document.getElementById("subscribe-success");
   const submitButton = form.querySelector(".subscribe-submit");
 
+  // Loading state ends here
+  submitButton.disabled = true;
+
   if (result === "duplicate") {
-    success.textContent = "You’re already on the list!";
+    success.textContent = "You’re already on the list.";
+    submitButton.textContent = "Already joined";
+    submitButton.style.opacity = "0.6";
+    submitButton.style.cursor = "default";
   } else {
     success.textContent = "You’re on the list. Welcome to Dulzura.";
     submitButton.textContent = "Joined";
-    submitButton.disabled = true;
     submitButton.style.opacity = "0.6";
     submitButton.style.cursor = "default";
     form.reset();
