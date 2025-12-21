@@ -14,6 +14,7 @@
 
 <body>
 
+<!-- HEADER -->
 <header class="top-header">
   <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
@@ -22,19 +23,18 @@
   </h1>
 </header>
 
-  <!-- SIDEBAR TOGGLE -->
-  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <nav class="nav">
+    <a href="articles.html" class="active">Articles</a>
+    <a href="subscribe.html" class="highlight">Subscribe</a>
+  </nav>
+</aside>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar" id="sidebar">
-    <nav class="nav">
-      <a href="articles.html" class="active">Articles</a>
-      <a href="subscribe.html" class="highlight">Subscribe</a>
-    </nav>
-  </aside>
+<!-- OVERLAY -->
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
-  <!-- OVERLAY -->
-  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+<!-- PAGE CONTENT -->
 <main class="page-container">
 
   <section class="articles-grid-section">
@@ -77,10 +77,8 @@
 
 </main>
 
-<main class="page-container">
-  <section class="articles-grid-section">
-    <div class="articles-grid">
-      ...
-    </div>
-  </section>
-</main>
+<!-- ✅ REQUIRED FOR SIDEBAR -->
+<script src="script.js"></script>
+
+</body>
+</html>
