@@ -20,21 +20,6 @@
       <a href="index.html">Dulzura</a>
     </h1>
 
-    <!-- Right-side buttons -->
-    <div class="header-buttons">
-      <!-- Subscribe -->
-      <a href="subscribe.html" class="subscribe-btn">Subscribe Now</a>
-
-      <!-- Login icon -->
-      <a href="login.html" class="login-icon-small" title="Login">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-          viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M15.75 3.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 21a7.5 7.5 0 0115 0v.75H4.5V21z"/>
-        </svg>
-      </a>
-    </div>
-  </header>
 
   <!-- SIDEBAR TOGGLE -->
   <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
@@ -51,13 +36,44 @@
 
   <!-- OVERLAY -->
   <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+<main class="page-container">
 
-  <!-- MAIN CONTENT -->
-  <main class="content">
-    <h1 class="cursive">Articles</h1>
-    <p>Our latest features and fashion insights will appear here soon.</p>
-  </main>
+  <section class="articles-grid-section">
 
-  <script src="script.js"></script>
-</body>
-</html>
+    <h2 class="articles-grid-title">articles</h2>
+
+    <div class="articles-grid">
+
+      <!-- Article 1 -->
+      <a href="articles/90s minimalism.html" class="article-card">
+        <img src="images/90s minimalism cover image.JPG" alt="Is 90s Minimalism Back?">
+        <p class="article-card-title">Is 90s Minimalism Back?</p>
+        <p class="article-card-author">Elisa Hernandez Reyes</p>
+      </a>
+
+      <!-- Article 2 -->
+      <a href="articles/faux fur.html" class="article-card">
+        <img src="images/faux fur cover image.JPG" alt="Faux Fur: The Ultimate Statement">
+        <p class="article-card-title">Faux Fur: The Ultimate Statement</p>
+        <p class="article-card-author">Elisa Hernandez Reyes</p>
+      </a>
+
+      <!-- Article 3 -->
+      <a href="articles/history of the trench.html" class="article-card">
+        <img src="images/articlecoverplaceholder.png" alt="History of the Trench">
+        <p class="article-card-title">History of the Trench</p>
+        <p class="article-card-author">Vira Bilan</p>
+      </a>
+
+      <!-- Article 4 -->
+      <a href="articles/niche girl.html" class="article-card">
+        <img src="images/articlecoverplaceholder.png" alt="Your Niche? Or, You’re Niche!">
+        <p class="article-card-title">Your Niche? Or, You’re Niche!</p>
+        <p class="article-card-author">Vira Bilan</p>
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
