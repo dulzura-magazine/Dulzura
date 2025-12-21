@@ -876,3 +876,10 @@ a {
 .article-body:first-of-type {
   text-indent: 0;
 }
+
+/* Emphasized section break (e.g. "7 Ways to Wear It Now") */
+.article-subhead.section-break {
+  font-size: 1.75rem;
+  margin-top: 4.5rem;
+  margin-bottom: 2rem;
+}
