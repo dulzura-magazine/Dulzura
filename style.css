@@ -888,9 +888,7 @@ a {
    ARTICLES GRID
 ------------------------------ */
 
-.page-container {
-  padding-top: 30px; /* pushes content below fixed header */
-}
+
 
 .articles-grid-section {
   max-width: 1200px;          /* wider so cards can sit side-by-side */
