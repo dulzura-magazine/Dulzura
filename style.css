@@ -888,10 +888,19 @@ a {
    ARTICLES GRID
 ------------------------------ */
 
+.page-container {
+  padding-top: 140px; /* pushes content below fixed header */
+}
+
 .articles-grid-section {
   max-width: 1200px;          /* wider so cards can sit side-by-side */
   margin: 140px auto 80px;
   padding: 0 40px;
+}
+
+/* Push articles below fixed header */
+.articles-grid-section {
+  margin-top: 140px;   /* separates header from content */
 }
 
 /* TRUE side-by-side grid */
@@ -955,6 +964,3 @@ a {
   }
 }
 
-.page-container {
-  padding-top: 140px; /* pushes content below fixed header */
-}
