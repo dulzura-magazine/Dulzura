@@ -889,10 +889,18 @@ a {
 ------------------------------ */
 
 .articles-grid-section {
-  max-width: 1100px;
+  max-width: 1200px;          /* wider so cards can sit side-by-side */
   margin: 140px auto 80px;
-  padding: 0 24px;
+  padding: 0 40px;
 }
+
+/* TRUE side-by-side grid */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row on desktop */
+  gap: 48px 32px;
+}
+
 
 .articles-grid-title {
   font-family: var(--font-display);
@@ -902,12 +910,6 @@ a {
   text-transform: lowercase;
 }
 
-/* Grid layout */
-.articles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 36px 24px;
-}
 
 /* Card */
 .article-card {
@@ -941,4 +943,14 @@ a {
   text-transform: uppercase;
   opacity: 0.6;
 }
+@media (max-width: 900px) {
+  .articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
+@media (max-width: 600px) {
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+}
