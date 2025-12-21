@@ -954,3 +954,7 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+.page-container {
+  padding-top: 140px; /* pushes content below fixed header */
+}
