@@ -1053,3 +1053,31 @@ a {
     max-width: 720px;
   }
 }
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  margin: 22px 0 26px;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: #ffffff; /* assuming your footer is black */
+}
+
+.social-icon:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
