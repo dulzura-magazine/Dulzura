@@ -977,10 +977,9 @@ a {
 }
 
 .footer-logo {
-  font-family: var(--font-display);
+  font-family: var(--font-logo);
   font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  text-transform: normal;
   font-size: 36px;
   margin-bottom: 14px;
 }
