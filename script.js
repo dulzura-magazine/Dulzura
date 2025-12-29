@@ -100,5 +100,11 @@ submitButton.disabled = true;
   success.classList.add("show");
 })
 
+    
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const y = document.getElementById("footer-year");
+  if (y) y.textContent = new Date().getFullYear();
+});
+
