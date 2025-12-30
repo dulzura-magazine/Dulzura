@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Dulzura</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+<div id="sidebar" class="sidebar">
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="articles.html">Articles</a>
+    <a href="login.html">Login</a>
+    <a href="subscribe.html">Subscribe</a>
+  </nav>
+</div>
+
+<div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="top-header">
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <h1 class="site-logo">
+    <a href="index.html">Dulzura</a>
+  </h1>
+</header>
+
+<!-- ================= PAGE ================= -->
+<main class="page-container">
+  <section class="legal-page">
+    <h2 class="legal-title">contact</h2>
+
+    <p class="legal-body">
+      For general inquiries, collaborations, or press:
+      <br/>
+      <em>dulzuramagazine@gmail.com</em>
+    </p>
+
+    <p class="legal-body">
+      You can also reach us via Instagram / TikTok / Pinterest through the links in the footer.
+    </p>
+  </section>
+</main>
+
+</body>
+</html>
