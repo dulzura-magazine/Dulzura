@@ -1443,3 +1443,32 @@ a {
     grid-row: 2;
   }
 }
+
+/* ===== Curated (articles) should ALWAYS stay horizontal ===== */
+.curated-scroll{
+  display: flex;
+  flex-wrap: nowrap;          /* KEY: never wrap to a new line */
+  gap: 18px;
+  overflow-x: auto;           /* horizontal scroll */
+  overflow-y: hidden;         /* prevent vertical weirdness */
+  -webkit-overflow-scrolling: touch; /* smooth on iPhone */
+  padding-bottom: 10px;       /* space for scrollbar */
+}
+
+/* Each item should never shrink and never wrap */
+.curated-item{
+  flex: 0 0 auto;             /* KEY: prevents shrinking + stacking */
+  width: 320px;               /* pick a width that looks right */
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images behave cleanly inside each card */
+.curated-cover{
+  width: 100%;
+  height: 190px;              /* adjust to taste */
+  object-fit: cover;
+  display: block;
+}
+
+
