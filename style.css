@@ -1455,20 +1455,20 @@ a {
   padding-bottom: 10px;       /* space for scrollbar */
 }
 
-/* Each item should never shrink and never wrap */
+/* Curated slider cards */
 .curated-item{
-  flex: 0 0 auto;             /* KEY: prevents shrinking + stacking */
-  width: 320px;               /* pick a width that looks right */
-  text-decoration: none;
-  color: inherit;
+  flex: 0 0 320px;
+  min-width: 320px;
 }
 
-/* Make images behave cleanly inside each card */
+/* Full-size feel: let height scale naturally */
 .curated-cover{
   width: 100%;
-  height: 190px;              /* adjust to taste */
+  height: auto;            /* remove fixed height */
+  aspect-ratio: 16 / 10;   /* controls the visible size */
   object-fit: cover;
   display: block;
+  border-radius: 6px;      /* optional; remove if you don’t want */
 }
 
 .curated-scroll{
