@@ -1465,7 +1465,7 @@ a {
 .curated-cover{
   width: 100%;
   height: auto;            /* remove fixed height */
-  aspect-ratio: 16 / 6;   /* controls the visible size */
+  aspect-ratio: 3 / 4;   /* controls the visible size */
   object-fit: cover;
   display: block;
   border-radius: 6px;      /* optional; remove if you don’t want */
