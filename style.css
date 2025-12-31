@@ -1484,3 +1484,126 @@ html, body{
   overflow-x: hidden;
 }
 
+/* ==============================
+   MEET OUR TEAM (team.html)
+   Responsive grid, side-by-side
+============================== */
+
+.team-wrap {
+  margin-top: 42px;
+}
+
+/* Section headers (Editor-in-Chief, Journalists, etc.) */
+.team-section-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: 0.02em;
+  margin: 46px 0 18px;
+  text-transform: lowercase;
+}
+
+/* Grid that automatically wraps into rows */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 across on desktop */
+  gap: 26px;
+  margin-bottom: 18px;
+}
+
+/* Card */
+.team-card {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 18px 18px 16px;
+  background: #fff;
+  text-align: center;
+}
+
+/* Role (always at top) */
+.team-role {
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 12px;
+}
+
+/* Optional tag like "Lead" */
+.team-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.12);
+  margin-bottom: 14px;
+  opacity: 0.85;
+}
+
+/* Image */
+.team-photo {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;       /* perfect square crop */
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 14px;
+}
+
+/* Name */
+.team-name {
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+/* Email */
+.team-email {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* Recruiting caption */
+.team-recruiting {
+  margin-top: 52px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.team-recruiting span {
+  font-family: var(--font-display);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* -------- Responsive breakpoints -------- */
+
+/* Tablet: 2 across */
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile: 1 across */
+@media (max-width: 560px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-section-title {
+    font-size: 22px;
+  }
+}
