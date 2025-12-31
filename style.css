@@ -1372,7 +1372,7 @@ a {
 }
 
 /* boxes */
-.shopbox{
+.curated-shopwrap .shopbox{
   display: block;
   border: 1px solid rgba(0,0,0,0.35);
   background: #fff;
@@ -1381,7 +1381,7 @@ a {
   overflow: hidden;
 }
 
-.shopbox img{
+.curated-shopwrap .shopbox img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1471,4 +1471,16 @@ a {
   display: block;
 }
 
+.curated-scroll{
+  width: 100%;
+  max-width: 100%;
+}
+
+.curated-item{
+  flex: 0 0 320px;   /* hard width in flex-basis */
+  min-width: 320px;  /* prevents any browser shrink behavior */
+}
+html, body{
+  overflow-x: hidden;
+}
 
