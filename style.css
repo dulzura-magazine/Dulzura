@@ -1136,3 +1136,119 @@ a {
 .home-subscribe-btn:hover {
   opacity: 0.85;
 }
+
+/* ===== Curated For You (template like your screenshot) ===== */
+.curated {
+  max-width: 1050px;
+  margin: 60px auto;
+  padding: 0 18px;
+}
+
+.curated-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.curated-title {
+  font-family: "Noto Serif Display", serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+.curated-shopmore {
+  font-family: "Noto Serif Display", serif;
+  font-size: 12px;
+  text-decoration: underline;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.curated-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 280px;
+  grid-template-rows: 170px 270px;
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* clickable image containers */
+.curated-box {
+  display: block;
+  border: 1px solid rgba(0,0,0,0.35);
+  background: #fff;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.curated-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* top row boxes */
+.curated-small {
+  grid-row: 1;
+}
+
+/* big feature box */
+.curated-feature {
+  grid-column: 1 / span 3;
+  grid-row: 2;
+}
+
+/* right column stack */
+.curated-shop {
+  grid-column: 4;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.curated-shop-title {
+  font-family: "Noto Serif Display", serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.curated-item {
+  height: 70px;
+}
+
+.curated-shopmore.bottom {
+  align-self: flex-end;
+  margin-top: 2px;
+  font-family: "Noto Serif Display", serif;
+  font-size: 12px;
+  text-decoration: underline;
+  color: inherit;
+  opacity: 0.9;
+}
+
+/* hover: subtle, editorial */
+.curated-box:hover img {
+  transform: scale(1.02);
+  transition: transform 180ms ease;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .curated-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .curated-small { grid-column: auto; grid-row: auto; height: 160px; }
+  .curated-feature { grid-column: 1 / -1; height: 260px; }
+  .curated-shop { grid-column: 1 / -1; }
+  .curated-item { height: 90px; }
+}
+
