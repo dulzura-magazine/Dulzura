@@ -1252,3 +1252,70 @@ a {
   .curated-item { height: 90px; }
 }
 
+/* ===== Shop page ===== */
+.shop-page {
+  max-width: 1050px;
+  margin: 120px auto 80px; /* assumes fixed header */
+  padding: 0 18px;
+}
+
+.shop-page-title {
+  font-family: "Noto Serif Display", serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.shop-page-subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  margin: 0 0 26px 0;
+  opacity: 0.85;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.shop-card {
+  border: 1px solid rgba(0,0,0,0.25);
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  background: #fff;
+}
+
+.shop-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.shop-meta {
+  padding: 12px 12px 14px;
+}
+
+.shop-name {
+  font-family: "Noto Serif Display", serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.shop-brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  .shop-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 520px) {
+  .shop-grid { grid-template-columns: 1fr; }
+  .shop-card img { height: 240px; }
+}
