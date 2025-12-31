@@ -1225,7 +1225,7 @@ a {
   margin: 0 0 4px 0;
 }
 
-.curated-item {
+.curated-shop .curated-item {
   height: 70px;
 }
 
@@ -1255,7 +1255,7 @@ a {
   .curated-small { grid-column: auto; grid-row: auto; height: 160px; }
   .curated-feature { grid-column: 1 / -1; height: 260px; }
   .curated-shop { grid-column: 1 / -1; }
-  .curated-item { height: 90px; }
+   .curated-shop .curated-item { height: 90px; }
 }
 
 /* ===== Shop page ===== */
