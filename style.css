@@ -1610,3 +1610,141 @@ html, body{
     font-size: 22px;
   }
 }
+/* ==========================
+   DIGITAL ISSUE PREVIEW
+========================== */
+
+.issue-preview-section {
+  max-width: 1400px;
+  margin: 100px auto;
+  padding: 0 30px;
+}
+
+.issue-preview-title {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  text-transform: lowercase;
+}
+
+.issue-preview-title span {
+  font-style: italic;
+}
+
+/* BOOK CONTAINER */
+.issue-book {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  background: #f8f8f8;
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.08);
+
+  min-height: 620px;
+}
+
+/* PAGES */
+.issue-page {
+  flex: 1;
+  background: #f7f7f7;
+  padding: 55px;
+  position: relative;
+}
+
+/* LEFT PAGE */
+.left-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.issue-feature-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.35s ease;
+}
+
+.issue-feature-link:hover {
+  transform: scale(1.02);
+}
+
+.issue-feature-image {
+  width: 100%;
+  max-width: 360px;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.issue-feature-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* CENTER SPINE */
+.issue-spine {
+  width: 10px;
+  background:
+    linear-gradient(
+      to right,
+      rgba(0,0,0,0.1),
+      rgba(255,255,255,0.6),
+      rgba(0,0,0,0.1)
+    );
+}
+
+/* RIGHT PAGE */
+.right-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.issue-right-image {
+  width: 100%;
+  max-width: 360px;
+  height: 520px;
+  object-fit: cover;
+  margin: 0 auto 24px;
+}
+
+.issue-right-caption {
+  max-width: 420px;
+  margin: 0 auto;
+
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .issue-book {
+    flex-direction: column;
+  }
+
+  .issue-spine {
+    display: none;
+  }
+
+  .issue-page {
+    padding: 40px 28px;
+  }
+
+  .issue-feature-image,
+  .issue-right-image {
+    height: auto;
+  }
+}
