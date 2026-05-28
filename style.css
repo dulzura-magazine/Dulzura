@@ -1748,3 +1748,35 @@ html, body{
     height: auto;
   }
 }
+/* ==========================
+   ISSUE PREVIEW
+========================== */
+
+.issue-preview-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 70px auto 90px;
+  padding: 0 28px;
+  box-sizing: border-box;
+}
+
+.issue-preview-link {
+  display: block;
+  width: 100%;
+}
+
+.issue-preview-image {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  /* keeps aspect ratio */
+  object-fit: contain;
+
+  /* subtle luxury feel */
+  transition: transform 0.35s ease;
+}
+
+.issue-preview-link:hover .issue-preview-image {
+  transform: scale(1.01);
+}
