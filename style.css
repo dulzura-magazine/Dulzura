@@ -1780,3 +1780,31 @@ html, body{
 .issue-preview-link:hover .issue-preview-image {
   transform: scale(1.01);
 }
+/* ==========================
+   OUTFIT NOTES SECTION
+========================== */
+
+.outfit-notes-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 60px auto 90px;
+  padding: 0 28px;
+  box-sizing: border-box;
+}
+
+.outfit-notes-link {
+  display: block;
+  width: 100%;
+}
+
+.outfit-notes-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+
+.outfit-notes-link:hover .outfit-notes-image {
+  transform: scale(1.01);
+}
