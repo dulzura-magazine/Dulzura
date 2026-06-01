@@ -1785,19 +1785,20 @@ html, body{
 ========================== */
 
 .outfit-notes-section {
-  max-width: 1100px;
+  max-width: 1180px;
   margin: 70px auto 90px;
   padding: 0 28px;
   box-sizing: border-box;
 }
 
+/* separated outside border/frame */
 .outfit-notes-card {
   background: #f7f5f3;
-  border: 1px solid rgba(0,0,0,0.08);
-  padding: 22px 22px 30px;
+  border: 1px solid rgba(122, 15, 29, 0.35);
+  padding: 22px;
 }
 
-/* separated banner */
+/* banner is separated from outfit area */
 .outfit-notes-banner {
   background: var(--burgundy);
   color: #fff;
@@ -1805,70 +1806,74 @@ html, body{
   font-size: clamp(26px, 4vw, 42px);
   text-align: center;
   padding: 12px 20px 10px;
-  margin-bottom: 34px;
+  margin-bottom: 42px;
 }
 
-/* clickable area */
 .outfit-image-link {
   display: block;
   color: inherit;
 }
 
-.outfit-annotated {
+/* fixed design canvas — everything scales together */
+.outfit-stage {
   position: relative;
-  max-width: 980px;
+  width: 100%;
+  aspect-ratio: 1200 / 720;
+  max-width: 1120px;
   margin: 0 auto;
-  min-height: 650px;
+  background: #f7f5f3;
+  overflow: hidden;
 }
 
-/* main outfit image */
+/* center image locked to same coordinate system */
 .outfit-main-image {
   position: absolute;
-  left: 50%;
-  top: 20px;
-  transform: translateX(-50%);
-  width: 430px;
-  max-width: 46%;
+  left: 360px;
+  top: 35px;
+  width: 470px;
+  height: 620px;
+  object-fit: cover;
   display: block;
   z-index: 2;
 }
 
-/* labels */
+/* labels locked to canvas */
 .outfit-label {
   position: absolute;
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: 22px;
   font-weight: 400;
   color: #111;
   z-index: 4;
+  text-transform: lowercase;
 }
 
 .label-top {
-  left: 55px;
-  top: 220px;
+  left: 115px;
+  top: 210px;
 }
 
 .label-skirt {
-  left: 85px;
-  top: 410px;
+  left: 150px;
+  top: 430px;
 }
 
 .label-belt {
-  left: 165px;
-  top: 505px;
+  left: 245px;
+  top: 555px;
 }
 
 .label-bag {
-  right: 95px;
-  top: 195px;
+  right: 120px;
+  top: 175px;
 }
 
 .label-shoes {
-  right: 125px;
-  top: 465px;
+  right: 135px;
+  top: 495px;
 }
 
-/* arrows */
+/* arrows locked to same canvas */
 .outfit-arrows {
   position: absolute;
   inset: 0;
@@ -1881,76 +1886,42 @@ html, body{
 .outfit-arrows path {
   fill: none;
   stroke: #111;
-  stroke-width: 1.7;
+  stroke-width: 2.2;
   stroke-linecap: round;
 }
 
 .outfit-click-caption {
   position: absolute;
-  right: 260px;
-  bottom: 0;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
   font-family: var(--font-display);
-  font-size: 14px;
+  font-size: 15px;
+  letter-spacing: 0.04em;
   color: #111;
   z-index: 4;
+  white-space: nowrap;
 }
 
-/* Mobile */
+/* mobile: scale whole section, do not reposition pieces */
 @media (max-width: 700px) {
   .outfit-notes-section {
-    padding: 0 14px;
+    padding: 0 12px;
   }
 
   .outfit-notes-card {
-    padding: 14px 12px 22px;
+    padding: 12px;
   }
 
   .outfit-notes-banner {
-    margin-bottom: 24px;
-  }
-
-  .outfit-annotated {
-    min-height: 450px;
-  }
-
-  .outfit-main-image {
-    width: 240px;
-    max-width: 52%;
-    top: 18px;
+    margin-bottom: 22px;
   }
 
   .outfit-label {
-    font-size: 12px;
-  }
-
-  .label-top {
-    left: 14px;
-    top: 135px;
-  }
-
-  .label-skirt {
-    left: 18px;
-    top: 265px;
-  }
-
-  .label-belt {
-    left: 42px;
-    top: 340px;
-  }
-
-  .label-bag {
-    right: 16px;
-    top: 130px;
-  }
-
-  .label-shoes {
-    right: 26px;
-    top: 320px;
+    font-size: 18px;
   }
 
   .outfit-click-caption {
-    right: 18px;
-    bottom: 0;
     font-size: 11px;
   }
 }
