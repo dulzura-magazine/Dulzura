@@ -1780,6 +1780,7 @@ html, body{
 .issue-preview-link:hover .issue-preview-image {
   transform: scale(1.01);
 }
+
 /* ==========================
    OUTFIT NOTES SECTION
 ========================== */
@@ -1791,14 +1792,14 @@ html, body{
   box-sizing: border-box;
 }
 
-/* separated outside border/frame */
 .outfit-notes-card {
   background: #f7f5f3;
   border: 1px solid rgba(122, 15, 29, 0.35);
-  padding: 22px;
+  padding: 24px 28px 30px;
+  box-sizing: border-box;
 }
 
-/* banner is separated from outfit area */
+/* separated banner */
 .outfit-notes-banner {
   background: var(--burgundy);
   color: #fff;
@@ -1809,119 +1810,45 @@ html, body{
   margin-bottom: 42px;
 }
 
+/* clickable image */
 .outfit-image-link {
   display: block;
-  color: inherit;
-}
-
-/* fixed design canvas — everything scales together */
-.outfit-stage {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1200 / 720;
-  max-width: 1120px;
+  max-width: 980px;
   margin: 0 auto;
-  background: #f7f5f3;
-  overflow: hidden;
 }
 
-/* center image locked to same coordinate system */
-.outfit-main-image {
-  position: absolute;
-  left: 360px;
-  top: 35px;
-  width: 470px;
-  height: 620px;
-  object-fit: cover;
-  display: block;
-  z-index: 2;
-}
-
-/* labels locked to canvas */
-.outfit-label {
-  position: absolute;
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 400;
-  color: #111;
-  z-index: 4;
-  text-transform: lowercase;
-}
-
-.label-top {
-  left: 115px;
-  top: 210px;
-}
-
-.label-skirt {
-  left: 150px;
-  top: 430px;
-}
-
-.label-belt {
-  left: 245px;
-  top: 555px;
-}
-
-.label-bag {
-  right: 120px;
-  top: 175px;
-}
-
-.label-shoes {
-  right: 135px;
-  top: 495px;
-}
-
-/* arrows locked to same canvas */
-.outfit-arrows {
-  position: absolute;
-  inset: 0;
+.outfit-annotated-image {
   width: 100%;
-  height: 100%;
-  z-index: 3;
-  pointer-events: none;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
-.outfit-arrows path {
-  fill: none;
-  stroke: #111;
-  stroke-width: 2.2;
-  stroke-linecap: round;
-}
-
+/* text under image */
 .outfit-click-caption {
-  position: absolute;
-  left: 50%;
-  bottom: 18px;
-  transform: translateX(-50%);
+  margin: 18px auto 0;
+  text-align: center;
   font-family: var(--font-display);
   font-size: 15px;
   letter-spacing: 0.04em;
   color: #111;
-  z-index: 4;
-  white-space: nowrap;
 }
 
-/* mobile: scale whole section, do not reposition pieces */
+/* Mobile */
 @media (max-width: 700px) {
   .outfit-notes-section {
-    padding: 0 12px;
+    padding: 0 14px;
   }
 
   .outfit-notes-card {
-    padding: 12px;
+    padding: 14px 14px 22px;
   }
 
   .outfit-notes-banner {
-    margin-bottom: 22px;
-  }
-
-  .outfit-label {
-    font-size: 18px;
+    margin-bottom: 24px;
   }
 
   .outfit-click-caption {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
