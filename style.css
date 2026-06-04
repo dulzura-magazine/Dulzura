@@ -2154,3 +2154,14 @@ html, body{
     gap: 16px;
   }
 }
+/* ==========================
+   SHOP PAGE TOP SPACING FIX
+========================== */
+
+.shopping-page {
+  padding-top: 220px !important;
+}
+
+.shopping-title {
+  margin-top: 40px !important;
+}
