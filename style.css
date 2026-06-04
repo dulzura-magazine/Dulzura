@@ -1962,3 +1962,82 @@ html, body{
 
   text-align: center;
 }
+/* ================= FEATURED OUTFIT ================= */
+
+.featured-outfit-section {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.featured-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-transform: lowercase;
+}
+
+.featured-title span {
+  font-style: italic;
+}
+
+.featured-subtext {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.featured-outfit-image {
+  max-width: 850px;
+  margin: 0 auto 60px;
+}
+
+.featured-outfit-image img {
+  width: 100%;
+  border: 1px solid #e7dede;
+}
+
+.featured-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 24px;
+}
+
+.featured-item-card {
+  text-decoration: none;
+  color: inherit;
+  background: #faf8f8;
+  border: 1px solid #ece3e3;
+  padding: 16px;
+  transition: transform 0.25s ease;
+}
+
+.featured-item-card:hover {
+  transform: translateY(-4px);
+}
+
+.featured-item-image {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background: #f3eeee;
+  margin-bottom: 14px;
+}
+
+.featured-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.featured-name {
+  font-size: 15px;
+  color: #666;
+}
