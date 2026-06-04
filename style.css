@@ -2165,3 +2165,47 @@ html, body{
 .shopping-title {
   margin-top: 80px !important;
 }
+/* ==========================
+   ARCHIVE SECTION
+========================== */
+
+.archive-section {
+  max-width: 1200px;
+  margin: 100px auto 90px;
+  padding: 0 40px;
+}
+
+.archive-title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: lowercase;
+  margin-bottom: 28px;
+}
+
+.archive-edition {
+  border-top: 1px solid rgba(0,0,0,0.12);
+  padding-top: 28px;
+}
+
+.archive-edition-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 34px;
+  letter-spacing: 0.01em;
+}
+
+.archive-edition-title span {
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .archive-section {
+    padding: 0 20px;
+  }
+
+  .archive-edition-title {
+    font-size: 22px;
+  }
+}
