@@ -2041,3 +2041,41 @@ html, body{
   font-size: 15px;
   color: #666;
 }
+/* ================= GENERAL SHOPPING ================= */
+
+.shopping-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  margin-top: 50px;
+}
+
+.shopping-item {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease;
+}
+
+.shopping-item:hover {
+  transform: translateY(-5px);
+}
+
+.shopping-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background: #f4f0f0;
+  border: 1px solid #e8dddd;
+  margin-bottom: 14px;
+}
+
+.shopping-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.shopping-name {
+  font-size: 15px;
+  color: #666;
+}
