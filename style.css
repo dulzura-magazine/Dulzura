@@ -248,6 +248,15 @@ a {
   height: 140px;
   background: linear-gradient(to bottom, rgba(245,245,247,0) 0%, #f5f5f7 100%);
 }
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls {
+  display: none !important;
+}
 /* ----------------------------------------------------
    EDITORIAL SECTION
 ---------------------------------------------------- */
