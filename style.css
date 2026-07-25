@@ -213,18 +213,18 @@ a {
 }
 
 .hero-image-wrapper {
+  position: relative;
   width: 100%;
-  max-height: none !important;
-  overflow: visible !important;
+  height: auto;
+  overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
-  height: auto !important;
+  height: auto;
   display: block;
-  object-fit: contain !important;
+  object-fit: cover;
 }
-
 .hero-caption {
   position: absolute;
   top: 55%;
