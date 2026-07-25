@@ -108,3 +108,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (y) y.textContent = new Date().getFullYear();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector(".hero-image");
+
+  if (video) {
+    video.muted = true;
+    video.play().catch(() => {});
+  }
+});
