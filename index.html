@@ -25,38 +25,37 @@ body{
     padding:40px;
 }
 
-.container,
-.temp-container{
+
+/* Main container */
+.container{
     max-width:700px;
     width:100%;
     text-align:center;
 }
 
 
-/* Dulzura logo - same as header */
-.temp-logo,
-.temp-container h1,
+/* Dulzura logo - matches website header */
 .container h1{
     font-family:'Pinyon Script', cursive;
     font-weight:400;
     font-size:72px;
     color:#7a0f1d;
-    letter-spacing:0;
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
 
-/* Main heading */
-h2{
+/* Main announcement */
+.container h2{
     font-family:'Noto Serif Display', serif;
-    font-size:26px;
     font-weight:400;
+    font-size:28px;
     color:#7a0f1d;
-    margin-bottom:28px;
+    margin-bottom:30px;
 }
 
 
-p{
+/* Paragraph text */
+.container p{
     font-family:'Cormorant Garamond', serif;
     font-size:20px;
     line-height:1.7;
@@ -65,75 +64,52 @@ p{
 }
 
 
-/* Burgundy button */
-.btn,
-.subscribe-submit{
+/* Subscribe button */
+.btn{
     display:inline-block;
     margin-top:30px;
-    padding:12px 32px;
+    padding:12px 34px;
     background:#7a0f1d;
-    color:white;
-    border:none;
+    color:#fff;
+    text-decoration:none;
+
     font-family:'Noto Serif Display', serif;
     font-size:15px;
     letter-spacing:.05em;
-    cursor:pointer;
-    border-radius:999px;
     text-transform:uppercase;
+
+    border-radius:999px;
+    transition:.3s;
 }
 
 
-.btn:hover,
-.subscribe-submit:hover{
+.btn:hover{
     opacity:.85;
 }
 
 
-/* social links */
+/* Social links */
 .social{
     margin-top:45px;
 }
 
 
-.social a,
-.back-link{
+.social a{
     font-family:'Noto Serif Display', serif;
+    font-size:14px;
     color:#555;
     text-decoration:none;
     margin:0 12px;
 }
 
 
-.social a:hover,
-.back-link:hover{
+.social a:hover{
     color:#7a0f1d;
 }
 
 
-/* subscribe inputs */
-.subscribe-form{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-
-.subscribe-form input{
-    font-family:'Cormorant Garamond', serif;
-    font-size:17px;
-    padding:12px 16px;
-    border:1px solid #bbb;
-    background:white;
-}
-
-
-.back-link{
-    display:block;
-    margin-top:35px;
-}
-
 </style>
+
 </head>
 
 <body>
