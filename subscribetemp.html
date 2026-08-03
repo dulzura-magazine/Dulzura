@@ -13,55 +13,131 @@
 
   <style>
 
-    body{
-      background:#f8f5f2;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      min-height:100vh;
-      padding:40px 20px;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    .temp-container{
-      width:100%;
-      max-width:600px;
-      text-align:center;
-    }
+body{
+    background:#f8f5f2;
+    color:#222;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:40px;
+}
 
-    .temp-logo{
-      font-size:3.5rem;
-      letter-spacing:8px;
-      font-family:Georgia, serif;
-      font-weight:400;
-      margin-bottom:18px;
-    }
+.container,
+.temp-container{
+    max-width:700px;
+    width:100%;
+    text-align:center;
+}
 
-    .temp-tagline{
-      color:#7a0f1d;
-      font-style:italic;
-      margin-bottom:35px;
-      font-size:1.1rem;
-    }
 
-    .subscribe-form-wrapper{
-      margin-top:0;
-    }
+/* Dulzura logo - same as header */
+.temp-logo,
+.temp-container h1,
+.container h1{
+    font-family:'Pinyon Script', cursive;
+    font-weight:400;
+    font-size:72px;
+    color:#7a0f1d;
+    letter-spacing:0;
+    margin-bottom:20px;
+}
 
-    .back-link{
-      display:inline-block;
-      margin-top:35px;
-      color:#555;
-      text-decoration:none;
-      font-size:.95rem;
-      transition:.25s;
-    }
 
-    .back-link:hover{
-      color:#7a0f1d;
-    }
+/* Main heading */
+h2{
+    font-family:'Noto Serif Display', serif;
+    font-size:26px;
+    font-weight:400;
+    color:#7a0f1d;
+    margin-bottom:28px;
+}
 
-  </style>
 
+p{
+    font-family:'Cormorant Garamond', serif;
+    font-size:20px;
+    line-height:1.7;
+    color:#555;
+    margin-bottom:18px;
+}
+
+
+/* Burgundy button */
+.btn,
+.subscribe-submit{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 32px;
+    background:#7a0f1d;
+    color:white;
+    border:none;
+    font-family:'Noto Serif Display', serif;
+    font-size:15px;
+    letter-spacing:.05em;
+    cursor:pointer;
+    border-radius:999px;
+    text-transform:uppercase;
+}
+
+
+.btn:hover,
+.subscribe-submit:hover{
+    opacity:.85;
+}
+
+
+/* social links */
+.social{
+    margin-top:45px;
+}
+
+
+.social a,
+.back-link{
+    font-family:'Noto Serif Display', serif;
+    color:#555;
+    text-decoration:none;
+    margin:0 12px;
+}
+
+
+.social a:hover,
+.back-link:hover{
+    color:#7a0f1d;
+}
+
+
+/* subscribe inputs */
+.subscribe-form{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+
+.subscribe-form input{
+    font-family:'Cormorant Garamond', serif;
+    font-size:17px;
+    padding:12px 16px;
+    border:1px solid #bbb;
+    background:white;
+}
+
+
+.back-link{
+    display:block;
+    margin-top:35px;
+}
+
+</style>
 </head>
 
 <body>
@@ -108,7 +184,7 @@
 
   </section>
 
-  <a href="indextemp.html" class="back-link">
+  <a href="index.html" class="back-link">
     ← Back
   </a>
 
