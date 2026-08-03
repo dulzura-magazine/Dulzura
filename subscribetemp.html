@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Notify Me — Dulzura</title>
+
+  <link rel="icon" type="image/png" href="images/favicon3.png">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+
+  <style>
+
+    body{
+      background:#f8f5f2;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      padding:40px 20px;
+    }
+
+    .temp-container{
+      width:100%;
+      max-width:600px;
+      text-align:center;
+    }
+
+    .temp-logo{
+      font-size:3.5rem;
+      letter-spacing:8px;
+      font-family:Georgia, serif;
+      font-weight:400;
+      margin-bottom:18px;
+    }
+
+    .temp-tagline{
+      color:#7a0f1d;
+      font-style:italic;
+      margin-bottom:35px;
+      font-size:1.1rem;
+    }
+
+    .subscribe-form-wrapper{
+      margin-top:0;
+    }
+
+    .back-link{
+      display:inline-block;
+      margin-top:35px;
+      color:#555;
+      text-decoration:none;
+      font-size:.95rem;
+      transition:.25s;
+    }
+
+    .back-link:hover{
+      color:#7a0f1d;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="temp-container">
+
+  <h1 class="temp-logo">DULZURA</h1>
+
+  <p class="temp-tagline">
+    Be the first to know when we launch.
+  </p>
+
+  <section class="subscribe-form-wrapper">
+
+    <form
+      id="subscribe-form"
+      class="subscribe-form"
+      method="post"
+    >
+
+      <input
+        type="text"
+        name="name"
+        placeholder="your name"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="your email"
+        required
+      >
+
+      <button
+        type="submit"
+        class="subscribe-submit">
+        Notify Me
+      </button>
+
+    </form>
+
+    <p id="subscribe-success" class="subscribe-success"></p>
+
+  </section>
+
+  <a href="indextemp.html" class="back-link">
+    ← Back
+  </a>
+
+</div>
+
+</body>
+</html>
