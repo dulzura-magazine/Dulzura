@@ -2212,14 +2212,12 @@ html, body{
 
 /* ================= HOME PHOTO COLLAGE ================= */
 
-.home-photo-collage {
-  width: calc(100% - 30px);  margin: 50px auto 0;
-  display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 12px;
-  padding: 0;
-  box-sizing: border-box;
+.home-photo-collage img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
 .home-photo-collage a {
