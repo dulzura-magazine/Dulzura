@@ -2200,16 +2200,12 @@ html, body{
 
 .home-editorial-photo {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 50px 6vw;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .home-editorial-photo img {
   width: 100%;
-  max-width: 1400px;
   height: auto;
   display: block;
-  object-fit: contain;
 }
