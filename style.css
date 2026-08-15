@@ -2194,3 +2194,22 @@ html, body{
   display: block;
   margin: 0 auto;
 }
+
+
+/* ================= HOME EDITORIAL PHOTO ================= */
+
+.home-editorial-photo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 6vw;
+  box-sizing: border-box;
+}
+
+.home-editorial-photo img {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
