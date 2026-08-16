@@ -2551,3 +2551,22 @@ html, body{
   margin: 0;
   padding: 0;
 }
+
+
+/* ARCHIVE COVER TEST */
+
+.archive-section .archive-cover {
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.archive-section .archive-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
