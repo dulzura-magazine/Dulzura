@@ -2323,3 +2323,27 @@ html, body{
 .home-four-photo-row a:hover img {
   transform: scale(1.02);
 }
+
+
+/* ================= TEAM PHOTO STACK ================= */
+
+.team-wrap {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.team-photo-stack {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.team-photo-stack img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
