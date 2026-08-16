@@ -2535,3 +2535,20 @@ html, body{
 .fall26-launch {
   padding-top: 70px;
 }
+
+
+/* =====================================================
+   ARCHIVE — UNIFORM ARTICLE COVER SIZES
+===================================================== */
+
+.archive-section .article-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
