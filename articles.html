@@ -1,11 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Articles • Dulzura Magazine</title>
   <link rel="icon" type="image/png" href="images/favicon3.png" />
-
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -16,18 +16,23 @@
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 <header class="top-header">
   <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-  <header class="top-header">
   <h1 class="site-logo">
     <a href="index.html">
       <img src="images/headlogo.png" alt="Dulzura Magazine">
     </a>
   </h1>
 </header>
-<!-- SIDEBAR -->
+
+
+<!-- =========================
+     SIDEBAR
+========================= -->
 <aside class="sidebar" id="sidebar">
   <nav class="nav">
     <a href="articles.html" class="active">Articles</a>
@@ -39,122 +44,130 @@
   </nav>
 </aside>
 
-<!-- OVERLAY -->
+
+<!-- =========================
+     OVERLAY
+========================= -->
 <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
-<!-- PAGE CONTENT -->
-<main class="page-container">
 
-  <section class="articles-grid-section">
+<!-- =====================================================
+     FALL 2026 LAUNCH — FULL WIDTH IMAGES
+===================================================== -->
+<section class="fall26-launch">
 
-    <h2 class="articles-grid-title">articles</h2>
+  <!-- Image 1 — NO LINK -->
+  <div class="fall26-launch-image">
+    <img src="images/articleheader.png" alt="Fall 2026 Launch">
+  </div>
 
-    <div class="articles-grid">
-      <!-- ARTICLE CARD -->
-      <a href="articles/princessbeach.html" class="article-card">
-        <img src="images/article1.jpg" alt="">
-        <div class="article-card-title">
-          Princess & The Beach
-        </div>
-        <div class="article-card-author">
-          Ameena Hossain
-        </div>
-      </a>
+  <!-- Image 2 -->
+  <a href="articles/luxurywoutlogos.html" class="fall26-launch-image">
+    <img src="images/luxurycover.png" alt="Luxury Without Logos">
+  </a>
 
-      <a href="articles/italiansummer.html" class="article-card">
-        <img src="images/italiansummer.png" alt="">
-        <div class="article-card-title">
-          What to Wear for an Italian Summer
-        </div>
-        <div class="article-card-author">
-          Ameena Hossain
-        </div>
-      </a>
-      
-      <a href="articles/oldmoney.html" class="article-card">
-        <img src="images/oldmoney.png" alt="">
-        <div class="article-card-title">
-          Old Money. New Swag.
-        </div>
-        <div class="article-card-author">
-          Reine-Esther Assigba
-        </div>
-      </a>
+  <!-- Image 3 -->
+  <a href="articles/cubiclecouture.html" class="fall26-launch-image">
+    <img src="images/cubicleheader.png" alt="Cubicle Couture">
+  </a>
 
-      <a href="articles/summersuitcase.html" class="article-card">
-        <img src="images/suitcase.png" alt="">
-        <div class="article-card-title">
-          The Perfect Summer Suitcase
-        </div>
-        <div class="article-card-author">
-          Vale Córdova
-        </div>
+  <!-- Image 4 -->
+  <a href="articles/offdutylook.html" class="fall26-launch-image">
+    <img src="images/offdutylookheader.png" alt="Off Duty Look">
+  </a>
 
-        
-      <a href="articles/visualdiary.html" class="article-card">
-        <img src="images/diary.png" alt="">
-        <div class="article-card-title">
-          The Visual Diary
-        </div>
-        <div class="article-card-author">
-          Vale Córdova
-        </div>
-        
-        
-        <a href="articles/music.html" class="article-card">
-        <img src="images/music.png" alt="">
-        <div class="article-card-title">
-          The Music that Made You
-        </div>
-        <div class="article-card-author">
-          Reine-Esther Assigba
-        </div>
-      </a>
+  <!-- Image 5 -->
+  <a href="articles/businessseduction.html" class="fall26-launch-image">
+    <img src="images/thebusinessofseductionheader.png" alt="Business Seduction">
+  </a>
 
-        <a href="articles/neutral.html" class="article-card">
-        <img src="images/neutral.png" alt="">
-        <div class="article-card-title">
-          What Even is a Neutral?
-        </div>
-        <div class="article-card-author">
-          Nadejda Futrell
-        </div>
-      </a>
+  <!-- Image 6 -->
+  <a href="articles/colorconvinced.html" class="fall26-launch-image">
+    <img src="images/colormeconvincedheader.png" alt="Color Convinced">
+  </a>
 
-        <a href="articles/2016.html" class="article-card">
-        <img src="images/2016.png" alt="">
-        <div class="article-card-title">
-          2026 is the New 2016
-        </div>
-        <div class="article-card-author">
-          Vale Córdova
-        </div>
-      </a>
+  <!-- Image 7 -->
+  <a href="articles/effortlesscitychic.html" class="fall26-launch-image">
+    <img src="images/guidetoeffortlesscitychic.png" alt="Effortless City Chic">
+  </a>
 
-        <a href="articles/makeuptrend.html" class="article-card">
-        <img src="images/makeup.png" alt="">
-        <div class="article-card-title">
-          Makeup Trends Right Now
-        </div>
-        <div class="article-card-author">
-          Vale Córdova
-        </div>
-      </a>
-      
-    </div>
+  <!-- Image 8 -->
+  <a href="articles/getsmidged.html" class="fall26-launch-image">
+    <img src="images/getsmidgedheader.png" alt="Get Smidged">
+  </a>
 
-  </section>
+  <!-- Image 9 -->
+  <a href="articles/sidewalkrunway.html" class="fall26-launch-image">
+    <img src="images/thesidewalkheader.png" alt="Sidewalk Runway">
+  </a>
 
-</main>
+  <!-- Image 10 -->
+  <a href="articles/inhermood.html" class="fall26-launch-image">
+    <img src="images/inhermoodheader.png" alt="In Her Mood">
+  </a>
 
-  <!-- =========================
-     ARCHIVE SECTION
+  <!-- Image 11 -->
+  <a href="articles/fieldguide90s.html" class="fall26-launch-image">
+    <img src="images/fieldguideheader.png" alt="Field Guide 90s">
+  </a>
+
+  <!-- Image 12 -->
+  <a href="articles/clockedoff.html" class="fall26-launch-image">
+    <img src="images/clockedoffheade.png" alt="Clocked Off">
+  </a>
+
+  <!-- Image 13 -->
+  <a href="articles/boardroombombshell.html" class="fall26-launch-image">
+    <img src="images/boardroombombshellheader.PNG" alt="Boardroom Bombshell">
+  </a>
+
+  <!-- Image 14 -->
+  <a href="articles/beigerun.html" class="fall26-launch-image">
+    <img src="images/beigeheader.png" alt="Beige Run">
+  </a>
+
+  <!-- Image 15 -->
+  <a href="articles/ohkickedout.html" class="fall26-launch-image">
+    <img src="images/kickedoutheader.png" alt="Oh Kicked Out">
+  </a>
+
+</section>
+
+
+<!-- =========================
+     ARCHIVE
 ========================= -->
 <section class="archive-section">
 
   <h2 class="archive-title">archive</h2>
 
+
+  <!-- =================================================
+       SUMMER 26 EDITION
+  ================================================== -->
   <div class="archive-edition">
+
+    <h3 class="archive-edition-title">
+      Summer <span>2026</span> Edition
+    </h3>
+
+    <div class="articles-grid">
+
+      <!--
+        SUMMER 26 ARTICLES GO HERE.
+        I am intentionally leaving these blank rather than
+        inventing titles, authors, links, or images.
+      -->
+
+    </div>
+  </div>
+
+
+  <!-- =================================================
+       NEW YEARS 2025 EDITION
+  ================================================== -->
+  <div class="archive-edition">
+
     <h3 class="archive-edition-title">
       New Years <span>2025</span> Edition
     </h3>
@@ -163,60 +176,96 @@
 
       <!-- Article 1 -->
       <a href="articles/cindy.html" class="article-card">
-        <img src="images/cindy.jpeg" alt="Cindy Kimberely">
-        <p class="article-card-title">Cindy Kimberly: The Modern Muse</p>
-        <p class="article-card-author">Madison Lorena</p>
-      </a>
-
-      
-      <a href="articles/90s minimalism.html" class="article-card">
-        <img src="images/articlecover5.jpg" alt="Is 90s Minimalism Back?">
-        <p class="article-card-title">Is 90s Minimalism Back?</p>
-        <p class="article-card-author">Elisa Hernandez Reyes</p>
+        <img src="images/cindy.jpeg" alt="Cindy Kimberly">
+        <p class="article-card-title">
+          Cindy Kimberly: The Modern Muse
+        </p>
+        <p class="article-card-author">
+          Madison Lorena
+        </p>
       </a>
 
       <!-- Article 2 -->
-      <a href="articles/faux fur.html" class="article-card">
-        <img src="images/articlecover3.jpg" alt="Faux Fur: The Ultimate Statement">
-        <p class="article-card-title">Faux Fur: The Ultimate Statement</p>
-        <p class="article-card-author">Elisa Hernandez Reyes</p>
+      <a href="articles/90s minimalism.html" class="article-card">
+        <img src="images/articlecover5.jpg" alt="Is 90s Minimalism Back?">
+        <p class="article-card-title">
+          Is 90s Minimalism Back?
+        </p>
+        <p class="article-card-author">
+          Elisa Hernandez Reyes
+        </p>
       </a>
 
       <!-- Article 3 -->
-      <a href="articles/history of the trench.html" class="article-card">
-        <img src="images/articlecover4.jpg" alt="History of the Trench">
-        <p class="article-card-title">History of the Trench</p>
-        <p class="article-card-author">Vira Bilan</p>
+      <a href="articles/faux fur.html" class="article-card">
+        <img src="images/articlecover3.jpg" alt="Faux Fur: The Ultimate Statement">
+        <p class="article-card-title">
+          Faux Fur: The Ultimate Statement
+        </p>
+        <p class="article-card-author">
+          Elisa Hernandez Reyes
+        </p>
       </a>
 
       <!-- Article 4 -->
+      <a href="articles/history of the trench.html" class="article-card">
+        <img src="images/articlecover4.jpg" alt="History of the Trench">
+        <p class="article-card-title">
+          History of the Trench
+        </p>
+        <p class="article-card-author">
+          Vira Bilan
+        </p>
+      </a>
+
+      <!-- Article 5 -->
       <a href="articles/niche girl.html" class="article-card">
         <img src="images/articlecover2.jpg" alt="Your Niche? Or, You’re Niche!">
-        <p class="article-card-title">Your Niche? Or, You’re Niche!</p>
-        <p class="article-card-author">Vira Bilan</p>
+        <p class="article-card-title">
+          Your Niche? Or, You’re Niche!
+        </p>
+        <p class="article-card-author">
+          Vira Bilan
+        </p>
       </a>
 
+      <!-- Article 6 -->
       <a href="articles/standing out.html" class="article-card">
         <img src="images/standing.jpeg" alt="The Art of Standing Out">
-        <p class="article-card-title">The Art of Standing Out</p>
-        <p class="article-card-author">Noku Nzira</p>
+        <p class="article-card-title">
+          The Art of Standing Out
+        </p>
+        <p class="article-card-author">
+          Noku Nzira
+        </p>
       </a>
 
+      <!-- Article 7 -->
       <a href="articles/time of year.html" class="article-card">
         <img src="images/time.jpeg" alt="That Time of Year">
-        <p class="article-card-title">That Time of Year</p>
-        <p class="article-card-author">Noku Nzira</p>
+        <p class="article-card-title">
+          That Time of Year
+        </p>
+        <p class="article-card-author">
+          Noku Nzira
+        </p>
       </a>
 
-      
     </div>
   </div>
 
 </section>
-  
-<!-- ✅ REQUIRED FOR SIDEBAR -->
+
+
+<!-- =========================
+     SIDEBAR SCRIPT
+========================= -->
 <script src="script.js"></script>
-<!-- ================= FOOTER ================= -->
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 <footer class="site-footer">
   <div class="footer-inner">
 
@@ -226,29 +275,45 @@
       Fashion, culture, and editorial stories from Dulzura.
     </p>
 
-        <div class="footer-social">
-  <a class="social-icon" href="https://www.instagram.com/dulzuramagazine/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener" aria-label="Instagram">
-    <!-- Instagram -->
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9A3.5 3.5 0 0 0 20 16.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm4.5 4.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2Zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2ZM17.7 6.9a.9.9 0 1 1-.9-.9.9.9 0 0 1 .9.9Z"/>
-    </svg>
-  </a>
+    <div class="footer-social">
 
-  <a class="social-icon" href="https://www.tiktok.com/@dulzuramagazine?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok">
-    <!-- TikTok -->
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M16.6 3c.4 2.6 1.9 4.2 4.4 4.4v3c-1.6.1-3.1-.4-4.4-1.3v6.1c0 4-3.4 7.2-7.5 6.6-2.7-.4-4.9-2.6-5.3-5.3C3.1 12.5 6.1 9 9.9 9c.5 0 .9.1 1.4.2v3.3c-.4-.1-.8-.3-1.2-.3-1.4 0-2.5 1.2-2.4 2.6.1 1 .9 1.9 2 2.1 1.6.3 3-.9 3-2.4V3h3.9Z"/>
-    </svg>
-  </a>
+      <!-- Instagram -->
+      <a class="social-icon"
+         href="https://www.instagram.com/dulzuramagazine/?utm_source=ig_web_button_share_sheet"
+         target="_blank"
+         rel="noopener"
+         aria-label="Instagram">
 
-  <a class="social-icon" href="https://pin.it/656nGmWJq" target="_blank" rel="noopener" aria-label="Pinterest">
-    <!-- Pinterest -->
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.4-6s-.4-.8-.4-1.9c0-1.8 1-3.1 2.3-3.1 1.1 0 1.6.8 1.6 1.8 0 1.1-.7 2.7-1.1 4.2-.3 1.3.7 2.3 1.9 2.3 2.3 0 4-2.4 4-5.9 0-3.1-2.2-5.3-5.4-5.3-3.7 0-5.9 2.8-5.9 5.7 0 1.1.4 2.3 1 3 .1.1.1.2.1.4l-.3 1.2c-.1.4-.3.5-.6.3-1.2-.6-2-2.5-2-4 0-3.3 2.4-6.4 7-6.4 3.7 0 6.6 2.6 6.6 6.1 0 3.7-2.3 6.6-5.5 6.6-1.1 0-2.1-.6-2.4-1.2l-.7 2.6c-.3.9-1 2.1-1.5 2.8A10 10 0 1 0 12 2Z"/>
-    </svg>
-  </a>
-</div>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9A3.5 3.5 0 0 0 20 16.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm4.5 4.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2Zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2ZM17.7 6.9a.9.9 0 1 1-.9-.9.9.9 0 0 1 .9.9Z"/>
+        </svg>
+      </a>
 
+      <!-- TikTok -->
+      <a class="social-icon"
+         href="https://www.tiktok.com/@dulzuramagazine?is_from_webapp=1&sender_device=pc"
+         target="_blank"
+         rel="noopener"
+         aria-label="TikTok">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M16.6 3c.4 2.6 1.9 4.2 4.4 4.4v3c-1.6.1-3.1-.4-4.4-1.3v6.1c0 4-3.4 7.2-7.5 6.6-2.7-.4-4.9-2.6-5.3-5.3C3.1 12.5 6.1 9 9.9 9c.5 0 .9.1 1.4.2v3.3c-.4-.1-.8-.3-1.2-.3-1.4 0-2.5 1.2-2.4 2.6.1 1 .9 1.9 2 2.1 1.6.3 3-.9 3-2.4V3h3.9Z"/>
+        </svg>
+      </a>
+
+      <!-- Pinterest -->
+      <a class="social-icon"
+         href="https://pin.it/656nGmWJq"
+         target="_blank"
+         rel="noopener"
+         aria-label="Pinterest">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.4-6s-.4-.8-.4-1.9c0-1.8 1-3.1 2.3-3.1 1.1 0 1.6.8 1.6 1.8 0 1.1-.7 2.7-1.1 4.2-.3 1.3.7 2.3 1.9 2.3 2.3 0 4-2.4 4-5.9 0-3.1-2.2-5.3-5.4-5.3-3.7 0-5.9 2.8-5.9 5.7 0 1.1.4 2.3 1 3 .1.1.1.2.1.4l-.3 1.2c-.1.4-.3.5-.6.3-1.2-.6-2-2.5-2-4 0-3.3 2.4-6.4 7-6.4 3.7 0 6.6 2.6 6.6 6.1 0 3.7-2.3 6.6-5.5 6.6-1.1 0-2.1-.6-2.4-1.2l-.7 2.6c-.3.9-1 2.1-1.5 2.8A10 10 0 1 0 12 2Z"/>
+        </svg>
+      </a>
+
+    </div>
 
     <div class="footer-links">
       <a href="articles.html">Articles</a>
@@ -260,7 +325,9 @@
     </div>
 
     <div class="footer-bottom">
-      <span>© <span id="footer-year"></span> Dulzura Magazine. All rights reserved.</span>
+      <span>
+        © <span id="footer-year"></span> Dulzura Magazine. All rights reserved.
+      </span>
     </div>
 
   </div>
@@ -268,3 +335,4 @@
 
 </body>
 </html>
+```
