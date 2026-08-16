@@ -2347,3 +2347,187 @@ html, body{
   margin: 0;
   padding: 0;
 }
+
+
+/* =====================================================
+   ARTICLES PAGE — FULL IMAGE + RESPONSIVE FIX
+===================================================== */
+
+/* FALL 2026 LAUNCH
+   Full-width images with their COMPLETE original proportions
+*/
+.fall26-launch {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.fall26-launch-image {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.fall26-launch-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+}
+
+
+/* =====================================================
+   ARCHIVE
+===================================================== */
+
+.archive-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 90px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.archive-title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 40px);
+  font-weight: 400;
+  text-transform: lowercase;
+  margin: 0 0 50px;
+}
+
+.archive-edition {
+  width: 100%;
+  margin: 0 0 80px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+}
+
+.archive-edition-title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 400;
+  margin: 0 0 35px;
+  letter-spacing: 0.01em;
+}
+
+.archive-edition-title span {
+  font-style: italic;
+}
+
+
+/* ARTICLES GRID */
+
+.articles-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 50px 30px;
+}
+
+
+/* ARTICLE CARD */
+
+.article-card {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* COMPLETE IMAGE — NO CROPPING */
+
+.article-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+
+/* ARTICLE TITLE */
+
+.article-card-title {
+  margin: 14px 0 0;
+  font-family: var(--font-display);
+  font-size: 17px;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+
+
+/* ARTICLE AUTHOR */
+
+.article-card-author {
+  margin: 5px 0 0;
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .archive-section {
+    padding: 0 24px;
+  }
+
+  .articles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 22px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .archive-section {
+    margin-top: 60px;
+    padding: 0 16px;
+  }
+
+  .archive-title {
+    margin-bottom: 35px;
+  }
+
+  .archive-edition {
+    margin-bottom: 60px;
+    padding-top: 24px;
+  }
+
+  .articles-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .article-card-title {
+    font-size: 16px;
+  }
+
+  .article-card-author {
+    font-size: 12px;
+  }
+
+}
