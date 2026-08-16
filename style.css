@@ -2537,15 +2537,13 @@ html, body{
 }
 
 
-/* =====================================================
-   ARCHIVE — UNIFORM ARTICLE COVER SIZES
-===================================================== */
+
+/* ARCHIVE — ALL COVERS SAME SIZE */
 
 .archive-section .article-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 4;
-  height: auto;
+  height: 420px;
   object-fit: contain;
   object-position: center;
   border-radius: 0;
