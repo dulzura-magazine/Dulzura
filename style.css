@@ -2572,44 +2572,13 @@ html, body{
 }
 
 
-/* ================= FEATURES PAGE ================= */
-
-.features-page {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.feature-photo {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.feature-photo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-}
-
-.feature-photo a {
-  display: block;
-  width: 100%;
-}
-
-.feature-photo a img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
 /* ================= FEATURES PAGE ================= */
 
 .features-page {
   width: 100%;
   margin: 0;
-  padding: 70px 0 0;
+  padding: 90px 0 0;
 }
 
 .feature-photo {
