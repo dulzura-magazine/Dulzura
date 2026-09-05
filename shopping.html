@@ -11,12 +11,11 @@
   <script defer src="script.js"></script>
 
   <style>
+
 /* =====================================================
-   DULZURA SHOPPING PAGE — HTML OVERRIDE
-   Responsive + clean spacing
+   SHOPPING PAGE
 ===================================================== */
 
-/* PAGE */
 .shopping-page {
   width: 100%;
   max-width: 1400px;
@@ -24,8 +23,11 @@
 
   margin: 0 auto !important;
 
-  /* responsive top spacing for fixed header */
-  padding: clamp(95px, 9vw, 125px)
+  /*
+    Header is fixed, so we need enough space ABOVE
+    the actual shopping content.
+  */
+  padding: clamp(150px, 12vw, 190px)
            clamp(16px, 4vw, 55px)
            70px !important;
 
@@ -33,9 +35,7 @@
 }
 
 
-/* =====================================================
-   TITLE
-===================================================== */
+/* TITLE */
 
 .shopping-title {
   margin: 0 0 clamp(12px, 2vw, 18px) !important;
@@ -51,15 +51,13 @@
 }
 
 
-/* =====================================================
-   INTRO
-===================================================== */
+/* INTRO */
 
 .shopping-intro {
   width: 100%;
   max-width: 760px;
 
-  margin: 0 auto clamp(30px, 4vw, 48px) !important;
+  margin: 0 auto clamp(35px, 4vw, 50px) !important;
   padding: 0 !important;
 
   font-family: var(--font-body);
@@ -68,9 +66,7 @@
 }
 
 
-/* =====================================================
-   PRODUCT GRID
-===================================================== */
+/* GRID */
 
 .shopping-grid {
   width: 100%;
@@ -81,20 +77,16 @@
 
   display: grid;
 
-  /* desktop automatically adapts */
-  grid-template-columns:
-    repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 
-  gap: clamp(35px, 5vw, 65px)
-       clamp(14px, 2.5vw, 35px);
+  column-gap: clamp(14px, 2.5vw, 35px);
+  row-gap: clamp(40px, 5vw, 65px);
 
   border: none !important;
 }
 
 
-/* =====================================================
-   PRODUCT CARD
-===================================================== */
+/* PRODUCT */
 
 .shopping-item {
   width: 100%;
@@ -121,9 +113,7 @@
 }
 
 
-/* =====================================================
-   PRODUCT IMAGE
-===================================================== */
+/* IMAGE */
 
 .shopping-image {
   display: block;
@@ -132,7 +122,6 @@
   height: auto;
 
   aspect-ratio: 4 / 5;
-
   object-fit: contain;
 
   margin: 0 0 12px !important;
@@ -146,9 +135,7 @@
 }
 
 
-/* =====================================================
-   BRAND
-===================================================== */
+/* BRAND */
 
 .shopping-brand {
   margin: 0 0 4px !important;
@@ -165,9 +152,7 @@
 }
 
 
-/* =====================================================
-   PRODUCT NAME
-===================================================== */
+/* NAME */
 
 .shopping-name {
   margin: 0 !important;
@@ -188,18 +173,16 @@
 @media (max-width: 1000px) {
 
   .shopping-page {
-    padding-top: 105px !important;
+    padding-top: 135px !important;
     padding-left: 24px !important;
     padding-right: 24px !important;
   }
 
   .shopping-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-
     column-gap: 20px;
     row-gap: 45px;
   }
-
 }
 
 
@@ -210,7 +193,7 @@
 @media (max-width: 650px) {
 
   .shopping-page {
-    padding-top: 95px !important;
+    padding-top: 125px !important;
     padding-left: 14px !important;
     padding-right: 14px !important;
     padding-bottom: 50px !important;
@@ -224,13 +207,11 @@
   .shopping-intro {
     font-size: 17px;
     line-height: 1.5;
-
     margin-bottom: 30px !important;
   }
 
   .shopping-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
     column-gap: 12px;
     row-gap: 34px;
   }
@@ -249,7 +230,6 @@
     font-size: 13px;
     line-height: 1.25;
   }
-
 }
 
 
@@ -260,9 +240,9 @@
 @media (max-width: 380px) {
 
   .shopping-page {
+    padding-top: 115px !important;
     padding-left: 10px !important;
     padding-right: 10px !important;
-    padding-top: 90px !important;
   }
 
   .shopping-grid {
@@ -277,8 +257,8 @@
   .shopping-brand {
     font-size: 8px;
   }
-
 }
+
 </style>
 </head>
 
@@ -303,15 +283,14 @@
 <header class="top-header">
   <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-  <header class="top-header">
   <h1 class="site-logo">
     <a href="index.html">
       <img src="images/headlogo.png" alt="Dulzura Magazine">
     </a>
   </h1>
 </header>
-  <main class="page-container">
 
+<main class="page-container">
   
   <!-- ================= GENERAL SHOPPING ================= -->
   <section class="shopping-page">
