@@ -2917,3 +2917,33 @@ html, body{
 .home-subscribe-btn:hover::after {
   transform: translate(3px, -3px);
 }
+
+
+.home-subscribe-cta {
+  position: relative;
+  margin: 70px auto 75px;
+  padding: 38px 24px;
+  text-align: center;
+}
+
+.home-subscribe-cta::before {
+  content: "✦";
+  display: block;
+  margin-bottom: 14px;
+  color: var(--burgundy);
+  font-family: var(--font-body);
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+.home-subscribe-cta::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 70px;
+  height: 1px;
+  background: var(--burgundy);
+  transform: translateX(-50%);
+  opacity: 0.3;
+}
