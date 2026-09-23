@@ -2866,3 +2866,78 @@ html, body{
   }
 
 }
+
+
+/* ================= FALL 2026 ORDER CTA ================= */
+
+.home-subscribe-cta {
+  text-align: center;
+  padding: 55px 20px 65px;
+  position: relative;
+}
+
+.order-label {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+  opacity: 0.65;
+}
+
+.home-subscribe-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  padding: 17px 27px;
+  border: 1px solid #7a0f1d;
+  color: #7a0f1d;
+  text-decoration: none;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-subscribe-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #7a0f1d;
+  transform: translateY(101%);
+  transition: transform 0.35s ease;
+  z-index: 0;
+}
+
+.home-subscribe-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.order-arrow {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: transform 0.35s ease;
+}
+
+.home-subscribe-btn:hover {
+  color: white;
+}
+
+.home-subscribe-btn:hover::before {
+  transform: translateY(0);
+}
+
+.home-subscribe-btn:hover .order-arrow {
+  transform: translate(4px, -4px);
+}
+
+.order-caption {
+  margin-top: 14px;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
