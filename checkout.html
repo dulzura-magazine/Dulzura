@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Order Fall 2026 — Dulzura</title>
+  <link rel="icon" type="image/png" href="images/favicon3.png" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      margin: 0;
+      background: #fff;
+      color: #111;
+    }
+
+    .checkout-page {
+      min-height: 100vh;
+      padding-top: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    .checkout-wrap {
+      width: min(900px, calc(100% - 48px));
+      text-align: center;
+      padding: 70px 0 90px;
+    }
+
+    .checkout-kicker {
+      font-family: var(--font-logo);
+      color: var(--burgundy);
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .checkout-title {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(48px, 8vw, 82px);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+    }
+
+    .checkout-title em {
+      font-style: italic;
+    }
+
+    .checkout-rule {
+      width: 70px;
+      height: 1px;
+      background: var(--burgundy);
+      opacity: 0.35;
+      margin: 30px auto;
+    }
+
+    .checkout-description {
+      max-width: 560px;
+      margin: 0 auto;
+      font-family: var(--font-body);
+      font-size: 21px;
+      line-height: 1.55;
+    }
+
+    .checkout-product {
+      margin: 42px auto 0;
+      padding: 28px 30px;
+      max-width: 500px;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      text-align: left;
+    }
+
+    .checkout-product-name {
+      font-family: var(--font-display);
+      font-size: 22px;
+    }
+
+    .checkout-product-detail {
+      margin-top: 4px;
+      font-family: var(--font-body);
+      font-size: 16px;
+      opacity: 0.65;
+    }
+
+    .checkout-price {
+      font-family: var(--font-display);
+      font-size: 22px;
+      white-space: nowrap;
+      color: var(--burgundy);
+    }
+
+    .checkout-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 38px;
+      padding: 13px 27px;
+
+      background: var(--burgundy);
+      color: #fff;
+
+      border: 1px solid var(--burgundy);
+      border-radius: 999px;
+
+      font-family: var(--font-display);
+      font-size: 17px;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .checkout-button::after {
+      content: "↗";
+      font-family: var(--font-body);
+      font-size: 19px;
+      transition: transform 0.3s ease;
+    }
+
+    .checkout-button:hover {
+      background: #fff;
+      color: var(--burgundy);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px rgba(122, 15, 29, 0.12);
+    }
+
+    .checkout-button:hover::after {
+      transform: translate(3px, -3px);
+    }
+
+    .checkout-note {
+      margin-top: 18px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-style: italic;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 600px) {
+      .checkout-wrap {
+        padding: 55px 0 70px;
+      }
+
+      .checkout-product {
+        padding: 23px 0;
+      }
+
+      .checkout-product-name {
+        font-size: 19px;
+      }
+
+      .checkout-price {
+        font-size: 19px;
+      }
+
+      .checkout-description {
+        font-size: 19px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="top-header">
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <a href="index.html" class="site-logo">
+      Dulzura
+    </a>
+
+    <a href="checkout.html" class="header-subscribe-btn">
+      Order Fall 2026
+    </a>
+  </header>
+
+
+  <!-- CHECKOUT -->
+  <main class="checkout-page">
+    <div class="checkout-wrap">
+
+      <div class="checkout-kicker">the Fall 2026 edition</div>
+
+      <h1 class="checkout-title">
+        <em>Dulzura</em> Fall 2026
+      </h1>
+
+      <div class="checkout-rule"></div>
+
+      <p class="checkout-description">
+        Buy your copy of Dulzura's Fall 2026 print edition.
+        A collection of fashion, culture, and stories curated
+        by young creatives.
+      </p>
+
+      <div class="checkout-product">
+        <div>
+          <div class="checkout-product-name">
+            Dulzura — Fall 2026
+          </div>
+
+          <div class="checkout-product-detail">
+            Print edition · Preorder
+          </div>
+        </div>
+
+        <div class="checkout-price">
+          $20.00
+        </div>
+      </div>
+
+      <a href="https://buy.stripe.com/14AeV6feI3bW22N7N404800" class="checkout-button">
+        Continue to order
+      </a>
+
+      <div class="checkout-note">
+        Secure checkout · Shipping information collected at checkout
+      </div>
+
+    </div>
+  </main>
+
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+
+      if (sidebar) {
+        sidebar.classList.toggle("open");
+      }
+    }
+  </script>
+
+</body>
+</html>
